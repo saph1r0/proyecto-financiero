@@ -1,0 +1,283 @@
+
+body{
+    background-color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    background-color: yellow;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffff00;
+    padding: 20px;
+}
+
+.logo img {
+   
+    width: 350px;
+    margin-left: 70px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    text-align: right;
+    gap: 5px;
+  }
+
+.btn-primary {
+
+    background-image: url('principalb.png');
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 0px 15px 15px 15px;
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #616161;
+    letter-spacing: 0.2px;
+    text-transform: none;
+    padding: 15px 15px 15px 35px !important;
+
+}
+.btn-secondary {
+
+    background-image: url('/home/ubuntu20/dpb/Proyecto Banco/principalc.png');
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 0px 15px 15px 15px;
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #616161;
+    letter-spacing: 0.2px;
+    text-transform: none;
+    padding: 15px 15px 15px 35px !important;
+
+}
+.btn-third {
+
+    background-image: url('/home/ubuntu20/dpb/Proyecto Banco/principala.png');
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 0px 15px 15px 15px;
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #616161;
+    letter-spacing: 0.2px;
+    text-transform: none;
+    padding: 15px 15px 15px 35px !important;
+
+}
+
+.container2 {
+    background-color: #FFFFFF; /* White background for navigation */
+    padding:8px; /* Adjust as needed for spacing */
+    
+    margin-right: 80px;
+  margin-left: 80px;
+}
+
+.container2 ul {
+    list-style: none; /* Remove list bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space out items evenly */
+}
+
+.container2 li {
+    margin-right: 10px; 
+}
+.container2 li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.container2 a {
+    text-decoration: none; /* Remove underlines */
+    color: #000000; 
+}
+
+/* Banner styles */
+.banner {
+    background-color: #ffff00;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.banner-button {
+    background-color: #fff;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Features styles */
+.features {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.feature {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    margin-bottom: 10px;
+}
+
+.feature-button {
+    background-color: #ffff00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.feature-button:hover {
+    background-color: #ffff00;
+}
+
+/* Services styles */
+.services {
+    padding: 40px 0;
+  }
+  
+  .service-row {
+    display: flex;
+    flex-wrap: nowrap; /* esto hace que todos los servicios estén en una sola fila */
+    justify-content: space-between;
+  }
+  
+  .service {
+    flex: 1; /* esto hace que cada servicio tome el ancho disponible */
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .service h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .service p {
+    margin-bottom: 10px;
+  }
+  
+  .service a {
+    background-color: #ffff00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .service a:hover {
+    background-color:#ffff00;
+  }
+/* Footer styles */
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-section {
+    display: inline-block;
+    background-color: black;
+    margin: 0 20px;
+}
+
+.footer-section h3 {
+    color:yellow;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-media li {
+    margin: 0 5px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 24px;
+}
+
+.copyright {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+
+
+
