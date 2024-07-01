@@ -10,7 +10,7 @@
     <header>
         <div class="container">
             <div class="logo img">
-                <img src="/home/ubuntu20/dpb/Proyecto Banco/logodos.png" alt="qapaq">
+                <img src="imagenes/containers_menup/logodos.png" alt="qapaq">
             </div>
             <div class="buttons">
                <a class="btn btn-primary" href="">Qapaq por INTERNET</a>
@@ -23,9 +23,28 @@
         <div class="container2">
             <ul>
                 <li><a href="#">CONOCENOS</a></li>
-                <li><a href="#">UBICANOS</a></li>
-                <li><a href="#">PRESTAMOS</a></li>
-                <li><a href="#">AHORROS</a></li>
+                <li><a href="#">UBICANOS</a>
+                <ul class="submenu">
+                    <li><a href="#">Agencias</a></li>
+                    <li><a href="#">Agentes Recaudadores</a></li>
+                </ul>
+                </li>
+                <li><a href="#">PRESTAMOS</a>
+                <ul class="submenu">
+                    <li><a href="#">Para tu Negocio</a></li>
+                    <li><a href="#">Para ti</a></li>
+                </ul>
+                </li>
+                <li><a href="#">AHORROS</a>
+                <ul class="submenu">
+                    <li><a href="#">Ponte Tu Bono</a></li>
+                    <li><a href="#">Para tu Mercadería</a></li>
+                    <li><a href="#">Para tu Maquinaria</a></li>
+                    <li><a href="#">Material de Construcción</a></li>
+                    <li><a href="#">Para tu Cultivo</a></li>
+                    <li><a href="#">Qrecer 8</a></li>
+                  </ul> 
+                </li>
                 <li><a href="#">SEGUROS</a></li>
                 <li><a href="#">CANALES DIGITALES</a></li>
                 <li><a href="#">SERVICIOS</a></li>
@@ -33,86 +52,123 @@
         </div>
     </nav>
     <section class="banner">
-        <a href="#" class="banner-button">Más información</a>
+    	<div class="banner-carousel">
+            <div class="banner-item">
+            	<a href="https://www.qapaq.pe/prestamos-personales/">
+                	<img src="imagenes/banners/Banner1-web.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-item">
+            	<a href="">
+                	<img src="imagenes/banners/AHORROS-b1.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-item">
+            	<a href="https://www.qapaq.pe/cambio-de-oro/">
+                	<img src="imagenes/banners/QAMBIOS-1536x428.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-item">
+            	<a href="https://www.qapaq.pe/ahorros/">
+                	<img src="imagenes/banners/DPF-1536x428.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-item">
+            	<a href="https://www.qapaq.pe/mesa-de-dinero/">
+                	<img src="imagenes/banners/yape-banner-1536x428.jpg" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-item">
+            	<a href="https://www.qapaq.pe/campanas/">
+                	<img src="imagenes/banners/fraudes-06-1536x428.png" alt="banner-image">
+            	</a>
+        	</div>
+    	</div>
+    	<button class="banner-prev"></button>
+    	<button class="banner-next"></button>
+	</section>
+
+    <section class="features">
+        <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-40.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-40.png" data-href="" style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-40.png);">
+            <img src="" alt="Imagen 1">
+            <a href="#" class="enlace"></a>    </div>
+        <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-41.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-46.png" data-href="" style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-46.png);">
+            <img src="" alt="Imagen 1">
+            <a href="#" class="enlace"></a>    
+          </div>
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-42.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-47.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-47.png);">
+            <img src="" alt="Imagen 2">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-43.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-48.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-48.png);">
+            <img src="" alt="Imagen 3">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/iconomesa-74.png" data-image-hover="imagenes/news/iconomesa-75.png" data-href=""style="--image-hover: url(imagenes/news/iconomesa-75.png);">
+            <img src="" alt="Imagen 4">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-45.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-50.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-50.png);">
+            <img src="" alt="Imagen 5">
+            <a href="#" class="enlace"></a>
+          </div>
+    </section>
+    <script>
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+          const image = card.querySelector('img');
+          const imageData = card.getAttribute('data-image');
+          image.src = imageData;
+        });
+      
+      </script>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">
+            	<a href="">
+                	<img src="imagenes/banners/Banner-body-PC-25-1536x482.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-bdy">
+            	<a href="">
+                	<img src="imagenes/banners/Banner-body-PC-28-1536x482.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-bdy">
+            	<a href="">
+                	<img src="imagenes/banners/Banner-body-PC-29-1536x482.png" alt="banner-image">
+            	</a>
+        	</div>
+        </div>
     </section>
 
     <section class="features">
-        <div class="feature">
-            <i class="feature-icon">💡</i>
-            <h3 class="feature-title">Todo lo que NECESITAS</h3>
-            <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            <a href="#" class="feature-button">ver más</a>
+        <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-63-1.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-63-1.png" data-href="" style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-63-1.png);">
+            <img src="imagenes/news/BOTONES-NUEVOS-63-1.png" alt="Imagen 6">
+            <a href="#" class="enlace"></a>  
+          </div>
+        <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-60.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-61.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-61.png);">
+            <img src="imagenes/news/BOTONES-NUEVOS-60.png"alt="Imagen 7">
+            <a href="#" class="enlace"></a>
         </div>
-
-        <div class="feature">
-            <i class="feature-icon">💰</i>
-            <h3 class="feature-title">Para tus gastos PERSONALES</h3>
-            <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            <a href="#" class="feature-button">ver más</a>
-        </div>
-
-        <div class="feature">
-            <i class="feature-icon">💎</i>
-            <h3 class="feature-title">Efectivo por tus JOYAS de ORO</h3>
-            <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            <a href="#" class="feature-button">ver más</a>
-        </div>
-
-        <div class="feature">
-            <i class="feature-icon">🐷</i>
-            <h3 class="feature-title">Haz crecer TUS AHORROS</h3>
-            <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            <a href="#" class="feature-button">ver más</a>
-        </div>
-
-        <div class="feature">
-            <i class="feature-icon">💰</i>
-            <h3 class="feature-title">Mesa de DINERO</h3>
-            <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            <a href="#" class="feature-button">ver más</a>
-        </div>
-
-        <div class="feature">
-            <i class="feature-icon">📄</i>
-            <h3 class="feature-title">Nuestras CAMPAÑAS</h3>
-            <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            <a href="#" class="feature-button">ver más</a>
-        </div>
-    </section>
-    <section class="services">
-    <div class="container">
-        <h2>Nuestras Ofertas</h2>
-        <div class="service-row">
-        <div class="service">
-            <h3>Nueva Tasa para INSUPERABLE...</h3>
-            <p>Conoce más sobre nuestra nueva tasa de interés</p>
-            <a href="#">Ver más</a>
-        </div>
-        <div class="service">
-            <h3>Nueva Tasa para PLAZO FIJO...</h3>
-            <p>Conoce más sobre nuestra nueva tasa de interés</p>
-            <a href="#">Ver más</a>
-        </div>
-        <div class="service">
-            <h3>Disposición DE LA CTS...</h3>
-            <p>Conoce más sobre nuestra disposición de CTS</p>
-            <a href="#">Ver más</a>
-        </div>
-        <div class="service">
-            <h3>Traslado cuentas AL FSD</h3>
-            <p>Conoce más sobre nuestro traslado de cuentas</p>
-            <a href="#">Ver más</a>
-        </div>
-        <div class="service">
-            <h3>Reprogramaciones PROCEDIM...</h3>
-            <p>Conoce más sobre nuestras reprogramaciones</p>
-            <a href="#">Ver más</a>
-        </div>
-        </div>
-    </div>
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-60.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-61.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-61.png);">
+            <img src="imagenes/news/BOTONES-NUEVOS-60.png"alt="Imagen 8">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/iconomesa-74.png" data-image-hover="imagenes/news/iconomesa-75.png" data-href=""style="--image-hover: url(imagenes/news/iconomesa-75.png);">
+            <img src="imagenes/news/iconomesa-74.png" alt="Imagen 9">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/botonTRASLADO-80.png" data-image-hover="imagenes/news/botonTRASLADO-81.png" data-href=""style="--image-hover: url(imagenes/news/botonTRASLADO-81.png);">
+            <img src="imagenes/news/botonTRASLADO-80.png" alt="Imagen 10">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-64.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-65-1.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-65-1.png);">
+            <img src="imagenes/news/BOTONES-NUEVOS-64.png" alt="Imagen 11">
+            <a href="#" class="enlace"></a>
+          </div>
     </section>
     <footer>
-      <!--   <div class="container"> -->
             <div class="footer-section">
                 <h3>QAPAQ</h3>
                 <ul>
@@ -143,23 +199,26 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Libro de Reclamaciones</h3>
-                <img src="images/libro-reclamaciones.png" alt="Libro de Reclamaciones">
+                <a href="https://alianzas.qapaq.pe/LibroReclamaciones/"><img src="imagenes/banners/Libro-de-reclamaciones-164x97.png" alt="Libro de Reclamaciones"></a>
             </div>
             <div class="footer-section">
-                <h3>Contáctanos</h3>
+                <p>Contáctanos</p>
                 <ul class="social-media">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fas fa-phone-alt"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                  <li><a href="https://www.facebook.com/qapaqfinancierasolidaria/"><img src="imagenes/socialmendia/1-45x45.png" alt="Facebook"></a></li>
+                  <li><a href="https://www.youtube.com/@qapaqperu595"><img src="imagenes/socialmendia/3-45x45.png" alt="YouTube"></a></li>
+                  <li><a href="tel:017123223"><img src="imagenes/socialmendia/2-45x45.png" alt="Teléfono"></a></li>
+                  <li><a href="https://www.instagram.com/financiera_qapaq/"><img src="imagenes/socialmendia/instagramqapaq-45x45.png" alt="Instagram"></a></li>
+                  <li><a href="https://www.tiktok.com/@qapaq.peru"><img src="imagenes/socialmendia/tiktokqapaq-45x45.png" alt="TikTok"></a></li>
                 </ul>
-                <p>Call Center: +51 1 7123223</p>
+                <h3>Call Center: </h3>
+                <p>+51 1 7123223</p>
                 <p>Lun-Sab de 9am a 9pm</p>
-            </div>
-        <!-- </div> -->
+              </div>
         <p class="copyright">&copy; 2023 Financiera QAPAQ S.A. | 20521308321</p>
     </footer>
+    <script src="pag_main.js"></script>
 </body>
 </html>
+
+
+

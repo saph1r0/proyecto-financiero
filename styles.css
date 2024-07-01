@@ -1,5 +1,4 @@
-
-body{
+ body{
     background-color: white;
     font-family: sans-serif;
     margin: 0;
@@ -12,7 +11,7 @@ body{
     justify-content: space-between;
     align-items: center;
     color: #ffff00;
-    padding: 20px;
+    padding: 13px;
 }
 
 .logo img {
@@ -32,7 +31,7 @@ body{
 
 .btn-primary {
 
-    background-image: url('principalb.png');
+    background-image: url('imagenes/containers_menup/principalb.png');
     font-size: 13px;
     font-weight: 600;
     border-radius: 0px 15px 15px 15px;
@@ -48,7 +47,7 @@ body{
 }
 .btn-secondary {
 
-    background-image: url('/home/ubuntu20/dpb/Proyecto Banco/principalc.png');
+    background-image: url('imagenes/containers_menup/principalc.png');
     font-size: 13px;
     font-weight: 600;
     border-radius: 0px 15px 15px 15px;
@@ -64,7 +63,7 @@ body{
 }
 .btn-third {
 
-    background-image: url('/home/ubuntu20/dpb/Proyecto Banco/principala.png');
+    background-image: url('imagenes/containers_menup/principalc.png');
     font-size: 13px;
     font-weight: 600;
     border-radius: 0px 15px 15px 15px;
@@ -79,153 +78,223 @@ body{
 
 }
 
-.container2 {
-    background-color: #FFFFFF; /* White background for navigation */
-    padding:8px; /* Adjust as needed for spacing */
-    
+/* .container2 {
+    background-color: #FFFFFF;
+    padding:8px;
     margin-right: 80px;
   margin-left: 80px;
 }
 
 .container2 ul {
-    list-style: none; /* Remove list bullets */
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: space-between; /* Space out items evenly */
+    display: flex; 
+    justify-content: space-between;
 }
 
 .container2 li {
-    margin-right: 10px; 
+   position:relative;
 }
-.container2 li:last-child {
-    margin-right: 0; /* Remove margin from the last item */
+.container2 li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+.container2 li:hover > a {
+    background-color: #f0f0f0;
+  }
+  .container2.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+.container2 li:hover .submenu {
+    display: block;
+}
+.container2 submenu li {
+    padding: 10px 20px;
+    margin: 0;
+} */
+.container2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.container2 li {
+    position: relative;
+    display: inline-block; /* Arrange items horizontally */
+    margin-right: 20px; /* Add space between items */
+   
 }
 
 .container2 a {
-    text-decoration: none; /* Remove underlines */
-    color: #000000; 
-}
-
-/* Banner styles */
-.banner {
-    background-color: #ffff00;
-    color: #fff;
-    padding: 80px 0;
-    text-align: center;
-}
-
-.banner-button {
-    background-color: #fff;
-    color: black;
-    padding: 15px 30px;
-    border-radius: 5px;
+    display: block;
+    padding: 10px;
+    color: #333;
     text-decoration: none;
-    font-weight: bold;
+}
+/* 
+.container2 .submenu {
+    position: absolute;
+    display: none; 
+    top: 100%;
+    left: 0;
+    width: 150px;
+    background-color: #fff;
+} */
+
+.container2 .submenu li {
+    display: block;
 }
 
-/* Features styles */
-.features {
+.container2 .submenu a {
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+  .container2 li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container2 li:hover ul.submenu {
+    display: block;
+  }
+/*banner*/
+.banner-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 350px; 
+  }
+  
+  .banner-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .banner-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .banner-prev, .banner-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .banner-prev {
+    
+    width: 30px;
+  height: 30px;
+  border: 0;
+  margin: -20px 0 0;
+  box-shadow: none !important;
+  display: block;
+  background-color: transparent;
+  background-image: url('imagenes/banners/bg_direction_nav.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  }
+  
+  .banner-next {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    margin:0 0 -20px;
+    box-shadow: none !important;
+    display: block;
+    background-color: transparent;
+    background-image: url('imagenes/banners/bg_direction_nav.png');
+    background-repeat: no-repeat;
+    margin-left: 98%;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+  }
+/*feature styles*/
+  .features {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 40px 0;
+    background-color: #dddbdb;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.feature {
-    width: calc(50% - 20px);
-    margin-bottom: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.card {
+    width: 175px;
+    height: 154.833px;
+    margin: 0 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
-.feature-icon {
-    font-size: 36px;
-    color: #007bff;
-    margin-bottom: 10px;
+.card img {
+    width: 175px;
+    height: 154.833px;
+    object-fit: cover;
+    transition: none;
 }
 
-.feature-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.card:hover img {
+    display: none;
 }
 
-.feature-description {
-    margin-bottom: 10px;
-}
-
-.feature-button {
-    background-color: #ffff00;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.feature-button:hover {
-    background-color: #ffff00;
-}
-
+.card:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 160px;
+    background-image: var(--image-hover);
+    background-size: cover;
+    background-position: center;
+  }
+/*banner image*/
+.banner-bdy img {
+    width: 100%;
+    height: auto;
+  }
 /* Services styles */
-.services {
-    padding: 40px 0;
-  }
-  
-  .service-row {
-    display: flex;
-    flex-wrap: nowrap; /* esto hace que todos los servicios estén en una sola fila */
-    justify-content: space-between;
-  }
-  
-  .service {
-    flex: 1; /* esto hace que cada servicio tome el ancho disponible */
-    margin: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .service h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .service p {
-    margin-bottom: 10px;
-  }
-  
-  .service a {
-    background-color: #ffff00;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .service a:hover {
-    background-color:#ffff00;
-  }
+
 /* Footer styles */
 footer {
     background-color: black;
+    font-family: sans-serif;;
     color: #fff;
-    padding: 40px 0;
-    text-align: center;
+    padding: 10px 0;
+    text-align: left;
 }
 
 .footer-section {
     display: inline-block;
     background-color: black;
     margin: 0 20px;
+
 }
 
 .footer-section h3 {
@@ -255,26 +324,24 @@ footer {
 }
 
 .social-media {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    flex-wrap: wrap;  
     justify-content: center;
-    margin-bottom: 10px;
-}
-
-.social-media li {
-    margin: 0 5px;
-}
-
-.social-media a {
-    color: #fff;
-    font-size: 24px;
-}
-
+    align-items: center;
+  }
+  .social-media li {
+    margin: 10px; /* separa los iconos con un margen de 20px */
+  }
+  .social-media li img {
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%; /* opcional, para darles un borde redondeado */
+  
+  }
 .copyright {
+    text-align: center;
     font-size: 14px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 
