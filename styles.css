@@ -1,142 +1,10 @@
-/*  body{
+  body{
     background-color: white;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.container {
-    display: flex;
-    background-color: yellow;
-    justify-content: space-between;
-    align-items: center;
-    color: #ffff00;
-    padding: 13px;
-}
-
-.logo img {
-   
-    width: 350px;
-    margin-left: 70px;
-}
-.buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 10px;
-    text-align: right;
-    gap: 5px;
-  }
-
-.btn-primary {
-
-    background-image: url('imagenes/containers_menup/principalb.png');
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 0px 15px 15px 15px;
-    color: #fff;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #616161;
-    letter-spacing: 0.2px;
-    text-transform: none;
-    padding: 15px 15px 15px 35px !important;
-
-}
-.btn-secondary {
-
-    background-image: url('imagenes/containers_menup/principalc.png');
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 0px 15px 15px 15px;
-    color: #fff;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #616161;
-    letter-spacing: 0.2px;
-    text-transform: none;
-    padding: 15px 15px 15px 35px !important;
-
-}
-.btn-third {
-
-    background-image: url('imagenes/containers_menup/principalc.png');
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 0px 15px 15px 15px;
-    color: #fff;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #616161;
-    letter-spacing: 0.2px;
-    text-transform: none;
-    padding: 15px 15px 15px 35px !important;
-
-}
-
-
-.container2 ul {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  text-align: center ;
-}
-.container2 li {
-    position: relative;
-    display: inline-block; 
-    margin-right: 20px; 
-    text-align:left;
-}
-
-.container2 a {
-    display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-}
-.container2 .submenu li {
-    display: block;
-}
-
-.container2 .submenu a {
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-}
-
-  .container2 li ul.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 250px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    text-align: left;
-  }
-  
-  .container2 li:hover ul.submenu {
-    display: block;
-  }
-  .submenu-nivel-2 {
-    display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 250px; 
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  text-align: left; 
-  }
-  .submenu li:hover > .submenu-nivel-2 {
-    display: block;
-  } */
 /*banner*/
 .banner-carousel {
     position: relative;
@@ -242,72 +110,98 @@
     width: 100%;
     height: auto;
   }
-/* Services styles */
-
-/* Footer styles 
-footer {
-    background-color: black;
-    font-family: sans-serif;;
-    color: #fff;
-    padding: 10px 0;
-    text-align: left;
-}
-
-.footer-section {
-    display: inline-block;
-    background-color: black;
-    margin: 0 20px;
-
-}
-
-.footer-section h3 {
-    color:yellow;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-section li {
-    margin-bottom: 5px;
-}
-
-.footer-section a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-section a:hover {
-    text-decoration: underline;
-}
-
-.social-media {
-    display: flex;
-    flex-wrap: wrap;  
-    justify-content: center;
-    align-items: center;
+/*para_tunegocio text container*/
+.text-container {
+  text-align: center;
+  padding: 20px;
   }
-  .social-media li {
-    margin: 10px; 
+  .bodytxt {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
   }
-  .social-media li img {
-    width: 30px; 
-    height: 30px;
-    border-radius: 50%; 
+  .bodytxt h4 {
+  font-weight:normal ;
+  margin-bottom: 10px;
+  }
+  hr {
+    width: 40%;
+    margin: 20px auto;
+    border: 1px solid yellow;
   
   }
-.copyright {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 30px;
-}
-*/
+  /*hover botones-black-yellows*/
+    /* Estilos para los botones y listas */
+    /* .botones-black-yellows{
+      padding-bottom: 900px;
+    } */
+    .buttonblack-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding:40px;
+    }
+    .buttonblack {
+      background-color: black; 
+      color:white;  
+      padding: 15px 30px;
+      border-radius: 6px;
+      margin: 10px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 16px;
+      transition: background-color 0.3s; 
+    }
+    .buttonblack:hover {
+      background-color:rgb(215, 59, 85); 
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
+    .buttonyell {
+      background-color: white; 
+      color: #000000; /* Negro */
+      padding: 15px 30px;
+      border:0.5px solid yellow;
+      border-radius: 6px;
+      margin: 10px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s; /* Transición de color */
+    }
 
+    .buttonyell:hover {
+      background-color: #ffff00; 
+    }
 
+    .content-button {
+      display: none; 
+      text-align: center;
+      margin-top: 20px;
+      padding-bottom: 225px;
+    }
 
+    .content-button.active {
+      display: block; /* Muestra el contenido cuando está activo */
+      color:black;
+    }
+    .checkbox-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+   .checkbox {
+      margin-bottom: 10px;
+    }
+
+   .checkbox label {
+      margin-left: 10px;
+    }
