@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>-Para tu Negocio</title>
+</head>
+<body>
+    <div id="menu-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+    </script>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/banners/banner-NEGOCIO-05-1536x334.jpg" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="card" data-image="imagenes/news/BOTONES-negocios-19.png" data-image-hover="imagenes/news/BOTONES-negocios-20.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-negocios-20.png);">
+            <img src="imagenes/news/BOTONES-negocios-19.png"alt="Imagen 7">
+            <a href="#" class="enlace"></a>
+        </div>
+          <div class="card" data-image="imagenes/news/BOTONES-negocios-21.png" data-image-hover="imagenes/news/BOTONES-negocios-22.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-negocios-22.png);">
+            <img src="imagenes/news/BOTONES-negocios-21.png"alt="Imagen 8">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/BOTONES-negocios-23.png" data-image-hover="imagenes/news/BOTONES-negocios-24.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-negocios-24.png);">
+            <img src="imagenes/news/BOTONES-negocios-23.png" alt="Imagen 9">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/BOTONES-negocios-25.png" data-image-hover="imagenes/news/BOTONES-negocios-26.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-negocios-26.png);">
+            <img src="imagenes/news/BOTONES-negocios-25.png" alt="Imagen 10">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/BOTONES-negocios-27.png" data-image-hover="imagenes/news/BOTONES-negocios-28.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-negocios-28.png);">
+            <img src="imagenes/news/BOTONES-negocios-27.png" alt="Imagen 11">
+            <a href="#" class="enlace"></a>
+          </div>
+    </section>
+    <section class="text-container">
+        <div class="bodytxt">
+            <h4>
+                En QAPAQ te asesoramos y apoyamos en para sacar a flote tu actividad comercial, brindándote facilidades y <br>
+                destinando tu crédito a financiar lo que tu negocio necesita:<br>
+                <br>
+                Mercadería para abastecer tu negocio.<br>
+                Maquinaria nueva para facilitar tu trabajo.<br>
+                Material de construcción para ampliar tu local o tu vivienda.<br>
+                Insumos o maquinaria para tu actividad agrícola.<br>
+                <br>
+                Y tú ¿qué necesitas financiar en pro de tu negocio?<br>
+                </h4>
+        </div>
+    </section>
+    <style>
+        .text-container {
+        text-align: center;
+        padding: 20px;
+        }
+        .bodytxt {
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+        }
+        .bodytxt h4 {
+        font-weight:normal ;
+        margin-bottom: 10px;
+        }
+    </style>
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        });
+    </script>
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+</body>
+</html>
+
+
+

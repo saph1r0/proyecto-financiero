@@ -1,4 +1,4 @@
- body{
+/*  body{
     background-color: white;
     font-family: sans-serif;
     margin: 0;
@@ -78,49 +78,7 @@
 
 }
 
-/* .container2 {
-    background-color: #FFFFFF;
-    padding:8px;
-    margin-right: 80px;
-  margin-left: 80px;
-}
 
-.container2 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex; 
-    justify-content: space-between;
-}
-
-.container2 li {
-   position:relative;
-}
-.container2 li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-}
-.container2 li:hover > a {
-    background-color: #f0f0f0;
-  }
-  .container2.submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-.container2 li:hover .submenu {
-    display: block;
-}
-.container2 submenu li {
-    padding: 10px 20px;
-    margin: 0;
-} */
 .container2 ul {
   list-style: none !important;
   padding: 0 !important;
@@ -129,8 +87,8 @@
 }
 .container2 li {
     position: relative;
-    display: inline-block; /* Arrange items horizontally */
-    margin-right: 20px; /* Add space between items */
+    display: inline-block; 
+    margin-right: 20px; 
     text-align:left;
 }
 
@@ -174,11 +132,11 @@
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  text-align: left; /* Alinea el texto a la izquierda */
+  text-align: left; 
   }
   .submenu li:hover > .submenu-nivel-2 {
     display: block;
-  }
+  } */
 /*banner*/
 .banner-carousel {
     position: relative;
@@ -286,7 +244,7 @@
   }
 /* Services styles */
 
-/* Footer styles */
+/* Footer styles 
 footer {
     background-color: black;
     font-family: sans-serif;;
@@ -335,12 +293,12 @@ footer {
     align-items: center;
   }
   .social-media li {
-    margin: 10px; /* separa los iconos con un margen de 20px */
+    margin: 10px; 
   }
   .social-media li img {
     width: 30px; 
     height: 30px;
-    border-radius: 50%; /* opcional, para darles un borde redondeado */
+    border-radius: 50%; 
   
   }
 .copyright {
@@ -348,7 +306,7 @@ footer {
     font-size: 14px;
     margin-top: 30px;
 }
-
+*/
 
 
 
