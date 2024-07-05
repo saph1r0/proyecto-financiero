@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HIpotecario
+    </title>
+</head>
+<body>
+    <div id="menu-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+    </script>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/banners/cpln-1-1536x334.jpg" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+    <section class="text-container">
+        <div class="bodytxt">
+            <h2>
+                PARA LA CASA DE TUS SUEÑOS
+            </h2>
+            <hr>
+            <h4>Financiamos la compra de viviendas terminadas, en construcción y en planos.
+                <br>
+            </h4>
+        </div>
+    </section>
+    <section class="botones-black-yellows">
+      <div class="buttonblack-container">
+        <a href="https://www.qapaq.pe/wp-content/uploads/2022/11/Manual-de-Codigo-de-Etica-y-Conducta-Profesional.pdf">
+          <button class="buttonblack" id="botonnegro">SOLICITALO AQUI</button>
+        </a>
+      </div>
+      <div class="button-container">
+          <button class="buttonyell" id="btnRequisitos">Características <br> Y REQUISITOS</button>
+          <button class="buttonyell" id="btnDocumentos">Todos los <br>DOCUMENTOS</button>
+          <button class="buttonyell" id="btnSimula">Simula tu <br>CRÉDITO</button>
+          <button class="buttonyell" id="btnPreguntas">Preguntas<br>FRECUENTES</button>
+        </div>
+      
+        <div class="content-button" id="content-btnRequisitos">
+          <div class="bodytxt">
+              <br>
+              <h3>BENEFICIOS</h3>
+              <hr>
+              <h4 style="padding-left: 25%; text-align:left";>               
+                *     Plazo hasta por 30 años.<br>
+                *     Financiamos hasta un 90% de tu vivienda.<br>
+                *     Créditos desde S/ 20,000 hasta S/ 900,000.<br>
+                *     Cuotas simples y dobles (*).<br>
+                *     Las cuotas dobles solo son aplicables en caso de ser trabajador con ingresos<br> de 5ta categoría.
+            
+            
+              </h4>
+              <br>
+              <h3>REQUISITOS</h3>
+              <hr>
+              <h4 style="padding-left: 25%; text-align:left";>
+                *     Documentos que acrediten ingresos mensuales: boletas de pago, recibos por <br>honorarios u otros.<br>
+                *     Copia de DNI vigente por ambos lados.<br>
+                *     Ingreso neto mínimo de S/ 1,500.00 (sujeto a evaluación).<br>
+                *     No reportar atrasos en pagos de deudas en el sistema financiero(tanto para <br>el titular como cónyu-ge, de ser el caso).<br>
+                *     El inmueble a comprar debe encontrarse en Lima o Callao.<br>
+              </h4> 
+          </div>
+        </div>
+        <div class="content-button" id="content-btnDocumentos">
+          <br>
+          <h4>DOCUMENTOS DE TU PRESTAMO</h4>
+          <hr>
+          <br>
+          <div class="container-viñetas">
+          <ul>
+              <li><a href="https://www.qapaq.pe/wp-content/uploads/2024/05/Tarifario-Microempresa-Mayo-2024.pdf">Tarifario de Crédit</a></li>
+              <li><a href="https://www.qapaq.pe/wp-content/uploads/2022/09/Contrato-de-credito-Res.-1771-2021-Junio-2021.pdf">Contrato del Crédito</a></li>
+              <li><a href="https://www.qapaq.pe/wp-content/uploads/2022/11/HRI-Pontetubono-Nov-2022.pdf">Hoja Resumen Informativa</a></li>
+              <li><a href="https://www.qapaq.pe/wp-content/uploads/2023/10/Tarifario-de-comisiones-transversales-Octubre-2023.pdf">Tarifario de Comisiones Transversales</a></li>
+              <li><a href="https://www.qapaq.pe/wp-content/uploads/2023/06/Informacion-Beneficios-riesgos-y-condiciones-Activos-Junio-2023.pdf"> Información General P. Activos</a></li>
+              <li><a href="https://www.qapaq.pe/wp-content/uploads/2023/11/Productos-Activos-Formulas-y-Ejemplos-Octubre-2023-1.pdf"> Fórmulas y Ejemplos</a></li>
+              <li><a href="https://www.qapaq.pe/wp-content/uploads/2022/11/Contratacion-de-seguros-Endoso-de-poliza-1.pdf">Contratación del Seguro</a></li>
+          </ul>
+          </div>
+        </div>
+      
+        <div class="content-button" id="content-btnSimula">
+          <br>
+          <h4>SIMULADOR DE CRÉDITOS</h4>
+              <hr>
+              <section class="botones-black-yellows">
+                  <div class="buttonblack-container">
+                    <a href="https://alianzas.qapaq.pe/Web_Simulador/WebForm1.aspx">
+                      <button class="buttonblack" id="botonnegro">PRESIONA AQUI PARA VER EL SIMULADOR</button></div></section>
+                    </a>
+                  </div>
+              </section>
+        <div class="content-button" id="content-btnPreguntas">
+          <br>
+          <h4>PREGUNTAS FRECUENTES</h4>
+          <hr>
+          <div class="button-flechas">
+            <div class="buttonf">
+              <input type="button" id="chkPregunta1" onclick="mostrarRespuesta('respuesta1')">
+              <label for="chkPregunta1">¿Cuáles son los montos mínimos para solicitar el préstamo?</label>
+              <p class="respuesta" id="respuesta1" >Se puede acceder a prestamos desde 1,000 soles.</p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta2" onclick="mostrarRespuesta('respuesta2')">
+              <label for="chkPregunta2">¿En qué lugares puedo pagar la cuota de mi préstamo?</label>
+              <p class="respuesta" id="respuesta2" >Puedes pagar tus cuotas en efectivo en cualquiera de nuestras agencias QAPAQ a nivel nacional, a través del BCP o de nuestros agentes afiliados Western Union y Kasnet.</p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta3" onclick="mostrarRespuesta('respuesta3')">
+              <label for="chkPregunta3">¿Cuál es la Tasa de Interés que cobran?</label>
+              <p class="respuesta" id="respuesta3" >La Tasa de Interés depende de su experiencia crediticia, adecuado historial de comportamiento de pago y si ya es cliente de Financiera Qapaq.</p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta4" onclick="mostrarRespuesta('respuesta4')">
+              <label for="chkPregunta4">¿En qué momento se me entrega mi cronograma de pagos?</label>
+              <p class="respuesta" id="respuesta4" >El cronograma de pagos se entrega al momento de efectuarse el desembolso del Crédito.</p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta5" onclick="mostrarRespuesta('respuesta5')">
+              <label for="chkPregunta5">¿Puedo escoger una fecha específica del mes para pagar las cuotas de mi préstamo?</label>
+              <p class="respuesta" id="respuesta5" >Sí. Puedes escoger la fecha que mejor se adecue a tus necesidades. Deberás solicitarla antes del desembolso del crédito.</p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta6" onclick="mostrarRespuesta('respuesta6')">
+              <label for="chkPregunta6">¿Si se cancela el préstamo por adelantado, se descuentan los intereses?</label>
+              <p class="respuesta" id="respuesta6" >Sí, en la liquidación se cobra el valor de la cuota exigible y el saldo capital del crédito, los intereses posteriores se descuentan.</p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta7" onclick="mostrarRespuesta('respuesta7')">
+              <label for="chkPregunta7">¿Puedo contratar un Seguro con una compañía que no sea la sugerida por QAPAQ?</label>
+              <p class="respuesta" id="respuesta7" >Sí, siempre que acrediten haber contratado un Seguro externo con cobertura igual o mayor a la sugerida. El cliente presentará un solicitud, a fin de verificar que ésta cumpla con las características mínimas requeridas por QAPAQ</p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta8" onclick="mostrarRespuesta('respuesta8')">
+              <label for="chkPregunta8">¿Cuánto demora mi proceso de aprobación de Crédito?</label>
+              <p class="respuesta" id="respuesta8" >El tiempo de evaluación dependerá de tener los requisitos completos que le solicitará su Asesor y que se haya realizado la evaluación de su negocio.</p>
+            </div>
+          </div>
+        </div>
+  </section>
+  <div id="footer-container"></div>
+  <script>
+  /* footer */
+      document.addEventListener("DOMContentLoaded", function() {
+          document.getElementById('content-btnRequisitos').classList.add('active');
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-container').innerHTML = data;
+              });
+      });
+  </script>
+  <script>
+    /* buttonyellows */
+      const buttons = document.querySelectorAll('.buttonyell');
+      const contentButtons = document.querySelectorAll('.content-button');
+      buttons.forEach(button => {
+      button.addEventListener('click', () => {
+      contentButtons.forEach(contentButton => contentButton.classList.remove('active'));
+      const buttonId = button.id;
+      const contentButtonId = `content-btn${buttonId.replace('btn', '')}`;
+      document.getElementById(contentButtonId).classList.add('active');
+          });
+      });
+  </script>
+  <script>
+    /*flechitas checkboxes*/
+    function mostrarRespuesta(idRespuesta) {
+      var respuesta = document.getElementById(idRespuesta);
+      if (respuesta.style.display === "none" || respuesta.style.display === "") {
+        respuesta.style.display = "block";
+      } else {
+        respuesta.style.display = "none";
+      }
+    }
+  </script>
+  <script src="menu.html"></script>
+  <script src="footer.html"></script>
+</body>
+</html>
+
