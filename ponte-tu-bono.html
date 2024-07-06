@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>-Ponte Tu Bono</title>
+</head>
+<body>
+    <div id="menu-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+    </script>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/banners/banner-NEGOCIO-05-1536x334.jpg" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+    <section class="text-container">
+        <div class="bodytxt">
+            <h2>PONTE TU BONO</h2>
+            <hr>
+            <h4>
+                Si eres cliente nuevo accede a este beneficio, pagando tu cuota puntualmente todos los meses y logrando obtener<br>
+                un descuento anual sobre tu TEA.<br>
+            </h4>
+        </div>
+    </section>
+    <section class="botones-black-yellows">
+        <div class="buttonblack-container">
+            <button class="buttonblack" id="botonnegro">SOLICITALO AQUI</button>
+        </div>
+        <div class="button-container">
+            <button class="buttonyell" id="btnRequisitos">Características y Requisitos</button>
+            <button class="buttonyell" id="btnDocumentos">Todos los Documentos</button>
+            <button class="buttonyell" id="btnSimula">Simula tu Crédito</button>
+            <button class="buttonyell" id="btnPreguntas">Preguntas Frecuentes</button>
+          </div>
+        
+          <div class="content-button" id="content-btnRequisitos">
+            <div class="bodytxt">
+                <br>
+                <h3>BENEFICIOS</h3>
+                <hr>
+                <h4>
+                    * Descuento de hasta 3.00% anual sobre tu TEA, efectuando el pago de todas sus cuotas mensuales <br>
+                    establecidas en su cronograma de pagos.
+                </h4>
+                <br>
+                <h3>CONDICIONES</h3>
+                <hr>
+                <h4>
+                    * Si la cuota es pagada al día siguiente o en los días sucesivos al vencimiento deberá cancelar el 100% <br>
+                    de la cuota que corresponda.<br>
+                    * Perderá el beneficio en caso de realizar adelanto de cuotas, pago anticipado parcial o cancelación del crédito.<br>
+
+                </h4>
+                <br>
+                <h3>REQUISITOS</h3>
+                <hr>
+                <h4>
+                    * No tener ni haber tenido créditos en la Financiera.
+                </h4> 
+            </div>
+          </div>
+        
+          <div class="content-button" id="content-btnDocumentos">
+            <br>
+            <ul>
+                <li><a href="https://www.qapaq.pe/wp-content/uploads/2024/05/Tarifario-Microempresa-Mayo-2024.pdf">Tarifario de Crédit</a></li>
+                <li><a href="https://www.qapaq.pe/wp-content/uploads/2022/09/Contrato-de-credito-Res.-1771-2021-Junio-2021.pdf">Contrato del Crédito</a></li>
+                <li><a href="https://www.qapaq.pe/wp-content/uploads/2022/11/HRI-Pontetubono-Nov-2022.pdf">Hoja Resumen Informativa</a></li>
+                <li><a href="https://www.qapaq.pe/wp-content/uploads/2023/10/Tarifario-de-comisiones-transversales-Octubre-2023.pdf">Tarifario de Comisiones Transversales</a></li>
+                <li><a href="https://www.qapaq.pe/wp-content/uploads/2023/06/Informacion-Beneficios-riesgos-y-condiciones-Activos-Junio-2023.pdf"> Información General P. Activos</a></li>
+                <li><a href="https://www.qapaq.pe/wp-content/uploads/2023/11/Productos-Activos-Formulas-y-Ejemplos-Octubre-2023-1.pdf"> Fórmulas y Ejemplos</a></li>
+                <li><a href="https://www.qapaq.pe/wp-content/uploads/2022/11/Contratacion-de-seguros-Endoso-de-poliza-1.pdf">Contratación del Seguro</a></li>
+            </ul>
+          </div>
+        
+          <div class="content-button" id="content-btnSimula">
+            <hr>
+            <h3>SIMULADOR DE CRÉDITOS</h3>
+                <hr>
+                <br>
+                <section class="botones-black-yellows">
+                    <div class="buttonblack-container">
+                        <button class="buttonblack" id="botonnegro">Presiona aqui para ver el simulador</button></div></section>
+        
+          </div>
+        
+          <div class="content-button" id="content-btnPreguntas">
+            <hr>
+            <h3>PREGUNTAS FRECUENTES</h3>
+            <hr>
+            <div class="checkbox-container">
+              <div class="checkbox">
+                <input type="checkbox" id="chkPregunta1">
+                <label for="chkPregunta1">¿Cuál es el plazo de devolución del préstamo?</label>
+                <p class="respuesta" id="respuesta1"style="display: none;">El plazo de devolución del préstamo es de 12 meses.</p>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="chkPregunta2">
+                <label for="chkPregunta2">¿Cuál es el interés anual del préstamo?</label>
+                <p class="respuesta" id="respuesta2"style="display: none;">El interés anual del préstamo es del 12%.</p>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="chkPregunta3">
+                <label for="chkPregunta3">¿Qué documentos necesito para solicitar el préstamo?</label>
+                <p class="respuesta" id="respuesta3"style="display: none;">Necesitarás presentar tu documento de identidad, comprobante de ingresos y contrato de trabajo.</p>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="chkPregunta4">
+                <label for="chkPregunta4">¿Cuál es el plazo de devolución del préstamo?</label>
+                <p class="respuesta" id="respuesta4"style="display: none;">El plazo de devolución del préstamo es de 12 meses.</p>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="chkPregunta5">
+                <label for="chkPregunta5">¿Cuál es el interés anual del préstamo?</label>
+                <p class="respuesta" id="respuesta5"style="display: none;">El interés anual del préstamo es del 12%.</p>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="chkPregunta6">
+                <label for="chkPregunta6">¿Qué documentos necesito para solicitar el préstamo?</label>
+                <p class="respuesta" id="respuesta6"style="display: none;">Necesitarás presentar tu documento de identidad, comprobante de ingresos y contrato de trabajo.</p>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="chkPregunta7">
+                <label for="chkPregunta7">¿Cuál es el plazo de devolución del préstamo?</label>
+                <p class="respuesta" id="respuesta7"style="display: none;">El plazo de devolución del préstamo es de 12 meses.</p>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="chkPregunta8">
+                <label for="chkPregunta8">¿Cuál es el interés anual del préstamo?</label>
+                <p class="respuesta" id="respuesta8" style="display: none;">El interés anual del préstamo es del 12%.</p>
+              </div>
+            </div>
+          </div>
+    </section>
+    <div id="footer-container"></div>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('content-btnRequisitos').classList.add('active');
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        });
+    </script>
+      <script>
+            const buttons = document.querySelectorAll('.buttonyell');
+            const contentButtons = document.querySelectorAll('.content-button');
+            buttons.forEach(button => {
+            button.addEventListener('click', () => {
+            contentButtons.forEach(contentButton => contentButton.classList.remove('active'));
+            const buttonId = button.id;
+            const contentButtonId = `content-btn${buttonId.replace('btn', '')}`;
+            document.getElementById(contentButtonId).classList.add('active');
+            });
+        });
+      </script>
+      <script>
+        const checkboxes = document.querySelectorAll('.checkbox input[type="checkbox"]');
+        const respuestas = document.querySelectorAll('.respuesta');
+        checkboxes.forEach((checkbox, index) => {
+          checkbox.addEventListener('click', () => {
+            if (checkbox.checked) {
+              respuestas[index].style.display = 'block';
+            } else {
+              respuestas[index].style.display = 'none';
+            }
+          });
+        });
+      </script>
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+</body>
+</html>
+

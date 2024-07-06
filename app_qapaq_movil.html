@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>-Para tu Negocio</title>
+    <style>
+        *{
+            text-align: center;
+            align-items: center;
+        }
+  .boton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .contenido {
+    display: none;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+    </style>
+</head>
+<body>
+    <div id="menu-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+    </script>
+
+    <section class="banner-body">
+        <div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                    <img src="imagenes/banners/banner-mobil-2048x445.png" alt="ima"> 
+            </div>
+        </div>
+    </section>
+
+    <h3>APP QAPAQ MÓVIL</h3>
+            <hr><style>
+                hr {
+                    width: 20%;
+                    margin: 20px auto;
+                    border: 1px solid yellow;
+                }
+            </style>
+    
+    <script>
+        function mostrarContenido(idContenido) {
+            var contenido = document.getElementById(idContenido);
+            if (contenido.style.display === "none") {
+                contenido.style.display = "block";
+            } else {
+                contenido.style.display = "none";
+            }
+        }
+    </script>
+
+    <button class="boton" onclick="mostrarContenido('contenido1')">¿Que debo hacer para usar los canales digitales de Financiera Qapaq?</button>
+        <div id="contenido1" class="contenido">
+            <p>Debes tener actualizados tus datos de contacto (celular y correo electrónico) y afiliarte a los servicios digitales:</p>
+            <li>Si tu información de contacto está actualizada te podrás afiliar sin mayores inconvenientes.</li>
+            <li>Si tu información de contacto no está actualizada, deberás acercarte a la Agencia más próxima y solicitar<br> 
+                la actualización.
+            </li>
+        </div>
+    <br>
+    <button class="boton" onclick="mostrarContenido('contenido2')">¿Que hacer en la agencia?</button>
+        <div id="contenido2" class="contenido">
+            <li>Acércate a ventanilla o plataforma.</li>
+            <li>Pide la actualización, registra tus datos de contacto y valídalos.</li>
+            <li>Firma los formatos correspondientes.</li>
+            <li>¡Listo! Ya podrás afiliarte a Qapaq por Internet.</li>
+        </div>
+    <br>
+    <button class="boton" onclick="mostrarContenido('contenido3')">¿Como ubico la agencia más cercana?</button>
+        <div id="contenido3" class="contenido">
+            <p>Para ubicar la agencia más cercana a ti, haz click aquí.</p>
+        </div>
+    <br>
+    <button class="boton" onclick="mostrarContenido('contenido4')">Clave dinamica</button>
+        <div id="contenido4" class="contenido">
+            <li>La Clave Dinámica es un código de 6 dígitos que  sirve para hacer operaciones de manera segura en Qapaq<br> 
+                por Internet o en el App Qapaq Móvil.
+            </li>
+            <li>La Clave Dinámica te llegará por SMS al celular afiliado o por correo electrónico.</li>
+            <li>Si vas a hacer pagos o transferencias a terceros es necesario que uses la Clave Dinámica, para realizar<br> 
+                operaciones entre tus cuentas o consultas.
+            </li>
+        </div>
+    <br>
+    <button class="boton" onclick="mostrarContenido('contenido5')">¿Como ingresar por primera vez al App Qapaq Movil?</button>
+        <div id="contenido5" class="contenido">
+            Contenido del botón 2
+        </div>
+    <br>
+    <button class="boton" onclick="mostrarContenido('contenido6')">¿Como bloquear mi acceso a los canales digitales en caso de perdida o robo de mi dispositivo?</button>
+        <div id="contenido6" class="contenido">
+            Para bloquear tus accesos, ingresa desde algún dispositivo disponible al siguiente link y completa el formulario:<br>
+            https://bancaenlinea.qapaq.com.pe/Account/BloqueoUsuario<br>
+            <br>
+            Al completar esta acción, se bloquearán todos tus accesos, y para que los puedas restituir deberás dirigirte a<br>
+            una agencia de la red QAPAQ portando tu DNI.<br>
+
+
+        </div>
+
+    <p>¡Listo! Ya puedes hacer consultas y operaciones usando los Canales Digitales de Financiera QAPAQ.</p>
+
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        });
+    </script>
+
+
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+    <script src="pag_main.js"></script>
+</body>
+</html>
