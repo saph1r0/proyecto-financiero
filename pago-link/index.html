@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>-Consumo</title>
+</head>
+<body>
+    <div id="menu-container">
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+        </script>
+    </div>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/banner-pagolink1-1536x334.png" alt="banner-image"> 
+            </div>
+        </div>
+    </section>
+    <section class="text-container">
+        <div class="bodytxt">
+            <h2>PAGO LINK</h2>
+            <hr>
+            <h4>
+                Hemos puesto a tu disposición el nuevo servicio Pago Link; una plataforma provista por Niubiz (antes<br>
+                Visanet) que permite generar links para pago de cuotas de tus créditos.
+                <br>
+            </h4>
+        </div>
+    </section>
+    <section class="botones-black-yellows">
+          <div class="button-flechas">
+            <div class="buttonf">
+              <input type="button" id="chkPregunta1" onclick="mostrarRespuesta('respuesta1')">
+              <label for="chkPregunta1">¿Cómo funciona el Pago Link?</label>
+              <p class="respuesta" id="respuesta1" >
+                  Las coordinaciones para el Pago Link son directamente con tu Asesor de Negocios o Personal de Cobranzas.<br>
+                  Cargo con tarjeta de débito afiliada a cualquier cuenta que el cliente mantenga en el sistema financiero<br>
+                  (con fondos suficientes para el pago).<br>
+                  No es necesario acercarse a una Agencia, el trámite se realiza en línea.<br>
+                  El pago se procesa y se podrá visualizar en el sistema a las 48 horas de efectuado.<br>
+              </p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta2" onclick="mostrarRespuesta('respuesta2')">
+              <label for="chkPregunta2">¿Cómo acceder?</label>
+              <div class="respuesta" id="respuesta2">
+              <p>
+                  Coordina con tu funcionario de Financiera Qapaq, la generación del Pago Link.<br>
+                  Tu funcionario te remitirá previa coordinación, el link de pago a través de: Correo electrónico, Whatsapp<br>
+                  o Redes Sociales. (Según tu elección)<br>
+                  Recibes el Pago Link y al ingresar debes completar tus datos personales.<br>
+              </p>
+                  <div>        	
+                	<img src="imagenes/pp.png" alt="banner-image"> 
+                  </div>
+              <p>
+                  En la siguiente pantalla deberás ingresar los datos de tu tarjeta de débito (recuerda que sólo podrás<br>
+                  colocar cuentas que mantengan fondos disponibles para concretar el pago).<br>
+              </p>
+              <div>        	
+                	<img src="imagenes/ph.png" alt="banner-image"> 
+              </div>
+              <p>
+                  Efectúas el pago y recibes automáticamente una confirmación y tu constancia.<br>
+              </p>
+              <div>        	
+                	<img src="imagenes/oe.png" alt="banner-image"> 
+              </div>
+              <div>        	
+                	<img src="imagenes/cp.png" alt="banner-image"> 
+              </div>
+              <p>
+                  Tu pago se reflejará en nuestros sistemas, como máximo 48 horas después de efectuado.<br>
+              </p>
+              <p>
+                  ¡Listo! Ya puedes pagar desde donde estés las cuotas de tus créditos.<br>
+              </p>
+              </div>
+            </div>
+          </div>
+        
+    </section>
+    <div id="footer-container">
+          <script>
+            /* footer */
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.getElementById('content-btnRequisitos').classList.add('active');
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('footer-container').innerHTML = data;
+                        });
+                });
+            </script>
+    </div>
+
+  <script>
+    /* buttonyellows */
+      const buttons = document.querySelectorAll('.buttonyell');
+      const contentButtons = document.querySelectorAll('.content-button');
+      buttons.forEach(button => {
+      button.addEventListener('click', () => {
+      contentButtons.forEach(contentButton => contentButton.classList.remove('active'));
+      const buttonId = button.id;
+      const contentButtonId = `content-btn${buttonId.replace('btn', '')}`;
+      document.getElementById(contentButtonId).classList.add('active');
+          });
+      });
+  </script>
+  <script>
+    /*flechitas checkboxes*/
+    function mostrarRespuesta(idRespuesta) {
+      var respuesta = document.getElementById(idRespuesta);
+      if (respuesta.style.display === "none" || respuesta.style.display === "") {
+        respuesta.style.display = "block";
+      } else {
+        respuesta.style.display = "none";
+      }
+    }
+  </script>
+  <script src="menu.html"></script>
+  <script src="footer.html"></script>
+</body>
+</html>
+
