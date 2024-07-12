@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>-Consumo</title>
+</head>
+<body>
+    <div id="menu-container">
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+        </script>
+    </div>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/WEB-1-1536x464.jpg" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/WEB-2-1536x957.jpg" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/WEB-3-1536x737.jpg" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/WEB-4-1536x1025.jpg" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/WEB-5-1536x686.jpg" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/WEB-6-1536x785.jpg" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/WEB-7-1536x337.jpg" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+
+    <div id="footer-container">
+          <script>
+            /* footer */
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.getElementById('content-btnRequisitos').classList.add('active');
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('footer-container').innerHTML = data;
+                        });
+                });
+            </script>
+    </div>
+  <script src="menu.html"></script>
+  <script src="footer.html"></script>
+</body>
+</html>
+
