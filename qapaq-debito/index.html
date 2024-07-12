@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>-Consumo</title>
+</head>
+<body>
+    <div id="menu-container">
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+        </script>
+    </div>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/QAPAQ-DEBITO.png" alt="banner-image"> 
+        	</div>
+        </div>
+    </section>
+    <section class="text-container">
+        <div class="bodytxt">
+            <h2>TARJETA DE DÉBITO QAPAQ</h2>
+            <hr>
+            <h4>
+                Sin costos de mantenimiento, membresías, transacciones globales seguras con Visa, retiros intermoneda y<br>
+                control total digital para una experiencia financiera sin complicaciones.
+                <br>
+            </h4>
+        </div>
+    </section>
+    <section class="botones-black-yellows">
+        <div class="button-container">
+          <button class="buttonyell" id="btnRequisitos">Características <br> Y REQUISITOS</button>
+          <button class="buttonyell" id="btnDocumentos">Todos los <br>DOCUMENTOS</button>
+          <button class="buttonyell" id="btnPreguntas">Preguntas<br>FRECUENTES</button>
+        </div>
+        <div class="content-button" id="content-btnRequisitos">
+          <div class="bodytxt">
+              <br>
+              <h3>BENEFICIOS</h3>
+              <hr>
+              <h4 style="padding-left: 25%; text-align:left">               
+                *     Cero mantenimiento.<br>
+                *     Primera tarjeta sin costo, en caso de robo, pérdida o deterioro de la tarjeta la reposición estará sujeta a<br>
+                      una comisión detallada en nuestro tarifario vigente.<br>
+                *     Paga tus compras en POS afiliados a Visa Internacional en todo el mundo.<br>
+                *     Úsala para pagar servicios o hacer tus compras por internet.<br>
+                *     Retira desde cajeros de la RED Unicard y redes en todo el mundo afiliadas a PLUS o Visa (sujeto a cobro<br>
+                      de comisión según tarifario vigente).<br>
+                *     Tecnología CHIP – Contactless para comprar seguro, fácil y rápido.<br>
+                *     Tus compras y pagos se cargarán en línea en el saldo disponible de tu cuenta de ahorros principal.<br>
+                *     Retiros en cajero de la RED Unicard de cualquiera de tus cuentas afiliadas a la tarjeta de débito.<br>
+                *     Retiros intermoneda: Retira soles con cargo en tu cuenta en dólares y visceversa al tipo de cambio Qapaq<br>
+                      (preferencial).<br>
+                *     Puedes bloquear y/o desbloquear tu tarjeta y configurar su uso desde nuestros canales digitales (Qapaq<br>
+                      por internet o App Qapaq móvil).<br>
+                *     <br>
+              </h4>
+              <br>
+              <h3>REQUISITOS</h3>
+              <hr>
+              <h4 style="padding-left: 25%; text-align:left">
+                *      Pídela presentando tu DOI vigente en cualquiera de nuestras 40 agencias a nivel nacional.<br>
+                *      Abre o mantén una cuenta de ahorros presencial o digital en Financiera Qapaq (Ahorros soles, Ahorros<br>
+                       dólares, Cuenta Negocios asociada al crédito Olla de Oro, La Magnifiqa, Qapital+ o Insuperable).<br>
+                
+              </h4>
+              <br>
+              <h3>TARIFAS</h3>
+              <hr>
+              <h4 style="padding-left: 25%; text-align:left">
+                *     Primera tarjeta sin costo.<br>
+                *     Compras en POS y por internet sin costo.<br>
+                *     Reposición (según tarifario).<br>
+                *     Retiros en cajero (según tarifario).<br>
+                *     Compras internacionales con cambio de moneda (según tarifario).<br>
+
+              </h4> 
+          </div>
+        </div>
+        <div class="content-button" id="content-btnDocumentos">
+          <br>
+          <h4>DOCUMENTOS DE TU TARJETA</h4>
+          <hr>
+          <br>
+          <div class="container-viñetas">
+          <ul>
+              <li><a href="https://www.qapaq.pe/wp-content/uploads/2023/12/Tarifario-tarjeta-de-debito-Diciembre-2023.pdf">Tarifario de la Tarjeta de Débito</a></li>
+              <li><a href="https://www.qapaq.pe/wp-content/uploads/2023/11/Contrato-productos-pasivos-Resol.-1987-2021-Agosto-2021-1.pdf">Contrato de productos Pasivos</a></li>
+              <li><a href="https://www.qapaq.pe/wp-content/uploads/2023/12/Cartilla-Informativa-Tarjeta-de-debito.pdf">Cartilla Informativa</a></li>
+          </ul>
+          </div>
+        </div>
+        
+        <div class="content-button" id="content-btnPreguntas">
+          <br>
+          <h4>PREGUNTAS FRECUENTES</h4>
+          <hr>
+          <div class="button-flechas">
+            <div class="buttonf">
+              <input type="button" id="chkPregunta1" onclick="mostrarRespuesta('respuesta1')">
+              <label for="chkPregunta1">¿Cómo activar/empezar a usar mi Qapaq Débito?</label>
+              <p class="respuesta" id="respuesta1" >
+                  Solicita tu tarjeta de débito en cualquiera de nuestras 40 agencias a nivel nacional.<br>
+                  Dirígete a un cajero de la RED Unicard, inserta tu tarjeta y elije la opción “Cambio de clave”.<br>
+                  Coloca la clave temporal contenida dentro del sobre (debajo de la tarjeta).<br>
+                  Elije una clave personal de 4 dígitos y digítala.<br>
+                  Confirma tu clave personal digitándola nuevamente y listo.<br>
+              </p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta2" onclick="mostrarRespuesta('respuesta2')">
+              <label for="chkPregunta2">¿En qué canales puedo utilizar mi Qapaq Débito?</label>
+              <p class="respuesta" id="respuesta2" >
+                  Compras con tarjeta en POS afiliados a Visa a nivel internacional.<br>
+                  Compras y pagos por internet.<br>
+                  Retiros en cajeros automáticos de la RED Unicard, otras redes locales y otras redes a nivel internacional<br>
+                  afiliados a Visa Plus (comisiones por operaciones en cajero automático según tarifario vigente).<br>
+              </p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta3" onclick="mostrarRespuesta('respuesta3')">
+              <label for="chkPregunta3">¿Qué hacer en caso de pérdida o robo?</label>
+              <p class="respuesta" id="respuesta3" >
+                  Bloquea llamando en Lima a nuestro callcenter 01 712-3223, a la central de bloqueos de Unibanca 01 512-<br>
+                  2030, en Provincias al 0-800-4-2121, USA o Canadá al 001-800-396-9665 u Otros países al 1-303-967-1098<br>
+                  (Collect.), atención 24/7.<br>
+                  Puedes bloquear tu tarjeta también desde nuestros canales digitales (Qapaq por Internet o APP Qapaq<br>
+                  móvil) o presencialmente en nuestra red de agencias.<br>
+              </p>
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta4" onclick="mostrarRespuesta('respuesta4')">
+              <label for="chkPregunta4">¿Cómo solicitar una reposición de tarjeta?</label>
+              <p class="respuesta" id="respuesta4" >
+                  Para solicitar la reposición* de tu tarjeta de débito en caso de pérdida, robo o deterioro, deberás<br>
+                  acercarte a cualquiera de nuestras 40 agencias a nivel nacional con tu DOI vigente.<br>
+                  *Sujeta al pago de comisión según tarifario.<br>
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <div id="footer-container"></div>
+  <script>
+  /* footer */
+      document.addEventListener("DOMContentLoaded", function() {
+          document.getElementById('content-btnRequisitos').classList.add('active');
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-container').innerHTML = data;
+              });
+      });
+  </script>
+  <script>
+    /* buttonyellows */
+      const buttons = document.querySelectorAll('.buttonyell');
+      const contentButtons = document.querySelectorAll('.content-button');
+      buttons.forEach(button => {
+      button.addEventListener('click', () => {
+      contentButtons.forEach(contentButton => contentButton.classList.remove('active'));
+      const buttonId = button.id;
+      const contentButtonId = `content-btn${buttonId.replace('btn', '')}`;
+      document.getElementById(contentButtonId).classList.add('active');
+          });
+      });
+  </script>
+  <script>
+    /*flechitas checkboxes*/
+    function mostrarRespuesta(idRespuesta) {
+      var respuesta = document.getElementById(idRespuesta);
+      if (respuesta.style.display === "none" || respuesta.style.display === "") {
+        respuesta.style.display = "block";
+      } else {
+        respuesta.style.display = "none";
+      }
+    }
+  </script>
+  <script src="menu.html"></script>
+  <script src="footer.html"></script>
+</body>
+</html>
+
