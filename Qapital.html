@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>-Inicio-Qapaq</title>
+    <style>
+      .Ahorros_principal {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  align-items: center;
+  font-family: Trebuchet MS;
+  padding-inline-end: 10%;
+  padding-left: 10%;
+  padding-block-end: 10%;
+
+}
+
+.content {
+  display: block; 
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.imagenahorro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.imagenahorro img {
+  max-width: 100%;
+  height: auto;
+}
+
+.centro {
+  width: 100%; 
+}
+
+.centroh2 {
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  align-items: center;
+  
+}
+
+.buttons {
+  margin: 20px 0;
+  text-align: center; 
+  padding-left: 10%;
+}
+
+.buttons button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #000; 
+  background-color: #fff; 
+  border: 2px solid #ffcc00; 
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #ffcc00; 
+  color: #000; 
+}
+
+.centrar-cuadro-preguntas{
+  padding-left: 10%;
+}
+
+.custom-button {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #ff0000; 
+}
+
+
+
+.centroh3 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.centroul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #666;
+  
+}
+
+
+
+.faq-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 10px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.faq-question:hover {
+  color: #ffcc00;
+}
+
+.faq-icon {
+  margin-right: 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+  padding-left: 20px;
+  border-left: 2px solid #ffcc00;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+  <header>
+    <div id="menu-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+    </script>
+  </header>
+  <!-- SECCION AHORROS -->
+
+  <div class="imagenahorro">
+      <img src="Imagenes_Ahorro/mensaje_inicio.png" alt="Piggy bank">
+  </div>
+    <div class="Ahorros_principal">
+      <div class="content">
+          
+          <div class="centro">
+              <h2 class="centroh2">CUENTA QAPITAL PLUS</h2>
+              <center>
+                <p id="dynamicText">Con tu cuenta Qapital + obtendrás los beneficios, el respaldo y ¡el plus que tu capital necesita!</p>
+   
+            </center>
+              <div class="buttons">
+                <button onclick="changeText('requisitos')">Características y Requisitos</button>
+                <button onclick="changeText('documentos')">Todos los Documentos</button>
+                <button onclick="changeText('preguntas')">Preguntas Frecuentes</button>
+            </div>
+          </div>
+          
+            <div id="extraContent">
+        
+
+              <!-- Agregar contenido a los botones -->
+              <div id="requisitos" class="content-section">
+                  <!-- Boton requisitos datos -->
+
+                <p>Requisitos para abrir un depósito a plazo fijo:</p>
+                <h3 class="centroh3">BENEFICIOS</h3>
+                <ul class="centroul">
+                  <li>Sólo para Personas Naturales y en moneda nacional.</li>
+                  <li>Óptima tasa de interés.</li>
+                  <li>Sin costo de mantenimiento si conservas un saldo promedio mensual de S/ 1,500.00.</li>
+                  <li>Depósitos ilimitados.</li>
+                  <li>Hasta 4 retiros libres por ventanilla al mes.</li>
+                  <li>Producto disponible a nivel nacional.</li>
+                  <li>Los depósitos y saldos de las cuentas de ahorros de personas naturales se encuentran cubiertos por el Fondo de Seguro de Depósitos hasta el límite de su cobertura.</li>
+                  
+               </ul>
+               <h3 class="centroh3">REQUISITOS</h3>
+              <ul class="centroul">
+                  <li>Persona Natural.</li>
+                  <li>Copia de Documento de Identidad.</li>
+                  <li>Recibo de servicios del domicilio del titular.</li>
+                  <li>Monto mínimo de apertura S/4,000.00.</li>
+
+              </ul>
+              <h3 class="centroh3">RESPALDO</h3>
+              <p>Financiera QARQ cuenta con el sólido respaldo internacional del Banco Solidario, líderes en el sector Microfinanciero de Ecuador con un rating de calificación de AA+.</p>
+              <ul class="centroul">
+                <li>Capital social de 45.8 millones de soles.</li>
+              </ul>
+              <p><b>Clasificación a Dic 2021:</b></p>
+              <ul class="centroul">
+                  <li>Class & Asociados S.A.: C+</li>
+                  <li>Pacific Credit Rating: C+</li>
+              </ul>
+                    
+            </div>
+            <!-- Boton documentos  -->
+            <div id="documentos" class="content-section" style="display:none;">
+                
+                <h3 class="centroh3">DOCUMENTOS DE TU CUENTA</h3>
+                <ul>
+                  <li>Tarifario Cuenta Qapital Plus</li>
+                  <li>Contrato Pasivos</li>
+                  <li>Cartilla de Información Qapital+</li>
+                  <li>Tarifario de comisiones transversales</li>
+                  <li>Información General - P. Pasivos</li>
+                  <li>Fórmulas y Ejemplos</li>
+                  <li>Instructivo para cierre de cuenta ahorros</li>
+              </ul>
+            </div>
+             
+             <!-- Boton PREGUNTAS FRECUENTES  -->
+            <div id="preguntas" class="content-section" style="display:none;">
+              <div class="centrar-cuadro-preguntas">
+              <div class="faq-container">
+                <h2 class="faq-title">PREGUNTAS FRECUENTES</h2>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span class="faq-icon">▼</span>
+                        ¿Cuál es el monto mínimo para abrir una Cuenta de Qapital+?
+                    </div>
+                    <div class="faq-answer">
+                      <p>El monto mínimo para abrir la cuenta de ahorros Qapital+ es de S/4,000.00</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span class="faq-icon">▼</span>
+                        ¿La cuenta de ahorros Qapital+ tiene una comision por mantenimiento?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Solo te cobraremos la comisión por mantenimiento en caso mantengas un saldo promedio mensual menor a S/1,500.00 en tu cuenta. Puedes revisar los costos en el tarifario del producto.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span class="faq-icon">▼</span>
+                        ¿Como se calcula el saldo promedio para el cobro del mantenimiento de la cuenta Qapital+?
+                    </div>
+                    <div class="faq-answer">
+                      <p>El saldo promedio mensual se calcula sumando los saldos que tiene la cuenta al cierre de cada día y el importe resultante se divide entre la cantidad de días del mes. Si el promedio mensual resultara menor a S/1,500.00 se cobrará el costo del mantenimiento al cierre del mes correspondiente. Si fuera igual o mayor a S/1,500.00 no se cobrará dicho concepto.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span class="faq-icon">▼</span>
+                        ¿La Cuenta de Ahorros Qapital+ tiene algun cargo relacionado a Seguros?
+                    </div>
+                    <div class="faq-answer">
+                      <p>No tiene cargos asociados a Seguros..</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                  <div class="faq-question" onclick="toggleAnswer(this)">
+                      <span class="faq-icon">▼</span>
+                      ¿Que pasa si realizo mas de 4 retiros en un mes?
+                  </div>
+                  <div class="faq-answer">
+                    <p>Si excedes el número de retiros libres que tiene tu cuenta de ahorros Qapital+, a partir del 5to retiro se te cargará una comisión. Puedes revisar los costos en el tarifario del producto.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question" onclick="toggleAnswer(this)">
+                      <span class="faq-icon">▼</span>
+                      ¿Como se calculan y cuando pagan los intereses de la Cuenta de Ahorros Qapital+?
+                  </div>
+                  <div class="faq-answer">
+                    <p>Los intereses son calculados diariamente en base al saldo de la cuenta y se abonan el último día de cada mes.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question" onclick="toggleAnswer(this)">
+                      <span class="faq-icon">▼</span>
+                      ¿Si solicito que me envien mi Estado de Cuenta a mi correo electronico me cobran una comision?
+                  </div>
+                  <div class="faq-answer">
+                    <p>No. Sólo el envío físico del Estado de Cuenta se encuentra sujeto al cobro de comisión, según se menciona en el tarifario del producto. También puedes visualizar tus saldos y movimientos sin costo alguno a través de nuestros canales digitales.</p>
+                  </div>
+                </div>
+                
+                
+              </div>
+             
+            </div>
+            </div>
+         
+            
+          </div>
+      </div>
+  </div>
+  <div id="footer-container"></div>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-container').innerHTML = data;
+              });
+      });
+  </script>
+  <script src="menu.html"></script>
+  <script src="footer.html"></script>
+</body>
+<script>
+function changeText(option) {
+  // Ocultar todos los bloques de contenido
+  document.querySelectorAll('.content-section').forEach(section => {
+      section.style.display = 'none';
+  });
+
+  // Mostrar el bloque de contenido correspondiente
+  const selectedSection = document.getElementById(option);
+  if (selectedSection) {
+      selectedSection.style.display = 'block';
+  }
+}
+
+function toggleAnswer(element) {
+  const answer = element.nextElementSibling;
+  const icon = element.querySelector('.faq-icon');
+
+  if (answer) {
+      if (answer.style.display === "none" || answer.style.display === "") {
+          answer.style.display = "block";
+          icon.style.transform = "rotate(180deg)";
+      } else {
+          answer.style.display = "none";
+          icon.style.transform = "rotate(0deg)";
+      }
+  }
+}
+</script>
+</html>
+
