@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - QAPAQ</title>
+    <link rel="stylesheet" href="styles_in_sesion.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="form-container1">
+        <h2>QAPAQ POR INTERNET</h2>
+        <p>Ingresa tus datos</p>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="documentType">Tipo de documento</label>
+                <select id="documentType" name="documentType" required>
+                    <option value="DNI">DNI</option>
+                    <option value="CEX">CEX</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dni">Número de documento</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required readonly>
+            </div>
+            <div class="form-group" id="virtualKeyboard"></div>
+            <button type="submit">INGRESAR</button>
+        </form>
+        <p><a href="registro.html">Regístrate</a> | <a href="#">¿Olvidé mi contraseña?</a> | <a href="#">Ayuda</a></p>
+    </div>
+
+    <script>
+    $(document).ready(function() {
+        const keys = [
+            'A', 'B', 'C', 'D', 'E', 'F', '6', '4', '8',
+            'G', 'H', 'I', 'J', 'K', 'L', '1', '3', '5',
+            'M', 'N', 'O', 'P', 'Q', 'R', '7', '2', '9',
+            'S', 'T', 'U', 'V', 'W', 'X', '0', 'Borrar'
+        ];
+
+        const $virtualKeyboard = $('#virtualKeyboard');
+        const $passwordField = $('#password');
+
+        keys.forEach(key => {
+            const $button = $('<button>').text(key);
+            $virtualKeyboard.append($button);
+            $button.on('click', function(event) {
+                event.preventDefault(); 
+
+                if (key === 'Borrar') {
+                    $passwordField.val($passwordField.val().slice(0, -1));
+                } else {
+                    $passwordField.val($passwordField.val() + key);
+                }
+            });
+        });
+
+        $("#loginForm").on("submit", function(event) {
+            event.preventDefault(); 
+
+            var formData = {
+                documentType: $("#documentType").val(),
+                dni: $("#dni").val(),
+                password: $("#password").val()
+            };
+
+            $.ajax({
+                type: "POST",
+                url: "login.jsp",
+                data: formData,
+                success: function(response) {
+                    alert(response);
+                    if (response.includes("exitoso")) {
+                        window.location.href = "welcom.jsp";
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr);
+                }
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>
+
