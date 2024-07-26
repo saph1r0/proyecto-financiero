@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>-Inicio-Qapaq</title>
+    <style>
+      .Ahorros_principal {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  align-items: center;
+  font-family: Trebuchet MS;
+  padding-inline-end: 10%;
+  padding-left: 10%;
+  padding-block-end: 10%;
+
+}
+
+.content {
+  display: block; 
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.imagenahorro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.imagenahorro img {
+  max-width: 100%;
+  height: auto;
+}
+
+.centro {
+  width: 100%; 
+}
+
+.centroh2 {
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  align-items: center;
+  
+}
+
+.buttons {
+  margin: 20px 0;
+  text-align: center; 
+  padding-left: 10%;
+}
+
+.buttons button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #000; 
+  background-color: #fff; 
+  border: 2px solid #ffcc00; 
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #ffcc00; 
+  color: #000; 
+}
+
+.centrar-cuadro-preguntas{
+  padding-left: 10%;
+}
+
+.custom-button {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #ff0000; 
+}
+
+
+
+.centroh3 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.centroul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #666;
+  
+}
+
+
+
+.faq-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 10px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.faq-question:hover {
+  color: #ffcc00;
+}
+
+.faq-icon {
+  margin-right: 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+  padding-left: 20px;
+  border-left: 2px solid #ffcc00;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+  <header>
+    <div id="menu-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+    </script>
+  </header>
+   
+
+  <div class="imagenahorro">
+      <img src="Imagenes_Ahorro/mensaje_inicio.png" alt="Piggy bank">
+  </div>
+    <div class="Ahorros_principal">
+      <div class="content">
+          
+          <div class="centro">
+              <h2 class="centroh2">DEPÓSITO A PLAZO FIJO</h2>
+              <center>
+                <p id="dynamicText">Depósitos con contrato de tiempo de permanencia, pudiendo el cliente elegir entre las modalidades de Pago Periódico o al Vencimiento.</p>
+            </center>
+              <div class="buttons">
+                <button onclick="changeText('requisitos')">Características y Requisitos</button>
+                <button onclick="changeText('documentos')">Todos los Documentos</button>
+                <button onclick="changeText('simulacion')">Simula tu Depósito</button>
+                <button onclick="changeText('preguntas')">Preguntas Frecuentes</button>
+            </div>
+          </div>
+          
+            <div id="extraContent">
+              <!-- Este es el contenido adicional que se cambiará dinámicamente -->
+
+              <!-- Agregar contenido a los botones -->
+              <div id="requisitos" class="content-section">
+                  <!-- Boton requisitos datos -->
+
+                <p>Requisitos para abrir un depósito a plazo fijo:</p>
+                <h3 class="centroh3">BENEFICIOS</h3>
+                <ul class="centroul">
+                  <li>Una súper tasa por tu depósito.</li>
+                  <li>Sin cobro de gastos, comisiones ni mantenimiento.</li>
+                  <li>Los depósitos y saldos de las cuentas de ahorro de personas naturales y jurídicas sin fines de lucro se encuentran cubiertos por el Fondo de Seguro de Depósitos hasta el límite de su cobertura.</li>
+                  <li>La Tasa de interés es efectiva anual (TEA) y fija, mientras esté vigente el depósito.</li>
+               </ul>
+               <h3 class="centroh3">REQUISITOS</h3>
+              <ul class="centroul">
+                  <li>Persona natural.</li>
+                  <li>Monto mínimo de apertura S/ 1,000.</li>
+                  <li>Copia de Documento de Identidad.</li>
+                  <li>Recibo de servicios de domicilio del titular.</li>
+              </ul>
+              <h3 class="centroh3">RESPALDO</h3>
+              <p>Financiera QARQ cuenta con el sólido respaldo internacional del Banco Solidario, líderes en el sector Microfinanciero de Ecuador con un rating de calificación de AA+.</p>
+              <ul class="centroul">
+                <li>Capital social de 45.8 millones de soles.</li>
+              </ul>
+              <p><b>Clasificación a Dic 2021:</b></p>
+              <ul class="centroul">
+                  <li>Class & Asociados S.A.: C+</li>
+                  <li>Pacific Credit Rating: C+</li>
+              </ul>
+              <b></b>
+              <b></b>
+              <b></b>
+                    
+            </div>
+            <!-- Boton documentos  -->
+            <div id="documentos" class="content-section" style="display:none;">
+                
+                <h3 class="centroh3">DOCUMENTOS DE TU CUENTA</h3>
+                <ul>
+                    <li>Tarifario Depósito Plazo Fijo</li>
+                    <li>Contrato Pasivos Depósito a Plazo Fijo</li>
+                    <li>Cartilla de Depósito a Plazo Fijo</li>
+                    <li>Tarifario de comisiones transversales</li>
+                    <li>Información General - P. Pasivos</li>
+                    <li>Fórmulas y Ejemplos</li>
+                </ul>
+            </div>
+              <!-- Boton Simulador  -->
+            <div id="simulacion" class="content-section" style="display:none;">
+              <h3 class="centroh3">SIMULADOR DE DEPÓSITOS</h3>
+              <center>
+                <button class="custom-button">PRESIONA AQUÍ PARA VER EL SIMULADOR</button>
+              </center>
+            </div>
+            <div id="preguntas" class="content-section" style="display:none;">
+              <div class="centrar-cuadro-preguntas">
+              <div class="faq-container">
+                <h2 class="faq-title">PREGUNTAS FRECUENTES</h2>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span class="faq-icon">▼</span>
+                        ¿Tener mi dinero en un Depósito a Plazo Fijo es más rentable que tenerlo en una Cuenta de Ahorros?
+                    </div>
+                    <div class="faq-answer">
+                      <p>Si, los Depósitos a Plazo Fijo generan mayor rentabilidad que las Cuentas de Ahorros, sin embargo, están sujetos a un plazo de permanencia, por lo que para disponer libremente del capital deberá esperar al vencimiento del plazo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span class="faq-icon">▼</span>
+                        ¿Puedo solicitar que los intereses de mi Depósito a Plazo Fijo me sean entregados de forma mensual?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Si, al momento de la apertura puede decidir si desea que sus intereses sean pagados al vencimiento o de forma periódica (mensual, trimestral, semestral o anual). Los pagos periódicos de intereses serán abonados en una cuenta de ahorros a su nombre para su retiro en ventanilla.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span class="faq-icon">▼</span>
+                        ¿Puedo cancelar mi Depósito a Plazo Fijo antes de cumplirse el plazo pactado?
+                    </div>
+                    <div class="faq-answer">
+                      <p>Si, es posible. Sin embargo, de acuerdo al Contrato de Productos Pasivos, estará sujeto a una penalidad. Si la cancelación del depósito se realiza antes de haber transcurrido los 30 días desde la apertura no se pagará intereses, asimismo, si se realiza después de los 30 días, se pagará la menor tasa de interés vigente para Cuenta de Ahorros a la fecha de cancelación.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span class="faq-icon">▼</span>
+                        ¿Qué pasa si ya recibí pagos periódicos de intereses y solicito la cancelación de mi depósito antes del vencimiento?
+                    </div>
+                    <div class="faq-answer">
+                      <p>Se cancelará el depósito bajo las condiciones establecidas en el Contrato de Productos Pasivos, realizando un recálculo de los intereses, de tal forma que los intereses que se hayan adelantado producto de los pagos periódicos, serán descontados del capital del Depósito a Plazo Fijo.Contratar los seguros de otra compañía (elegido directamente o a través de un corredor de seguros), siempre que cumpla con las condiciones informadas por La Financiera.</p>
+                    </div>
+                </div>
+              </div>
+             
+            </div>
+            </div>
+         
+            
+          </div>
+      </div>
+  </div>
+  <div id="footer-container"></div>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-container').innerHTML = data;
+              });
+      });
+  </script>
+  <script src="menu.html"></script>
+  <script src="footer.html"></script>
+</body>
+<script>
+function changeText(option) {
+  // Ocultar todos los bloques de contenido
+  document.querySelectorAll('.content-section').forEach(section => {
+      section.style.display = 'none';
+  });
+
+  // Mostrar el bloque de contenido correspondiente
+  const selectedSection = document.getElementById(option);
+  if (selectedSection) {
+      selectedSection.style.display = 'block';
+  }
+}
+
+function toggleAnswer(element) {
+  const answer = element.nextElementSibling;
+  const icon = element.querySelector('.faq-icon');
+
+  if (answer) {
+      if (answer.style.display === "none" || answer.style.display === "") {
+          answer.style.display = "block";
+          icon.style.transform = "rotate(180deg)";
+      } else {
+          answer.style.display = "none";
+          icon.style.transform = "rotate(0deg)";
+      }
+  }
+}
+</script>
+</html>
+
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>-Para tu Negocio</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <style>
+        *{
+        text-align: center;
+        align-items: center;
+        }
+        #map {
+            width: 55%;
+            height: 580px;
+            box-shadow: 5px 5px 5px #888;
+            position: relative;
+            display: inline-block;        }
+    </style>
+    <div id="menu-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+    </script>
+
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                	<img src="imagenes/banners/agenciasbanner2024-0000.png.png" alt="ima"> 
+        	</div>
+        </div>
+    </section>
+
+        <div class="bodytxt">
+            <br>
+            <h3>NUESTRAS AGENCIAS</h3>
+            <hr><style>
+                hr {
+                    width: 20%;
+                    margin: 20px auto;
+                    border: 1px solid yellow;
+                }
+            </style>
+            <h4>
+                Visita cualquiera de nuestras 38 agencias a nivel nacional para solicitud de préstamos, apertura de cuentas de <br>
+                ahorro, pago de créditos, consultas o la operación que requieras realizar en el horario de lunes a viernes de<br>
+                9:00am a 6:30pm y sábados de 9:00am a 1:00pm.
+            </h4>
+            <br>
+            <section>
+                <style>
+                    .dropdown {
+                        position: relative;
+                        display: inline-block;
+                    }
+
+                    .dropdown-content {
+                        display: none;
+                        z-index: 1000;
+                        position: absolute;
+                        background-color: #f9f9f9;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+                    }
+
+                    /* Estilos para los botones */
+                    .dropdown button {
+                        font-size: 16px;
+                        padding: 10px 20px; /* Ajusta el tamaño del botón */
+                    }
+
+                    .dropdown:hover .dropdown-content {
+                        display: block;
+                    }
+                </style>
+                        <div class="dropdown">
+                            <button>Botón 1</button>
+                            <div class="dropdown-content">
+                                <li><a href="#">Opción 1A</a></li>
+                                <li><a href="#">Opción 1A</a></li>
+                                <li><a href="#">Opción 1A</a></li>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button>Botón 1</button>
+                            <div class="dropdown-content">
+                                <a href="#">Opción 1A</a>
+                                <a href="#">Opción 1B</a>
+                                <a href="#">Opción 1C</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button>Botón 1</button>
+                            <div class="dropdown-content">
+                                <a href="#">Opción 1A</a>
+                                <a href="#">Opción 1B</a>
+                                <a href="#">Opción 1C</a>
+                            </div>
+                        </div>
+            </section>
+            <br>
+
+            <div id="map">
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+            <script>
+                var map = L.map('map').setView([41.66, -4.72], 15);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+            </script>
+            </div>
+
+            <h4>
+                Recuerda que también puedes pagar tus cuotas a través de nuestros agentes de recaudación (*):
+            </h4>
+            <br>
+            <h3>YAPE | Agentes BCP | Western Union | Agentes Kasnet</h3>
+            <h4>
+                Además puedes realizar tus pagos sin costo alguno en nuestras agencias a nivel nacional y nuestros canales<br>
+                digitales Qapaq Web y App Qapaq Móvil.
+            </h4>
+            <br>
+            <h6>(*) Para más información sobre las comisiones aplicables por nuestros agentes recaudadores por el uso de los servicios<br>
+                de recaudación para el pago de las cuotas de su crédito, puede visitar www.qapaq.pe sección Agentes Recaudadores.
+            </h6> 
+        </div>
+
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        });
+    </script>
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+</body>
+</html>
+
+
+

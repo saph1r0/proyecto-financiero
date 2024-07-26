@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vida_integral</title>
+    <style>
+      
+      .Ahorros_principal {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        align-items: center;
+        font-family: Trebuchet MS;
+        padding-inline-end: 10%;
+        padding-left: 10%;
+        padding-block-end: 10%;
+      
+      }
+      
+      .content {
+        display: block; 
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      
+      .imagenahorro {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px; 
+      }
+      
+      .imagenahorro img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .centro {
+        width: 100%; 
+      }
+      
+      .centroh2 {
+        align-items: center;
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+      }
+      
+      p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+        align-items: center;
+        
+      }
+      
+      .buttons {
+        margin: 20px 0;
+        text-align: center; 
+        padding-left: 10%;
+      }
+      
+      .buttons button {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #000; 
+        background-color: #fff; 
+        border: 2px solid #ffcc00; 
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      
+      .buttons button:hover {
+        background-color: #ffcc00; 
+        color: #000; 
+      }
+      
+      .centrar-cuadro-preguntas{
+        padding-left: 10%;
+      }
+      
+      .custom-button {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .custom-button:hover {
+        background-color: #ff0000; 
+      }
+      
+      
+      
+      .centroh3 {
+        font-size: 20px;
+        color: #333;
+        margin-top: 20px;
+        text-align: center;
+      }
+      
+      .centroul {
+        list-style-type: disc;
+        margin-left: 20px;
+        color: #666;
+        
+      }
+      
+      
+      
+      .faq-container {
+        width: 90%;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .faq-title {
+        text-align: center;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ffcc00;
+        padding-bottom: 10px;
+      }
+      
+      .faq-item {
+        margin-bottom: 20px;
+      }
+      
+      .faq-question {
+        font-size: 18px;
+        color: #333;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+      
+      .faq-question:hover {
+        color: #ffcc00;
+      }
+      
+      .faq-icon {
+        margin-right: 10px;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+      }
+      
+      .faq-answer {
+        display: none;
+        font-size: 16px;
+        color: #666;
+        margin-top: 10px;
+        padding-left: 20px;
+        border-left: 2px solid #ffcc00;
+      }
+      
+      .faq-answer p {
+        margin: 0;
+      }
+      
+      
+          </style>
+      </head>
+      <body>
+        <header>
+          <div id="menu-container"></div>
+          <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                  fetch('menu.html')
+                      .then(response => response.text())
+                      .then(data => {
+                          document.getElementById('menu-container').innerHTML = data;
+                      });
+              });
+          </script>
+        </header> 
+
+  <!-- SECCION AHORROS -->
+
+  <div class="imagenahorro">
+      <img src="Imagenes_Ahorro/banneryo.png" alt="Piggy bank">
+  </div>
+    <div class="Ahorros_principal">
+      <div class="content">
+          
+          <div class="centro">
+              <h2 class="centroh2">SEGURO VIDA INTEGRAL PLUS</h2>
+              <center>
+                <p id="dynamicText">Seguro de Vida Integral Plus que brindan cobertura al Asegurado quien asume un crédito con Financiera QAPAQ.</p>  
+            </center>
+      
+              <div class="buttons">
+                <button onclick="changeText('COBERTURA')">Cobertura del SEGURO</button>
+                <button onclick="changeText('REQUISITOS')">Requisitos y CONDICIONES</button>
+                <button onclick="changeText('PROCEDIMIENTO')">Procedimiento en CASO DE SINIESTRO</button>
+                <button onclick="changeText('CERTIFICADO')">Certificado de PÓLIZA DE SEGURO</button>
+            </div>
+          </div>
+          
+            <div id="extraContent">
+        
+
+              <!-- Agregar contenido a los botones -->
+              <div id="COBERTURA" class="content-section">
+                  <!-- Boton COBERTURA DEL SEGURO -->
+                  <h3 class="centroh3">COBERTURA</h3>
+                  <p><b>Coberturas y Sumas Aseguradas:</b></p>
+                  <br>
+                  <table>
+                    <tr>
+                        <th>Cobertura Principal</th>
+                        <th>Sumas Aseguradas Máximas</th>
+                        <th>Máximo de Atenciones por Año</th>
+                    </tr>
+                    <tr>
+                        <td>Muerte Accidental</td>
+                        <td>S/1,000.00</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+                <br>
+                <p><b>Asistencias (VDR ASISTENCIAS SAC)</b></p>
+                <br>
+                <table>
+                  <tr>
+                      <th colspan="3">SERVICIO DE ASISTENCIAS IGS</th>
+                  </tr>
+                  <tr>
+                      <th>ASISTENCIA HOGAR</th>
+                      <th>MONTO MÁXIMO</th>
+                      <th>MÁXIMO DE EVENTOS POR AÑO</th>
+                  </tr>
+                  <tr>
+                      <td>Cerrajero por emergencia</td>
+                      <td>S/ 200.00</td>
+                      <td>Dos eventos</td>
+                  </tr>
+                  <tr>
+                      <td>Vidriero por emergencia</td>
+                      <td>S/ 200.00</td>
+                      <td>Dos eventos</td>
+                  </tr>
+                  <tr>
+                      <td>Electricista por emergencia</td>
+                      <td>S/ 200.00</td>
+                      <td>Dos eventos</td>
+                  </tr>
+                  <tr>
+                      <td>Gasfitero por emergencia</td>
+                      <td>S/ 200.00</td>
+                      <td>Dos eventos</td>
+                  </tr>
+                  <tr class="highlight">
+                      <td>Referencia y coordinación para técnicos en arreglos generales</td>
+                      <td>SIN LIMITE</td>
+                      <td>SIN LIMITE</td>
+                  </tr>
+                  <tr>
+                      <td>Instalación de luminarias / servicio de cambio de tomacorriente / Instalación de cortinas y persianas / grifería básica / configuración de TV</td>
+                      <td>Hasta S/ 200.00 (entre todos los servicios)</td>
+                      <td>Tres eventos (entre todos los servicios)</td>
+                  </tr>
+              </table>
+            
+              
+                    
+              </div>
+            <!-- Boton Requisitos y CONDICIONES  -->
+            <div id="REQUISITOS" class="content-section" style="display:none;">
+                
+                <h3 class="centroh3">REQUISITOS Y CONDICIONES</h3>
+                <ul>
+                    <li>Tener un préstamo vigente con Financiera QAPAQ.</li>
+                    
+                </ul>
+                <p><b>Limite de edad:</b></p>
+                <uL>
+                  <li>Edad Mínima de Ingreso: 18 años.</li>
+                  <li>Edad Máxima de Ingreso: 70 con 364 días.</li>
+                  <li>Edad Máxima de Permanencia: 75 con 364 días.</li>
+                </uL>
+                <p><b>Prima Comercial Mensual</b></p>
+                  <uL>
+                    <li>Prima Neta Anual: S/ 41.14</li>
+                    <li>Prima Comercial Anual + IGV: S/ 50.00</li>
+                  </uL>
+              
+                <p><b>Exclusiones</b></p>
+                <p>Las exclusiones se encuentran detalladas en la Póliza de Seguro.</p>
+                <p><b>Beneficiarios</b></p>
+                <p>Los beneficiarios designados por el Asegurado.</p>
+                <p>Si tienes alguna consulta o necesitas más información, puedes llamar a CHUBB SEGUROS PERU S.A. al 417-5000, de lunes a viernes de 9:00 a. m. a 6:00 p. m. o escribir a atencion.seguros@chubb.com.</p>
+                <p>La cobertura del seguro es responsabilidad de Chubb Seguros Perú S.A., empresa distinta a Financiera Qapaq S.A. Ley N° 28587, sus modificatorias y reglamento correspondiente.
+
+                </p>
+                   
+              </div>
+             
+             <!-- Boton PREGUNTAS FRECUENTES  -->
+            <div id="PROCEDIMIENTO" class="content-section" style="display:none;">
+              <h3 class="centroh3">AVISO DE SINIESTROS</h3>
+              <p>EL CONTRATANTE y/o los Beneficiarios o Herederos Legales deberá(n) dar aviso a la COMPAÑÍA por cualquiera de los medios de comunicación pactados de la ocurrencia del siniestro, en un plazo no mayor a treinta (30) días calendario desde el conocimiento del mismo, o de conocido el beneficio, o después de dicho plazo, tan pronto como sea posible, siempre y cuando el retraso obedezca a motivos de fuerza mayor, caso fortuito o imposibilidad de hecho.
+              </p>
+              <p>Posteriormente deberá de presentar los siguientes documentos:</p>
+              <p><b>En caso de Muerte Natural:</b></p>
+                <ul>
+                    <li>Documento de identidad del ASEGURADO fallecido, de tenerlo físicamente;</li>
+                    <li>Partida o Acta de Defunción emitida por RENIEC;</li>
+                    <li>Certificado Médico de Defunción completo emitido por el MINSA;</li>
+                    <li>Copia Certificada del Atestado o Informe Policial Completo emitido por la Policía Nacional del Perú, según corresponda</li>
+                    <li>Protocolo de Necropsia clínica o médico legal completo, cuando corresponda</li>
+                    <li>Resultado de Dosaje Etílico y/o Resultado de Análisis Toxicológico, cuando corresponda.</li>
+                </ul>
+              
+              
+              </div>
+
+              <div id="CERTIFICADO" class="content-section" style="display:none;">
+                <h3 class="centroh3">CERTIFICADO</h3>
+              <center>
+                <a href="Archivos/desgravamen.pdf">
+                  <button class="custom-button">Descargue aquí el certificado / Poliza de Seguro</button>
+                </a>
+                
+              </center>
+
+
+              </div>
+          
+         
+            
+          </div>
+      </div>
+  </div>
+  
+  <div id="footer-container"></div>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-container').innerHTML = data;
+              });
+      });
+  </script>
+  <script src="menu.html"></script>
+  <script src="footer.html"></script>
+</body>
+<script>
+  function changeText(option) {
+    // Ocultar todos los bloques de contenido
+    document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none';
+    });
+  
+    // Mostrar el bloque de contenido correspondiente
+    const selectedSection = document.getElementById(option);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+  }
+  
+  function toggleAnswer(element) {
+    const answer = element.nextElementSibling;
+    const icon = element.querySelector('.faq-icon');
+  
+    if (answer) {
+        if (answer.style.display === "none" || answer.style.display === "") {
+            answer.style.display = "block";
+            icon.style.transform = "rotate(180deg)";
+        } else {
+            answer.style.display = "none";
+            icon.style.transform = "rotate(0deg)";
+        }
+    }
+  }
+  </script>
+
+</html>
+
+
+
+
+

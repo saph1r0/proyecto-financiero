@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Desgravamen</title>
+    <style>
+      .Ahorros_principal {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  align-items: center;
+  font-family: Trebuchet MS;
+  padding-inline-end: 10%;
+  padding-left: 10%;
+  padding-block-end: 10%;
+
+}
+
+.content {
+  display: block; 
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.imagenahorro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.imagenahorro img {
+  max-width: 100%;
+  height: auto;
+}
+
+.centro {
+  width: 100%; 
+}
+
+.centroh2 {
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  align-items: center;
+  
+}
+
+.buttons {
+  margin: 20px 0;
+  text-align: center; 
+  padding-left: 10%;
+}
+
+.buttons button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #000; 
+  background-color: #fff; 
+  border: 2px solid #ffcc00; 
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #ffcc00; 
+  color: #000; 
+}
+
+.centrar-cuadro-preguntas{
+  padding-left: 10%;
+}
+
+.custom-button {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #ff0000; 
+}
+
+
+
+.centroh3 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.centroul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #666;
+  
+}
+
+
+
+.faq-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 10px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.faq-question:hover {
+  color: #ffcc00;
+}
+
+.faq-icon {
+  margin-right: 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+  padding-left: 20px;
+  border-left: 2px solid #ffcc00;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+
+
+    </style>
+</head>
+<body>
+  <header>
+    <div id="menu-container"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            });
+    });
+</script>
+
+</header>
+  
+  <!-- SECCION AHORROS -->
+
+  <div class="imagenahorro">
+       <img src="Imagenes_Ahorro/banneryo.png" alt="Piggy bank">
+  </div>
+    <div class="Ahorros_principal">
+      <div class="content">
+          
+          <div class="centro">
+              <h2 class="centroh2">SEGURO DESGRAVAMEN</h2>
+              <center>
+                <p id="dynamicText">Seguro de Desgravamen brindan cobertura al Asegurado quien asume un crédito con Financiera QAPAQ.</p>  
+              </center>
+      
+              <div class="buttons">
+                <button onclick="changeText('COBERTURA')">Cobertura del SEGURO</button>
+                <button onclick="changeText('REQUISITOS')">Requisitos y CONDICIONES</button>
+                <button onclick="changeText('PROCEDIMIENTO')">Procedimiento en CASO DE SINIESTRO</button>
+                <button onclick="changeText('CERTIFICADO')">Certificado de PÓLIZA DE SEGURO</button>
+            </div>
+          </div>
+          
+            <div id="extraContent">
+        
+
+              <!-- Agregar contenido a los botones -->
+              <div id="COBERTURA" class="content-section">
+                  <!-- Boton COBERTURA DEL SEGURO -->
+
+                <h3 class="centroh3">COBERTURA</h3>
+                <ul class="centroul">
+                  <p><b>Los riesgos cubiertos son:</b></p>
+                  <li>Muerte Natural</li>
+                  <li>Muerte Accidental</li>
+                  <li>Invalidez Total y Permanentes por accidente.</li>
+                  <li>Invalidez Total y Permanentes por enfermedad.</li>
+                  
+                  <p ><b>Suma asegurada:</b></p>
+
+                  <p>El Saldo Insoluto del crédito al momento del siniestro (no incluye intereses compensatorios, moratorios, portes, comisiones u otros gastos); hasta un máximo de S/150,000 (o su equivalente en moneda extranjera) por Asegurado. El límite máximo asegurable aplica para la sumatoria de una o varias Solicitudes-Certificado de este tipo de producto adquiridas por el mismo ASEGURADO.</p>
+
+                  <p style="color: red">*Inicio de vigencia a partir del 02/11/2022 </p>
+                  
+                </ul>
+              
+                    
+              </div>
+            <!-- Boton Requisitos y CONDICIONES  -->
+            <div id="REQUISITOS" class="content-section" style="display:none;">
+                
+                <h3 class="centroh3">REQUISITOS Y CONDICIONES</h3>
+                <ul>
+                    <li>Tener un préstamo vigente con Financiera QAPAQ.</li>
+                    <li>Edad de Ingreso: Personas naturales mayores de 18 años y menores de 70 años 364 días (inclusive) de edad.</li>
+                    <li>Edad de Permanencia: Con un máximo de 75 años 364 días (inclusive) de edad.</li>
+                </ul>
+                <p><b>Prima Comercial Mensual</b></p>
+                <uL>
+                  <li>Tasa Comercial Mensual: 0.109%</li>
+                  <li>Tasa Comercial Mensual +IGV: 0.132%</li>
+                </uL>
+                <p>La Prima Única Comercial + IGV se calculará = Monto Inicial del Crédito x Tasa Bruta Mensual x [(Fecha Final – Fecha Inicial+1) x (Factor de Pago – Factor de Descuento) + Factor de Pago x 30]</p>
+                <p>Donde:</p>
+                <ul>
+                  <li>Fecha Final: es la fecha de finalización del cronograma de pagos inicial.</li>
+                  <li>Fecha Inicial: es la fecha de inicio del cronograma de pagos inicial, que equivale a la fecha de desembolso del crédito.</li>
+                  <li>Factor de Pago: Corresponde al factor diario generado por el financiamiento del seguro.</li>
+                  <li>Factor de Descuento: Corresponde al descuento al optar por el seguro financiado</li>
+                </ul>
+                <p><b>Exclusiones</b></p>
+                <p>Sin exclusiones.</p>
+                <p><b>Beneficiario Titular</b></p>
+                <p>Financiera Qapaq por el Saldo Insoluto (sin considerar penalidades, comisiones y gastos) a la fecha de ocurrencia del siniestro.</p>
+                   
+              </div>
+             
+             <!-- Boton PREGUNTAS FRECUENTES  -->
+            <div id="PROCEDIMIENTO" class="content-section" style="display:none;">
+              <h3 class="centroh3">AVISO DE SINIESTROS</h3>
+              <p>En caso de siniestro, los beneficiarios deberán dar aviso a la compañía en un plazo no menor a 30 días calendarios desde el conocimiento del mismo, o del beneficio, o después de dicho plazo, tan pronto como sea posible, siempre y cuando el retraso obedezca a motivos de fuerza mayor.
+              </p>
+              <p>Posteriormente deberá de presentar los siguientes documentos:</p>
+              <p><b>En caso de Muerte Natural:</b></p>
+                <ul>
+                    <li>Documento de identidad del ASEGURADO, en caso lo tenga en su poder.</li>
+                    <li>Acta o Partida de Defunción.</li>
+                    <li>Certificado Médico de Defunción completo.</li>
+                    <li>Estado de Cuenta del préstamo a la fecha de ocurrencia del siniestro, emitido por EL CONTRATANTE.</li>
+                </ul>
+                <p><b>En caso Muerte Accidental, adicionalmente se deberá presentar:</b></p>
+                <uL>
+                  <li>Copia Certificada del Atestado Policial Completo, según corresponda.</li>
+                  <li>Protocolo de Necropsia completo, según corresponda.</li>
+                  <li>Resultado de Dosaje Etílico y/o Resultado de Análisis Toxicológico; según corresponda.</li>
+                </uL>
+                <p>En caso de muerte presunta del ASEGURADO, ésta deberá acreditarse conforme a las disposiciones legales vigentes.</p>
+
+                <p><b>En caso de Invalidez Total y Permanente por Enfermedad:</b></p>
+
+                <ul>
+                  <li>Documento de identidad del ASEGURADO y/o solicitante, según corresponda.</li>
+                  <li>Certificado de Discapacidad o Dictamen de Grado de Invalidez, otorgado por los hospitales de los ministerios de Salud, de Defensa o del Interior, o también por el Seguro Social de Salud (EsSalud), u otra entidad autorizada para emitir dicho documento, en el cual se declare la condición de Invalidez
+                    Total y Permanente por Enfermedad.</li>
+                  <li>Formato de Declaración Médica suscrita por el médico tratante.</li>
+                  <li>Historia Clínica en copia fedateada y foliada por la institución de salud (en caso el formato Declaración Médica no fuese suficiente para evaluar el siniestro).</li>
+                  <li>Estado de Cuenta del préstamo a la fecha de ocurrencia del siniestro, emitido por EL CONTRATANTE.</li>
+                </ul>
+                <p><b>En caso de Invalidez Total y Permanente por Accidente:</b></p>
+                <ul>
+                  <li>Documento de identidad del ASEGURADO, en caso lo tenga en su poder.</li>
+                  <li>Copia Certificada del Atestado Policial Completo, según corresponda.</li>
+                  <li>Resultado de Análisis Toxicológico; según corresponda.</li>
+                  <li>Certificado de Discapacidad o Dictamen de Grado de Invalidez otorgado por los hospitales de los ministerios de Salud, de Defensa o del Interior, o también por el Seguro Social de Salud (EsSalud), u otra entidad autorizada para emitir dicho documento, en el cual se declare la condición de Invalidez Total y Permanente por Accidente.</li>
+                  <li>Formato de Declaración Médica suscrita por el médico tratante.</li>
+                  <li>Historia Clínica en copia fedateada y foliada por la institución de salud (en caso el formato Declaración Médica no fuese suficiente para evaluar el siniestro).</li>
+                  <li>Estado de Cuenta del préstamo a la fecha de ocurrencia del siniestro, emitido por EL CONTRATANTE.</li>
+                </ul>
+                <p>Si tienes alguna consulta o necesitas más información, puedes llamar a CHUBB SEGUROS PERU S.A., al 417-5000, de lunes a viernes, de 9:00 a. m. a 6:00 p. m., o escribir a atención.seguros@chubb.com.</p>
+                <p>La cobertura del seguro es responsabilidad de Chubb Seguros Perú S.A., empresa distinta a Financiera Qapaq S.A . Ley N° 28587, sus modificatorias y reglamento correspondiente.</p>
+              
+              </div>
+
+              <div id="CERTIFICADO" class="content-section" style="display:none;">
+                <h2 class="centroh2">CERTIFICADO</h2>
+              <center>
+                <a href="Archivos/desgravamen.pdf">
+                  <button class="custom-button">Descargue aquí el certificado / Poliza de Seguro</button>
+                </a>
+                
+              </center>
+
+
+              </div>
+          
+         
+            
+          </div>
+      </div>
+  </div>
+  
+
+  <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        });
+    </script>
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+    
+</body>
+<script>
+function changeText(option) {
+  // Ocultar todos los bloques de contenido
+  document.querySelectorAll('.content-section').forEach(section => {
+      section.style.display = 'none';
+  });
+
+  // Mostrar el bloque de contenido correspondiente
+  const selectedSection = document.getElementById(option);
+  if (selectedSection) {
+      selectedSection.style.display = 'block';
+  }
+}
+
+function toggleAnswer(element) {
+  const answer = element.nextElementSibling;
+  const icon = element.querySelector('.faq-icon');
+
+  if (answer) {
+      if (answer.style.display === "none" || answer.style.display === "") {
+          answer.style.display = "block";
+          icon.style.transform = "rotate(180deg)";
+      } else {
+          answer.style.display = "none";
+          icon.style.transform = "rotate(0deg)";
+      }
+  }
+}
+</script>
+</html>
+
+
+    

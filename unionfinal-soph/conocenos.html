@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>-Inicio-Qapaq</title>
+    <style>
+  .Ahorros_principal {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    align-items: center;
+    font-family: Trebuchet MS;
+    padding-inline-end: 10%;
+    padding-left: 10%;
+    padding-block-end: 10%;
+}
+
+.content {
+    display: block;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.imagenahorro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.imagenahorro img {
+    max-width: 100%;
+    height: auto;
+}
+
+.centro {
+    width: 100%; 
+}
+
+.centroh2 {
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    align-items: center;
+}
+
+.buttons {
+    margin: 20px 0;
+    text-align: center; 
+    padding-left: 10%;
+}
+
+.buttons button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000; 
+    background-color: #fff; 
+    border: 2px solid #ffcc00; 
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #ffcc00; 
+    color: #000; 
+}
+
+.centrar-cuadro-preguntas {
+    padding-left: 10%;
+}
+
+.custom-button {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #ff0000; 
+}
+
+.centroh3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.centroul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #666;
+}
+
+.faq-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 10px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.faq-question:hover {
+    color: #ffcc00;
+}
+
+.faq-icon {
+    margin-right: 10px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #ffcc00;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+  <header>
+    <div id="menu-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+    </script>
+  </header>
+    
+
+  
+
+    <div class="imagenahorro">
+      <img src="imagenes_conocenos/conocenos-1.jpg" alt="Piggy bank">
+  </div>
+    <div class="Ahorros_principal">
+      <div class="content">
+          
+          <div class="centro">
+              
+              <div class="buttons">
+                <button onclick="changeText('inicios')">Nuestros INICIOS</button>
+                <button onclick="changeText('filosofia')">Nuestra FILOSOFIA</button>
+                <button onclick="changeText('etica')">Codigo de ETICA</button>
+                <button onclick="changeText('directorio')">Directorio y P. GERENCIAL</button>
+                <button onclick="changeText('memorias')">Memorias y ESTADOS F.</button>
+            </div>
+          </div>
+          
+          <div id="extraContent">
+            <div id="inicios" class="content-section">
+                <div class="centroul">
+                    <p>Financiera QAPAQ es una institución peruana de capital extranjero, regulada por la Superintendencia de Banca, Seguros y AFP, que inició sus operaciones en Enero del 2010 bajo el nombre de Financiera Universal con una visión, misión y modelo de negocios similares a las de sus predecesores en Ecuador, Banco Solidario y Unibanco.</p>
+                    <img src="imagenes_conocenos/primer_btn.jpg" alt="mid" class="img-pequena">
+                </div>
+                <div class="centroul">
+                    <p>En el año 2012 adquiere la Caja Profinanzas, fusionando sus operaciones para finales del año y ampliando tanto su cobertura geográfica como de oferta de productos, ya que Profinanzas era una entidad especializada en el crédito rural agrícola, con presencia en el mercado superior a 18 años.</p>
+                    <img src="imagenes_conocenos/primer_btn1.jpg" alt="mid" class="img-pequena">
+                    <p>Actualmente Financiera QAPAQ viene consolidando su posición de mercado, operando en la costa, sierra y selva central del Perú, con una red de 39 agencias, y con una de las más importantes participaciones en el segmento de microempresa.</p>
+                </div>
+            </div>
+            <div id="filosofia" class="content-section" style="display:none;">
+                <p>Creemos en el país y en su gente, nos abocamos a apoyar a nuestros clientes y sus familias a lograr su misión de vida; contribuyendo al progreso de grandes segmentos de la población con un equipo humano especializado comprometido, creativo, íntegro y entusiasta.</p>
+                <h3 class="centroh3">MISION</h3>
+                <div>
+                    <p>Contribuir a mejorar el nivel de vida de las personas con productos y servicios de calidad e innovadores, de manera oportuna y confiable.</p>
+                </div>
+                <h3 class="centroh3">VISION</h3>
+                <div>
+                    <p>Ser la institución líder en calidad de servicio financiero con misión social, que se destaca por el talento y compromiso de sus colaboradores y el uso de tecnología de punta.</p>
+                </div>
+                <h3 class="centroh3">VALORES</h3>
+                <div class="centroul">
+                    <img src="imagenes_conocenos/union.jpeg" alt="mid" class="img-pequena">
+                </div>
+                <h3 class="centroh3">PRINCIPIOS</h3>
+                <div class="centroul">
+                <ul class="icon-list">
+                    <li><i class="material-icons">check_circle</i> Valoramos el esfuerzo por lo que se hace, no por lo que tiene.</li>
+                    <li><i class="material-icons">check_circle</i> Sabemos que la suerte es la excusa de los perdedores.</li>
+                    <li><i class="material-icons">check_circle</i> Sabemos que el éxito no llega porque sí, llega porque se busca.</li>
+                    <li><i class="material-icons">check_circle</i> Hacemos de la razón la herramienta para un futuro mejor y más sabio.</li>
+                    <li><i class="material-icons">check_circle</i> Trabajamos para estar al día en la atención de nuestros clientes.</li>
+                </ul>
+                </div>
+            </div>
+            <div id="etica" class="content-section">
+                <h3 class="centroh3">MANUAL CODIGO DE ETICA</h3>
+                <div class="centroul">
+                    <p>Financiera QAPAQ busca que el personal y los colaboradores de la institución se conduzcan bajo un régimen de transparencia y ética, para ello, el presente Código de Ética y Conducta Profesional (“Código”) procura guiar y proteger la actividad profesional del personal y los colaboradores en el ejercicio de su función o accionar, además de trazar una línea de conducta con relación a la información que manejan.</p>
+                    <a href="https://www.qapaq.pe/wp-content/uploads/2022/11/Manual-de-Codigo-de-Etica-y-Conducta-Profesional.pdf" class="download-button">DESCARGAR MANUAL</a>
+                </div>
+                <h3 class="centroh3">CANAL DE DENUNCIAS</h3>
+                <div class="centroul">
+                    <p>Financiera QAPAQ pone a disposición de sus colaboradores, clientes, proveedores y público en general el canal para remitir denuncias sobre incumplimientos al Código de Ética, actos referidos a fraudes y cualquier circunstancia irregular.</p>
+                    <p>El tratamiento de la información suministrada es confidencial y la denuncia es anónima, salvo que usted voluntariamente ingrese sus datos de contacto para poder recabar mayor información de ser necesario.</p>
+                    <p>Para presentar una denuncia, se requiere indicar una descripción -lo más detallada posible- de los hechos o circunstancias que le parecen sospechosas y la(s) persona(s) que estaría(n) involucradas en los hechos denunciados. También tiene la opción de adjuntar archivos como medio de prueba.</p>
+                    <p>Este es un canal exclusivo para la presentación de denuncias éticas, irregularidades y actos relacionados a fraudes cometidos por nuestros colaboradores; por este canal NO se atienden consultas, requerimientos, reclamos ni sugerencias.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaymOdUyAwImR3lkYX737p9HEH4-frzaK5jyMwkXB03nmVXA/viewform?pli=1" class="download-button">CANAL DE DENUNCIAS</a>
+                </div>
+            </div>
+          </div>
+        <div id="directorio" class="content-section" style="display:none;">
+          <div class="centroul">  
+            <h3 class="centroh3">DIRECTORES</h3>
+          
+            <ul class="icon-list">
+              <li>
+                <i class="material-icons">fiber_manual_record</i>
+                <a href="#" class="person-name"
+                   data-info="HÉCTOR GONZALO MARTINEZ FIGUEROA                                                         
+                   Director Titular
+                   Género:  Masculino
+                   
+                   Fecha de Nacimiento: Enero de 1968.
+                   
+                   Nacionalidad: Chileno.
+                   
+                   Profesión:  Contador Auditor de la Universidad de Concepción, Chile. MBA en Universidad Adolfo Ibañez, Miami – EEUU.
+                   
+                   Experiencia:  Presidente del Directorio en el Banco Solidario (2012-2014) – Director Princial del Banco Solidario (2014-2015) – Director Alterno del Banco de Antigua (2014-2015) – Director Suplente en Financiera Qapaq S.A. (2016-2018) – Presidente del Directorio de Financiera Qapaq S.A. (2018 a la fecha).">
+                    Gonzalo Martínez-Director Titular
+                </a>
+            </li>
+            <li>
+              <i class="material-icons">fiber_manual_record</i>
+              <a href="#" class="person-name"
+                 data-info="JOAQUIN ANTONIO RIBADENEIRA QUEVEDO
+                 Director Titular
+                 Género:  Masculino
+                 
+                 Fecha de Nacimiento: Abril de 1970.
+                 
+                 Nacionalidad: Ecuatoriano.
+                 
+                 Profesión:  Graduado en Literatura en Dartmounth College, EEUU. MBA en Universidad Adolfo Ibañez, Miami – EEUU.
+                 
+                 Experiencia:  Director en el Banco Solidario de Ecuador y en el Banco de Antigua de Guatemala; es Director de Financiera Qapaq S.A. (antes Financiera Universal) desde el año 2008.">
+                  Joaquín Ribadeneira-Director Titular
+              </a>
+          </li>
+          <li>
+            <i class="material-icons">fiber_manual_record</i>
+            <a href="#" class="person-name"
+               data-info="DIEGO FERNANDO CALVACHE NICOLA
+               Director Titular
+               Género:  Masculino
+               
+               Fecha de Nacimiento: Marzo de 1974.
+               
+               Nacionalidad: Ecuatoriano.
+               
+               Profesión:  Ingeniero Matemático con mención Estadística, Finanzas y Gestión Empresarial y Master en Estadística Aplicada por la Escuela Politécnica Nacional. Diplomado en Administración de Riesgo por el Instituto Tecnológico de Monterrey y Master en Dirección Bancaria por la Universidad Carlos II de Madrid.
+               
+               Experiencia:  Gerente General del Banco Solidario (2013-2014). Presidente del Directorio del Banco Solidario (2014 a la fecha).">
+                Diego Calvache-Director Titular
+            </a>
+        </li>
+        <li>
+          <i class="material-icons">fiber_manual_record</i>
+          <a href="#" class="person-name"
+             data-info="JOSE EDUARDO CAMPOS CORVACHO
+             Director Independiente
+             Género:  Masculino
+             
+             Fecha de Nacimiento: Diciembre de 1965.
+             
+             Nacionalidad: Peruano.
+             
+             Profesión:  Estudios de Economía en la Pontificia Universidad Católica del Perú. Master of Arts (M.A) in Economics en The University of Western Ontario.
+             
+             Experiencia:  Director independiente en Financiera Qapaq S.A., (2009 a la fecha) – Director de AC Capitales SAFI S.A. (2017 a la fecha) – Director de AC Pública SAC (2017 a la fecha) – Director Independiente en Azzaro Trading SAC (2018 a la fecha) – Director de APOYO Consultoría SAC (2017 a la fecha).">
+              Jose Eduardo Campos-Director Independiente
+          </a>
+      </li>
+      <li>
+        <i class="material-icons">fiber_manual_record</i>
+        <a href="#" class="person-name"
+           data-info="MARK ERNST HOFFMANN ROSAS
+           Director Independiente
+           Género:  Masculino
+           
+           Fecha de Nacimiento: Junio de 1969.
+           
+           Nacionalidad: Peruano.
+           
+           Profesión:  Bachiller en Ingieneria Industrial en Giorgia Institute of Technology de Atlanta. MBA en Cornell University (Ithaca, Nueva York).
+           
+           Experiencia:  Gerente General de Electroandes S.A. (2003-2007) – Gerente General Adjunto de Duke Energy Egenor (2008-2009) – Gerente General de Duke Energy Perú y Ecuador (2009-2014) – Gerente General de Amazonas Infraestructura (2014 a la fecha).">
+            Mark Hoffmann-Director Independiente
+        </a>
+    </li>
+    <li>
+      <i class="material-icons">fiber_manual_record</i>
+      <a href="#" class="person-name"
+         data-info="FERNANDO BUENO DAZA
+         Director Suplente
+         Género:  Masculino
+         
+         Fecha de Nacimiento: Febrero de 1963.
+         
+         Nacionalidad: Colombiano.
+         
+         Profesión:  Economista de la Pontificia Universidad Católica de Quito. MBA Universidad Adolfo Ibañez, Miami, EEUU.
+         
+         Experiencia:  Vicepresidente (CFO) de Micro Finance Advisors Inc. EEUU (2011 a la fecha) – Director del Banco Solidario de Ecuador (2011 a la fecha) – Director de Banco de Antigua de Guatemala.">
+          Fernando Bueno-Director Suplente
+      </a>
+  </li>
+  <li>
+    <i class="material-icons">fiber_manual_record</i>
+    <a href="#" class="person-name"
+       data-info="PERCY ARTURO CÁCERES NÚÑEZ
+       Director Suplente
+       Género:  Masculino
+       
+       Fecha de Nacimiento: Julio de 1956.
+       
+       Nacionalidad: Peruano.
+       
+       Profesión:  Contador Público de la Universidad Católica de Arequipa. MBA INCAE (Costa Rica).
+       
+       Experiencia:  Gerente General de SICONTAC CENTER Ecuador (2010-2014) – Director de Financiera Qapaq S.A. (2014-2016) – Presidente del Directorio de Financiera Qapaq S.A. (2016-2018) – Director Suplente de Financiera Qapaq S.A. (2018 a la fecha).">
+        Percy Cáceres-Director Suplente
+    </a>
+</li>
+<!-- Boton PREGUNTAS FRECUENTES ************************************************************************************************************************* -->
+        <h3 class="centroh3">DIRECTORES</h3>
+        <li>
+          <i class="material-icons">fiber_manual_record</i>
+          <a href="#" class="person-name"
+             data-info="HÉCTOR GONZALO MARTINEZ FIGUEROA                                                         
+             Director Titular
+             Género:  Masculino
+             
+             Fecha de Nacimiento: Enero de 1968.
+             
+             Nacionalidad: Chileno.
+             
+             Profesión:  Contador Auditor de la Universidad de Concepción, Chile. MBA en Universidad Adolfo Ibañez, Miami – EEUU.
+             
+             Experiencia:  Presidente del Directorio en el Banco Solidario (2012-2014) – Director Princial del Banco Solidario (2014-2015) – Director Alterno del Banco de Antigua (2014-2015) – Director Suplente en Financiera Qapaq S.A. (2016-2018) – Presidente del Directorio de Financiera Qapaq S.A. (2018 a la fecha).">
+             Estevan Abad – Gerente General
+          </a>
+      </li>
+      <li>
+        <i class="material-icons">fiber_manual_record</i>
+        <a href="#" class="person-name"
+           data-info="JOAQUIN ANTONIO RIBADENEIRA QUEVEDO
+           Director Titular
+           Género:  Masculino
+           
+           Fecha de Nacimiento: Abril de 1970.
+           
+           Nacionalidad: Ecuatoriano.
+           
+           Profesión:  Graduado en Literatura en Dartmounth College, EEUU. MBA en Universidad Adolfo Ibañez, Miami – EEUU.
+           
+           Experiencia:  Director en el Banco Solidario de Ecuador y en el Banco de Antigua de Guatemala; es Director de Financiera Qapaq S.A. (antes Financiera Universal) desde el año 2008.">
+           Marco Antonio Fernández – Gerente Div. Riesgos
+        </a>
+    </li>
+    <li>
+      <i class="material-icons">fiber_manual_record</i>
+      <a href="#" class="person-name"
+         data-info="DIEGO FERNANDO CALVACHE NICOLA
+         Director Titular
+         Género:  Masculino
+         
+         Fecha de Nacimiento: Marzo de 1974.
+         
+         Nacionalidad: Ecuatoriano.
+         
+         Profesión:  Ingeniero Matemático con mención Estadística, Finanzas y Gestión Empresarial y Master en Estadística Aplicada por la Escuela Politécnica Nacional. Diplomado en Administración de Riesgo por el Instituto Tecnológico de Monterrey y Master en Dirección Bancaria por la Universidad Carlos II de Madrid.
+         
+         Experiencia:  Gerente General del Banco Solidario (2013-2014). Presidente del Directorio del Banco Solidario (2014 a la fecha).">
+         José García – Gerente Div. Producto
+      </a>
+  </li>
+  <li>
+    <i class="material-icons">fiber_manual_record</i>
+    <a href="#" class="person-name"
+       data-info="JOSE EDUARDO CAMPOS CORVACHO
+       Director Independiente
+       Género:  Masculino
+       
+       Fecha de Nacimiento: Diciembre de 1965.
+       
+       Nacionalidad: Peruano.
+       
+       Profesión:  Estudios de Economía en la Pontificia Universidad Católica del Perú. Master of Arts (M.A) in Economics en The University of Western Ontario.
+       
+       Experiencia:  Director independiente en Financiera Qapaq S.A., (2009 a la fecha) – Director de AC Capitales SAFI S.A. (2017 a la fecha) – Director de AC Pública SAC (2017 a la fecha) – Director Independiente en Azzaro Trading SAC (2018 a la fecha) – Director de APOYO Consultoría SAC (2017 a la fecha).">
+       Edgart Veggro – Gerente Div. Agencias
+    </a>
+</li>
+<li>
+  <i class="material-icons">fiber_manual_record</i>
+  <a href="#" class="person-name"
+     data-info="MARK ERNST HOFFMANN ROSAS
+     Director Independiente
+     Género:  Masculino
+     
+     Fecha de Nacimiento: Junio de 1969.
+     
+     Nacionalidad: Peruano.
+     
+     Profesión:  Bachiller en Ingieneria Industrial en Giorgia Institute of Technology de Atlanta. MBA en Cornell University (Ithaca, Nueva York).
+     
+     Experiencia:  Gerente General de Electroandes S.A. (2003-2007) – Gerente General Adjunto de Duke Energy Egenor (2008-2009) – Gerente General de Duke Energy Perú y Ecuador (2009-2014) – Gerente General de Amazonas Infraestructura (2014 a la fecha).">
+     Jorge Gómez – Gerente Div. Administración y Finanzas
+  </a>
+</li>
+<li>
+<i class="material-icons">fiber_manual_record</i>
+<a href="#" class="person-name"
+   data-info="FERNANDO BUENO DAZA
+   Director Suplente
+   Género:  Masculino
+   
+   Fecha de Nacimiento: Febrero de 1963.
+   
+   Nacionalidad: Colombiano.
+   
+   Profesión:  Economista de la Pontificia Universidad Católica de Quito. MBA Universidad Adolfo Ibañez, Miami, EEUU.
+   
+   Experiencia:  Vicepresidente (CFO) de Micro Finance Advisors Inc. EEUU (2011 a la fecha) – Director del Banco Solidario de Ecuador (2011 a la fecha) – Director de Banco de Antigua de Guatemala.">
+   Jomark Noriega – Gerente Div. TI y Procesos
+</a>
+</li>
+<li>
+<i class="material-icons">fiber_manual_record</i>
+<a href="#" class="person-name"
+ data-info="PERCY ARTURO CÁCERES NÚÑEZ
+ Director Suplente
+ Género:  Masculino
+ 
+ Fecha de Nacimiento: Julio de 1956.
+ 
+ Nacionalidad: Peruano.
+ 
+ Profesión:  Contador Público de la Universidad Católica de Arequipa. MBA INCAE (Costa Rica).
+ 
+ Experiencia:  Gerente General de SICONTAC CENTER Ecuador (2010-2014) – Director de Financiera Qapaq S.A. (2014-2016) – Presidente del Directorio de Financiera Qapaq S.A. (2016-2018) – Director Suplente de Financiera Qapaq S.A. (2018 a la fecha).">
+ Julio Martín Rodríguez – Auditor Interno
+</a>
+</li>
+            </ul>
+          </div>
+      </div>
+     
+      <div class="modal" id="personModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="personInfo"></p>
+        </div>
+    </div>
+    <div id="memorias" class="content-section">
+    
+    <h3 class="centroh3">MEMORIAS</h3> 
+      <ul class="centroh3">
+                    <li><a href="https://www.qapaq.pe/wp-content/uploads/2022/04/Memoria-Financiera-Qapaq2021.pdf">M 2022 PDF</a></li>
+                    <li><a href="https://www.qapaq.pe/wp-content/uploads/2022/04/Memoria-Financiera-Qapaq2021.pdf">M 2021 PDF</a></li>
+                    <li><a href="https://www.qapaq.pe/wp-content/uploads/2021/08/Memoria-Financiera-Qapaq-2020-2.pdf">M 2020 PDF</a></li>
+                    <li><a href="https://www.qapaq.pe/wp-content/uploads/2020/09/Memoria-Financiera-Qapaq-2019.pdf">M 2019 PDF</a></li>
+                    <li><a href="http://www.qapaq.pe/media/uploads/memoria_2018.pdf">M 2018 PDF</a></li>
+                    <li><a href="http://www.qapaq.pe/wp-content/uploads/2020/07/Memoria-2017.pdf">M 2017 PDF</a></li>
+                    <li><a href="http://www.qapaq.pe/wp-content/uploads/2020/07/01-Memoria-Financiera-Qapaq-2016-Final.pdf">M 2016 PDF</a></li>
+                    <li><a href="http://www.qapaq.pe/wp-content/uploads/2020/07/Memoria-2015.pdf">M 2015 PDF</a></li>
+      </ul>
+      
+     
+    </div>
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        });
+    </script>
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const personNames = document.querySelectorAll('.person-name');
+  const modal = document.getElementById('personModal');
+  const personInfo = document.getElementById('personInfo');
+  const modalClose = document.querySelector('.close');
+
+  personNames.forEach(person => {
+      person.addEventListener('click', function(e) {
+          e.preventDefault();
+          const info = this.getAttribute('data-info');
+          personInfo.textContent = info;
+          modal.style.display = 'block';
+      });
+  });
+
+  modalClose.addEventListener('click', function() {
+      modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', function(e) {
+      if (e.target == modal) {
+          modal.style.display = 'none';
+      }
+  });
+});
+function changeText(option) {
+    // Ocultar todos los bloques de contenido
+    document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Mostrar el bloque de contenido correspondiente
+    const selectedSection = document.getElementById(option);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+
+function toggleAnswer(element) {
+    const answer = element.nextElementSibling;
+    const icon = element.querySelector('.faq-icon');
+
+    if (answer) {
+        if (answer.style.display === "none" || answer.style.display === "") {
+            answer.style.display = "block";
+            icon.style.transform = "rotate(180deg)";
+        } else {
+            answer.style.display = "none";
+            icon.style.transform = "rotate(0deg)";
+        }
+    }
+} 
+  </script>
+</html>
+
+
+

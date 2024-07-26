@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>-Inicio-Qapaq</title>
+</head>
+<body>
+  <div id="menu-container"></div>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          fetch('menu.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('menu-container').innerHTML = data;
+              });
+      });
+  </script>
+    <section class="banner">
+    	<div class="banner-carousel">
+            <div class="banner-item">
+            	<a href="https://www.qapaq.pe/prestamos-personales/">
+                	<img src="imagenes/banners/Banner1-web.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-item">
+            	<a href="">
+                	<img src="imagenes/banners/AHORROS-b1.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-item">
+            	<a href="https://www.qapaq.pe/cambio-de-oro/">
+                	<img src="imagenes/banners/QAMBIOS-1536x428.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-item">
+            	<a href="https://www.qapaq.pe/ahorros/">
+                	<img src="imagenes/banners/DPF-1536x428.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-item">
+            	<a href="https://www.qapaq.pe/mesa-de-dinero/">
+                	<img src="imagenes/banners/yape-banner-1536x428.jpg" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-item">
+            	<a href="https://www.qapaq.pe/campanas/">
+                	<img src="imagenes/banners/fraudes-06-1536x428.png" alt="banner-image">
+            	</a>
+        	</div>
+    	</div>
+    	<button class="banner-prev"></button>
+    	<button class="banner-next"></button>
+	</section>
+
+    <section class="features">
+        <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-40.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-40.png" data-href="" style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-40.png);">
+            <img src="" alt="Imagen 1">
+            <a href="#" class="enlace"></a>    </div>
+        <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-41.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-46.png" data-href="" style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-46.png);">
+            <img src="" alt="Imagen 1">
+            <a href="#" class="enlace"></a>    
+          </div>
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-42.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-47.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-47.png);">
+            <img src="" alt="Imagen 2">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-43.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-48.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-48.png);">
+            <img src="" alt="Imagen 3">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/iconomesa-74.png" data-image-hover="imagenes/news/iconomesa-75.png" data-href=""style="--image-hover: url(imagenes/news/iconomesa-75.png);">
+            <img src="" alt="Imagen 4">
+            <a href="#" class="enlace"></a>
+          </div>
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-45.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-50.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-50.png);">
+            <img src="" alt="Imagen 5">
+            <a href="#" class="enlace"></a>
+          </div>
+    </section>
+    <script>
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+          const image = card.querySelector('img');
+          const imageData = card.getAttribute('data-image');
+          image.src = imageData;
+        });
+      
+      </script>
+    <section class="banner-body">
+    	<div class="banner-bodyl">
+            <div class="banner-bdy">
+            	<a href="">
+                	<img src="imagenes/banners/Banner-body-PC-25-1536x482.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-bdy">
+            	<a href="">
+                	<img src="imagenes/banners/Banner-body-PC-28-1536x482.png" alt="banner-image">
+            	</a>
+        	</div>
+        	<div class="banner-bdy">
+            	<a href="">
+                	<img src="imagenes/banners/Banner-body-PC-29-1536x482.png" alt="banner-image">
+            	</a>
+        	</div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-63-1.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-63-1.png" data-href="" style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-63-1.png);">
+            <img src="imagenes/news/BOTONES-NUEVOS-63-1.png" alt="Imagen 6">
+            <a href="#" class="enlace"></a>  
+          </div>
+        <a href="https://www.qapaq.pe/wp-content/uploads/2023/09/Comunicado-Insuperable-2023-09.pdf" >
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-60.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-61.png"style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-61.png);">
+            <img src="imagenes/news/BOTONES-NUEVOS-60.png"alt="Imagen 7">
+          </div>
+        </a>
+        <a href="https://www.qapaq.pe/wp-content/uploads/2024/05/Comunicacion-modificacion-tasa-Deposito-a-Plazo-Mayo-2024.pdf" class="enlace">
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-60.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-61.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-61.png);">
+            <img src="imagenes/news/BOTONES-NUEVOS-60.png"alt="Imagen 8">
+          </div>
+        </a>
+        <a href="https://www.qapaq.pe/wp-content/uploads/2024/05/LIBERACION-CTS.pdf" class="enlace">
+          <div class="card" data-image="imagenes/news/iconomesa-74.png" data-image-hover="imagenes/news/iconomesa-75.png" data-href=""style="--image-hover: url(imagenes/news/iconomesa-75.png);">
+            <img src="imagenes/news/iconomesa-74.png" alt="Imagen 9">
+          </div>
+        </a>
+        <a href="https://www.qapaq.pe/wp-content/uploads/2024/01/Comunicado-Traslado-cuentas-2024.01.pdf" class="enlace"></a>
+          <div class="card" data-image="imagenes/news/botonTRASLADO-80.png" data-image-hover="imagenes/news/botonTRASLADO-81.png" data-href=""style="--image-hover: url(imagenes/news/botonTRASLADO-81.png);">
+            <img src="imagenes/news/botonTRASLADO-80.png" alt="Imagen 10">
+          </div>
+        </a>
+        <a href="https://www.qapaq.pe/wp-content/uploads/2023/09/Comunicado-Reprogramaciones-II-2023-09.pdf" class="enlace"></a>
+          <div class="card" data-image="imagenes/news/BOTONES-NUEVOS-64.png" data-image-hover="imagenes/news/BOTONES-NUEVOS-65-1.png" data-href=""style="--image-hover: url(imagenes/news/BOTONES-NUEVOS-65-1.png);">
+            <img src="imagenes/news/BOTONES-NUEVOS-64.png" alt="Imagen 11">
+          </div>
+        </a>
+    </section>
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        });
+    </script>
+    <script src="pag_main.js"></script>
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+</body>
+</html>
+
+
+

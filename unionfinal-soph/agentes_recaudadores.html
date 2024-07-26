@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Para tu Negocio</title>
+    <style>
+        * {
+            text-align: center;
+            align-items: center;
+        }
+        .card {
+            display: inline-block;
+            width: 200px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+    </script>
+
+    <section class="banner-body">
+        <div class="banner-bodyl">
+            <div class="banner-bdy">        	
+                <img src="imagenes/banners/agenciasbanner2024-0000.png.png" alt="banner-image"> 
+            </div>
+        </div>
+    </section>
+
+    <div class="bodytxt">
+        <br>
+        <h3>CONOCE NUESTROS<br>AGENTES RECAUDADORES</h3>
+        <hr>
+        <style>
+            hr {
+                width: 20%;
+                margin: 20px auto;
+                border: 1px solid yellow;
+            }
+        </style>
+        <h4>
+            Financiera Qapaq mantiene un convenio que le permite realizar el pago de las cuotas de su crédito a través de <br>
+            los Agentes Kasnet, Western Union ubicados a nivel nacional, canales BCP ¡y ahora también por Yape!
+        </h4>
+        <br>
+
+        <section class="banner-body">
+            <div class="banner-bodyl">
+                <div class="banner-bdy2">        	
+                    <img src="imagenes/banners/agentes-recaudadores-2024-1-2048x502.png" alt="ima" width="80%"> 
+                </div>
+            </div>
+        </section>
+
+        <h4>
+            (*) Los pagos realizados después de las 6:00 pm, serán procesados al día siguiente hábil y la comisión es<br>
+            aplicable por parte del agente recaudador por el uso de los servicios de recaudación para el pago de sus<br>
+            cuotas.<br>
+            <br>
+            Asimismo, le recordamos que puede realizar el pago de sus cuotas sin costo alguno, a través de nuestros<br>
+            canales digitales: Banca por Internet y APP QAPAQ Móvil, y nuestra red de agencias ubicadas a nivel nacional.
+        </h4>
+        <br><br>
+        <h5>ENCUENTRA UN AGENTE FÍSICO </h5>
+        <hr>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            const image = card.querySelector('img');
+            const imageData = card.getAttribute('data-image');
+            image.src = imageData;
+        });
+    </script>
+
+    <a href="https://www.westernunion.com/ntxnl/pe/es/web/find-locations.html" class="enlace">
+        <div class="card" data-image="imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_074933-removebg-preview.png" data-image-hover="imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_075026-removebg-preview.png" style="--image-hover: url(imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_075026-removebg-preview.png);">
+            <img src="imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_074933-removebg-preview.png" alt="Image">
+        </div>
+    </a>
+    <a href="https://ubicatuagente.agentekasnet.com" class="enlace">
+        <div class="card" data-image="imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_074940-removebg-preview.png" data-image-hover="imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_075019-removebg-preview.png" style="--image-hover: url(imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_075019-removebg-preview.png);">
+            <img src="imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_074940-removebg-preview.png" alt="Imag">
+        </div>
+    </a>
+    <a href="https://www.viabcp.com/canales-presenciales" class="enlace">
+        <div class="card" data-image="imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_074947-removebg-preview.png" data-image-hover="imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_075011-removebg-preview.png" style="--image-hover: url(imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_075011-removebg-preview.png);">
+            <img src="imagenes/news/btn-agentes-recaudadores/Captura_de_pantalla_2024-07-05_074947-removebg-preview.png" alt="Im">
+        </div>
+    </a>
+
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        });
+    </script>
+
+    <script src="pag_main.js"></script>
+</body>
+</html>
