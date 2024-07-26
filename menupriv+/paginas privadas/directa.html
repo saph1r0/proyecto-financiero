@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferencia interna entre cuentas</title>
+    <style>
+       
+        .h1 {
+            margin: 0;
+            font-size: 1.5em;
+             text-align: center;
+            margin-bottom: 20px
+        }
+        .p {
+            margin: 0;
+             text-align: center;
+            margin-bottom: 20px
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .form-actions {
+            text-align: right;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .notification {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+   
+        <div class="content">
+            <h1>Transferencia interna entre cuentas</h1>
+            <p>Compra venta de divisas</p>
+            <p>Compra: 3.7340 - Venta: 3.7760</p>
+            <p>s&aacute;bado, 20 de julio de 2024 | &Uacute;ltimo Acceso: 10/07/2024 08:29 p.m. | <a href="#">Cerrar Sesi&oacute;n</a></p>
+
+        <form>
+            <div class="form-group">
+                <label for="monto">Monto:</label>
+                <input type="number" id="monto" name="monto" min="0" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="cuenta-origen">Cuenta origen:</label>
+                <select id="cuenta-origen" name="cuenta-origen">
+                    <option value="1326500061355">AHORROS SOLES DIGITAL 1326500061355 (S/)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Cuenta Destino</label>
+                <div>
+                    <input type="radio" id="cuenta-propia" name="cuenta-destino" value="propia" checked>
+                    <label for="cuenta-propia">Cuenta propia</label>
+                    <select id="cuenta-propia-select" name="cuenta-propia-select">
+                        <option value="1326500061355">AHORROS SOLES DIGITAL 1326500061355 (S/)</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="radio" id="cuenta-terceros" name="cuenta-destino" value="terceros">
+                    <label for="cuenta-terceros">Cuenta terceros</label>
+                    <input type="text" id="cuenta-terceros-input" name="cuenta-terceros-input" disabled>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="concepto">Concepto:</label>
+                <input type="text" id="concepto" name="concepto">
+            </div>
+            <div class="form-group notification">
+                <p>Notificación de transferencia por e-mail</p>
+                <input type="text" id="mail-terceros" name="mail-terceros">
+            </div>
+            <div class="form-actions">
+                <button type="submit">Siguiente</button>
+                <button type="button">Cancelar</button>
+            </div>
+        </form>
+        </div>
+    <script>
+        document.getElementById('cuenta-propia').addEventListener('change', function() {
+            document.getElementById('cuenta-propia-select').disabled = !this.checked;
+            document.getElementById('cuenta-terceros-input').disabled = this.checked;
+        });
+
+        document.getElementById('cuenta-terceros').addEventListener('change', function() {
+            document.getElementById('cuenta-terceros-input').disabled = !this.checked;
+            document.getElementById('cuenta-propia-select').disabled = this.checked;
+        });
+    </script>
+</body>
+</html>
+

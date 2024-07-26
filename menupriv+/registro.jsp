@@ -67,7 +67,7 @@
             pstmt.executeUpdate();
 
             rs = pstmt.getGeneratedKeys();
-            int usuarioId = 0;
+            int usuarioId = 1;
             if (rs.next()) {
                 usuarioId = rs.getInt(1);
             }

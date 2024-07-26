@@ -85,7 +85,7 @@
           <li>Máxima rentabilidad para tus retiros de CTS o AFP</li>
         </ul>
         <form action="guardarCuenta.jsp" method="post">
-            <input type="hidden" name="usuario_id" value="<%= request.getParameter("id") %>">
+            <input type="hidden" name="usuario_id" value="<%= request.getParameter("usuario_id") %>">
           <input type="hidden" name="accountType" value="Insuperable de Qapaq">
           <button type="submit">La quiero</button>
         </form>
@@ -98,7 +98,7 @@
           <li>Le damos un Plus de interés a tu capital</li>
         </ul>
         <form action="guardarCuenta.jsp" method="post">
-           <input type="hidden" name="usuario_id" value="<%= request.getParameter("id") %>">
+           <input type="hidden" name="usuario_id" value="<%= request.getParameter("usuario_id") %>">
           <input type="hidden" name="accountType" value="Qapital+ de Qapaq">
           <button type="submit">La quiero</button>
         </form>
@@ -111,7 +111,7 @@
           <li>La cuenta ideal para empezar a ahorrar en grande</li>
         </ul>
         <form action="guardarCuenta.jsp" method="post">
-           <input type="hidden" name="usuario_id" value="<%= request.getParameter("id") %>">
+           <input type="hidden" name="usuario_id" value="<%= request.getParameter("usuario_id") %>">
           <input type="hidden" name="accountType" value="La MagnifiQa de Qapaq">
           <button type="submit">La quiero</button>
         </form>
@@ -124,7 +124,7 @@
           <li>6 transacciones en ventanilla sin costo al mes.</li>
         </ul>
         <form action="guardarCuenta.jsp" method="post">
-            <input type="hidden" name="usuario_id" value="<%= request.getParameter("id") %>">
+            <input type="hidden" name="usuario_id" value="<%= request.getParameter("usuario_id") %>">
           <input type="hidden" name="accountType" value="Ahorro Soles Digital">
           <button type="submit">La quiero</button>
         </form>

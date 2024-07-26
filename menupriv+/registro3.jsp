@@ -87,8 +87,10 @@
     <main>
         <div class="form-container">
             <div class="right-panel">
-                <form>
+                <form action="procesar_r3.jsp" method="post">
+                    <input type="hidden" name="usuario_id" value="<%= request.getParameter("usuario_id") %>">
                     <div class="form-group">
+
                         <label for="dob">1. ¿Cuál es su fecha de nacimiento?</label>
                         <select id="dob-day" name="dob-day">
                             <option value="">- Día -</option>
@@ -161,9 +163,11 @@
                             <option value="no">No</option>
                         </select>
                     </div>
+                    <button type="submit">Enviar</button>
                 </form>
             </div>
         </div>
     </main>
 </body>
 </html>
+

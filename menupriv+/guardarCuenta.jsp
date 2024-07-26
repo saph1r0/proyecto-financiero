@@ -12,7 +12,7 @@
     try {
         usuarioId = Integer.parseInt(usuarioIdStr);
     } catch (NumberFormatException e) {
-        out.print("Error: ID de usuario no válido.");
+        out.print("Error: ID de usuariox no válido.");
         return;
     }
 
@@ -38,7 +38,8 @@
         if (rows > 0) {
             out.print("Cuenta guardada exitosamente.");
             // Redirigir o mostrar un mensaje de éxito según sea necesario
-            response.sendRedirect("registro3.jsp"); // Ajusta a tu página de éxito
+            response.sendRedirect("registro3.jsp?usuario_id=" + usuarioId);
+
         } else {
             out.print("Error al guardar la cuenta.");
         }
