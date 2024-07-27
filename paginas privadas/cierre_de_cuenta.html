@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerrar Cuenta</title>
+</head>
+<body>
+    
+    <div>
+        <center>
+            <p>Compra Venta de Divisas</p>
+            <p>compra : 3.7610 - venta : 38030</p>
+        </center>
+    </div>
+    <hr style="width: 100%; border: 5px yellow solid">
+    <p style="color: red"> Cierre de cuenta </p>
+    <hr style="width: 100%; border: 5px yellow solid">
+    <div style="padding: 5px;border: 2px red solid; width: 240px">
+        <p>Saldo contable : 0.00</p>
+        <p>Total retenciones : 0.00</p>
+        <p>Saldo disponible : 0.00</p>
+    </div>
+    <br><br>
+
+    
+    <div style="align-items: center">
+        <center>
+        <form action="cerrarCuenta.jsp" method="post" >
+            <input type="hidden" name="usuario_id" value="<%= session.getAttribute('usuario_id')%>">
+            <input style="align-items: center;background-color: red;width: 200px;height: 40px;color: white; border:none" type="submit" value="Cerrar Mi Cuenta">
+        </form>
+        </center>
+    </div>
+</body>
+</html>
