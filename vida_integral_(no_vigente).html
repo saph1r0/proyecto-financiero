@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>seguro agricola</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ruta_protegida_Seguros_Estilo.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="menu-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('menu.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('menu-container').innerHTML = data;
+                    });
+            });
+        </script>
+
+        <div class="imagenahorro">
+            <img src="Imagenes_Seguros/banner-SEGUROS.jpg" alt="segurs">
+        </div>
+
+        <div>
+            <center>
+            <h2>SEGURO AGRÍCOLA DE RENDIMIENTO</h2>
+            <hr>
+            <p> 
+                Asegura tu cultivo hasta 10has desde la siembra hasta la cosecha ante un desastre natural.
+            </p>
+            <div class="buttons">
+                    
+                <button onclick="changeText('COBERTURA')" style="margin-left: 17%;">Cobertura del <br>
+                SEGURO</button>
+                <button onclick="changeText('REQUISITOS')">Requisitos y <br>
+                CONDICIONES</button>
+                <button onclick="changeText('procedimiento')">Procedimientos en <br>
+                CASO DE SINIESTRO</button>
+                <button onclick="changeText('certificado')">Certificado de <br>
+               PÓLIZA DE SEGURO </button>
+
+            </div>
+            </center>
+        </div>
+
+        <div id="extraContent">
+            <div class="content-section" id="COBERTURA">
+                <center>
+                    <style>
+                        tr{
+                            width: 100%;
+                            
+                        }
+                        .s{
+                            width: 60%;
+                            border: 1px black solid;
+                            padding: 10px;
+                        }
+                        .g{
+                            width: 24%;
+                            border: 1px black solid;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        .j{
+                            width: 8%;
+                            border: 1px black solid;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        .h{
+                            width: 8%;
+                            border: 1px black solid;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        #s1{
+                            border: none;
+                        }
+                        #g1{
+                            border: none;
+                        }
+                        #j1{
+                            background-color: yellow;
+                        }
+                        h4{
+                            color: red;
+                        }
+                    </style>
+                    <h3>COBERTURA</h3>
+                    <hr>
+                    <div style="width: 55%; text-align: left;">
+                        <p><b>Los riesgos cubiertos son:</b></p>
+                    </div>
+                    <div style="width: 50%; text-align: left;">
+                        <li>Seguro de vida Integral Basico</li>
+                        <nav><li>Muerte Natural</li>
+                            <li>Muerte Accidental</li></nav>
+                        <li>Seguro de vida Integral </li>
+                        <nav><li>Muerte Natural</li>
+                            <li>Muerte Accidental</li>
+                            <li>Invalidez total y permanente por accidente</li></nav>
+                    </div>    
+                    <div style="width: 55%;  text-align: left; color: red">
+                        <p>*A partir del 01/12/2019 Seguro de Vida Integral aplica sólo para créditos Consumo e Impulso.</p>
+                        <p>*A partir del 01/04/2020 Seguro de Vida Integral Básico aplica sólo para créditos Microcrédito y Agrícola.</p>
+                    </div>
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="REQUISITOS" style="display:none;">
+                <center>
+                    <style>
+                        .k{
+                            width: 38%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        .q{
+                            width: 16%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        .l{
+                            width: 9%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        .u{
+                            width: 7%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        #ñ{
+                            background-color: yellow;
+                        }
+                    </style>
+                    <h3>REQUISITOS Y CONDICIONES</h3>
+                    <hr> 
+                    <div>
+                        <div style="width:50%">
+                            <li>Tener un préstamo vigente con Financiera QAPAQ.</li>
+                            <li>Edad de Ingreso: Personas naturales mayores de 18 años y menores de 70 años 364 días (inclusive) de edad.</li>
+                            <li>Edad de Permanencia: Con un máximo de 75 años 364 días (inclusive) de edad.</li>
+                        </div>
+                        <div style="width: 55%; text-align: left; ">
+                            <p><b>Prima Comercial Mensual</b></p>
+                            <p>La prima comercial se calculará multiplicando la Tasa Comercial Mensual + IGV por el monto inicial del crédito por el número de meses del crédito.</p>
+                        </div>
+                        <div style="width: 50%;text-align: left">
+                            <li>Seguro de vida Integral Basico</li>
+                        <nav><li>Tasa Comercial Mensual: 0.0814%</li>
+                            <li>Tasa Comercial Mensual +IGV: 0.096%</li></nav>
+                        <li>Seguro de vida Integral </li>
+                        <nav><li>Tasa Comercial Mensual: 0.0905%</li>
+                            <li>Tasa Comercial Mensual +IGV: 0.11%</li></nav>
+                        </div>
+                        <div style="width: 55%; text-align: left; ">
+                            <p><b>Exclusiones</b></p>
+                            <p>Sin exclusiones.</p>
+                            <p><b>Beneficiario Titular</b></p>
+                            <p>Financiera Qapaq por el Saldo Insoluto (sin considerar penalidades, comisiones y gastos) a la fecha de ocurrencia del siniestro.</p>
+                            <p><b>Beneficiarios Adicionales</b></p>
+                            <p>El beneficio en favor de el/los Beneficiario(s) Adicional(es) comprende la diferencia que exista entre la Suma Asegurada declarada en la Solicitud-Certificado de Seguro y el
+saldo insoluto de la deuda (sin considerar penalidades, comisiones y gastos) a la fecha de ocurrencia del siniestro.</p>
+                            <p>En caso de no haber declarado Beneficiarios, la indemnización se pagará a los Herederos Legales del Asegurado.</p>
+                        </div>
+                        
+                    </div>    
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="procedimiento" style="display:none;">
+                <center>
+                    <h3>AVISO DE SINIESTROS</h3>
+                    <hr> 
+                    <div style="font-size: 15px;">
+                        <div style=" width: 55%; text-align: left;">
+                            <p>En caso de siniestro, los beneficiarios deberán dar aviso a la compañía en un plazo no menor a 30 días calendarios desde el conocimiento del mismo, o del beneficio , o después de dicho plazo, tan pronto como sea posible, siempre y cuando el retraso obedezca a motivos de fuerza mayor.</p>
+                            <p>Posteriormente deberá de presentar los siguientes documentos:</p>
+                            <nav>
+                                <li>Acta de defunción del asegurado (original o copia legalizada).</li>
+                                <li>Certificado médico de defunción del asegurado (original o copia legalizada).</li>
+                                <li>Documento de identidad y/o partida de nacimiento del asegurado (original o copia legalizada).</li>
+                                <li>Documento de identidad y/o partida de nacimiento de los beneficiarios designados en el Certificado de Seguro o la Declaratoria de Herederos Legales</li>
+                                <li>Cualquier otro documento que la compañía considere necesario.</li>
+                            </nav>
+                            <p>Si tienes alguna consulta o necesitas más información, puedes llamar a CHUBB SEGUROS PERU S.A., al 417-5000, de lunes a viernes, de 9:00 a. m. a 6:00 p. m., o escribir a atención.seguros@chubb.com.</p>
+                            <p>La cobertura del seguro es responsabilidad de Chubb Seguros Perú S.A., empresa distinta a Financiera Qapaq S.A . Ley N° 28587, sus modificatorias y reglamento correspondiente.</p>
+                        </div>
+                    </div>    
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="certificado" style="display:none;">
+                <center>
+                    <h3>CERTIFICADO</h3>
+                    <hr>    
+                    <div>
+                        <a href="https://www.qapaq.pe/wp-content/uploads/2022/09/Solicitud-Certificado-Seguro-de-Vida-Integral-Qapaq-0922.pdf">
+                            <button class="custom-button">Vida integral(Descrague el PDF)</button><br><br>
+                        </a><a href="https://www.qapaq.pe/wp-content/uploads/2022/09/Solicitud-Certificado-Seguro-de-Vida-Integral-Basico-Qapaq-0922.pdf">
+                            <button class="custom-button">Vida integral basico(Descargue el PDF)</button><br><br>
+                        </a>
+                    </div>
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+        </div>
+        
+        <div id="footer-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-container').innerHTML = data;
+                    });
+            });
+        </script>
+    
+    <script src="Desgravamen_devolucion_Seguros_Funciones.js"></script>
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+    <script src="pag_main.js"></script>
+    </body>
+</html>

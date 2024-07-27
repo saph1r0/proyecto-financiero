@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Solidario</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ruta_protegida_Seguros_Estilo.css">
+        <link rel="stylesheet" href="styles.css">
+
+
+    </head>
+    <body>
+        <div id="menu-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('menu.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('menu-container').innerHTML = data;
+                    });
+            });
+        </script>
+        </div>
+
+        <div class="imagenahorro">
+            <img src="Imagenes_Seguros/banner-SEGUROS.jpg" alt="segurs">
+        </div>
+
+                <div>
+                <center>
+                <h2>SEGURO SOLIDARIO</h2>
+                <hr>
+                <p> 
+                    Seguro de Accidentes Personales que te protege a ti y a tu familia ante un evento fortuito.
+                </p>
+                </center>
+                </div>
+                <div class="buttons">
+                    
+                    <button onclick="changeText('COBERTURA')" style="margin-left: 17%;">Cobertura del <br>
+                    SEGURO</button>
+                    <button onclick="changeText('REQUISITOS')">Requisitos y <br>
+                    CONDICIONES</button>
+                    <button onclick="changeText('procedimiento')">Procedimientos en <br>
+                    CASO DE SINIESTRO</button>
+                    <button onclick="changeText('certificado')">Certificado de <br>
+                    POLIZA DE SEGURO</button>
+
+                </div>
+                
+                <div id="extraContent">
+                    <div id="COBERTURA" class="content-section" >
+                        <center>                
+                        <h2>COBERTURA</h2>
+                        <hr>
+                        <table style="width: 60%;">
+                            <tr>
+                                <td><b>Los riesgos cubiertos son:</b></td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr class="cel">
+                                <td class="cell"><li>Si te sucediera un ACCIDENTE y falleces, indemnizaremos a tu familia con S/ 15,000 para que cuenten con<br>
+                                    un respaldo económico.</li></td>
+                            </tr>
+                            <tr class="cel">
+                                <td><li>En caso un accidente te deje con INVALIDEZ TOTAL Y PERMANENTE, te entregaremos S/15,000 que te<br>
+                                    permitirá afrontar este momento.</li></td>
+                            </tr>
+                            <tr class="cel">
+                                <td><li>Si te ocurriera un ACCIDENTE, no te preocupes por los gastos médicos de curación, TE REEMBOLSAMOS<br>
+                                    hasta S/ 1,500.</li><br></td>
+                            </tr>
+                            <tr>
+                                <td><b>Además, en las siguientes asistencias prestadas por el proveedor de VDR:</b></td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                        </table>
+                        <table style="width: 44%; border-collapse: collapse; border: 1px black solid;border-bottom: none; text-align: center;">
+                                <tr style="background-color: yellow;border: 1px black solid; ">
+                                    <th style="border: 1px black solid; padding: 2%;"><b>MULTIASISTENCIA SOLIDARIA – FINANCIERA QAPAQ</b></th>
+                                </tr>
+                        </table>
+                        <table style="width: 44%; border-collapse: collapse; border: 1px black solid;text-align: center;">
+
+                                <tr style="border: 1px black solid;">
+                                    <td style="border: 1px black solid;padding: 2%;"><b>SERVICIOS</b></td>
+                                </tr>
+                        </table>
+                        <table style="width: 44%; border-collapse: collapse; border: 1px black solid; ">
+
+                                <tr style="background-color: yellow; border: 1px black solid; text-align: center;">
+                                    <td style="border: 1px black solid;padding: 2%;"><b>Detalle de Servicios</b></td>
+                                    <td style="border: 1px black solid;padding: 2%;"><b>Monto Máximo por<br> atención</b></td>
+                                    <td style="border: 1px black solid;padding: 2%;"><b>Máximo de<br> Atenciones por<br> Año</b></td>
+                                </tr>
+                                <tr style="border: 1px black solid;">
+                                    <td style="border: 1px black solid;padding: 2%;">Evaluación Inicial Presencial con<br> Fisioterapeuta</td>
+                                    <td style="border: 1px black solid;padding: 2%;">100% Servicio</td>
+                                    <td style="border: 1px black solid;padding: 2%;">01 atención</td>
+                                </tr>
+                                <tr style="border: 1px black solid;">
+                                    <td style="border: 1px black solid;padding: 2%;">Servicio de envío de Técnica en Enfermería<br> a domicilio para cuidado del paciente<br> derivado de un accidente.</td>
+                                    <td style="border: 1px black solid;padding: 2%;">Copago de S/35.00<br> por evento</td>
+                                    <td style="border: 1px black solid;padding: 2%;">01 atención</td>
+                                </tr>
+                                <tr style="border: 1px black solid;">
+                                    <td style="border: 1px black solid;padding: 2%;">Orientación Psicológica telefónica</td>
+                                    <td style="border: 1px black solid;padding: 2%;">100% Servicio</td>
+                                    <td style="border: 1px black solid;padding: 2%;">02 atenciones</td>
+                                </tr>
+                                <tr style="border: 1px black solid;">
+                                    <td style="border: 1px black solid;padding: 2%;">Servicio de traslado en ambulancia por<br> urgencia médica las 24 horas los 365 días<br> del año.</td>
+                                    <td style="border: 1px black solid;padding: 2%;">Hasta S/250</td>
+                                    <td style="border: 1px black solid;padding: 2%;">01 evento</td>
+                                </tr>
+                                <tr style="border: 1px black solid;">
+                                    <td style="border: 1px black solid;padding: 2%;">Orientación médica telefónica las 24 horas<br> los 365 días del año.</td>
+                                    <td style="border: 1px black solid;padding: 2%;">100% Servicio</td>
+                                    <td style="border: 1px black solid;padding: 2%;">Sin límite</td>
+                                </tr>
+                                <tr style="border: 1px black solid;">
+                                    <td style="border: 1px black solid;padding: 2%;">Asistencia de Sepelio<br>
+                                        • Asistencia del Director funerario<br>
+                                        • Gestión de trámites generales de sepelio<br>
+                                        • Traslado e instalación del servicio<br>
+                                        • Maquillaje y arreglo estético del fallecido<br>
+                                        • Tratamiento de conservación del cuerpo<br>
+                                        • Ataúd de madera modelo imperial<br>
+                                        • Capilla ardiente<br>
+                                        • Traslado del féretro en carroza.</td>
+                                    <td style="border: 1px black solid;padding: 2%;">100% Servicio<br> Monto Máximo<br> Servicio Funerario<br>
+                                        S/ 1,200.00 –</td>
+                                    <td style="border: 1px black solid;padding: 2%;">Evento único</td>
+                                </tr>
+                        </table>
+                        <table style="width: 44%; border-collapse: collapse; border: 1px black solid; ">
+
+                                <tr style="border: 1px black solid;">
+                                    <td style="border: 1px black solid;padding: 2%;">Disposiciones finales</td>
+                                </tr>
+                                <tr style="border: 1px black solid;">
+                                    <td style="border: 1px black solid;padding: 2%;">Se incluirán al plan de asistencia a las siguientes personas:<br>
+                                        <br>
+                                        Titular<br>
+                                        Edad mínima de ingreso: 18 años<br>
+                                        Edad máxima de ingreso: 74 años y 364 días<br>
+                                        Edad máxima de permanencia: 80 años y 364 días<br>
+                                        <br>
+                                        • Para hacer uso de los beneficios del plan se requiere siempre que los titulares residan<br> en el territorio nacional.<br>
+                                        • VDR no brinda reembolsos, cuando las atenciones se realizan de forma particular por<br> el cliente. Todos los servicios deberán ser solicitados a través de la Central de<br> Asistencias (01) 476-1610.<br>
+                                        • El servicio Asistencia Sepelio cubre el fallecimiento por accidentes personales. El<br> servicio se encuentra activo 24 horas del día los 365 días del año. Para hacer uso del<br> servicio el familiar del afiliado fallecido deberá comunicarse al (01)475-1711 /<br> 949098611 en un plazo no mayor a las 48 horas ocurrido el deceso. Servicio de<br> Asistencia Sepelio sujeto a la coyuntura.</td>
+                                </tr>
+                        </table>
+                        </center>
+                        <style>#e{margin-bottom: 10%;}</style>
+                        <div id="e"> </div>
+                    </div>
+                    <div id="REQUISITOS" class="content-section" style="display:none;">
+                        <center>
+                        <h2>REQUISITOS Y CONDICIONES</h2>
+                        <hr>
+                        <div style="width: 50%; text-align: left; font-size: 15px;">
+                            <li>Tener un préstamo vigente con Financiera QAPAQ.</li>
+                            <li>Titular asegurado y adicional deberá tener edad mínima de ingreso 18 años hasta 65 años y 345 días.</li>
+                            <li>Edad máxima de permanencia: 80 años 364 días (inclusive) de edad.</li>
+                        </div>
+                        <div style="width: 55%; text-align: left;">
+                            <p><b>Prima Comercial</b><br>
+                            Prima Comercial + IGV: S/. 8.00 por el número de meses del crédito.</p><br>
+                            <p><b>Exclusiones</b><br>
+                            Las exclusiones se encuentran detalladas en la Póliza de Seguro.</p><br>
+                            <p><b>Beneficiarios</b><br>
+                            Los beneficiarios designados por el Asegurado, en el caso de Invalidez Total y Permanente y Reembolso de<br> Gastos Médicos, el beneficiario será el Asegurado Titular.</p>
+                        </div>
+                        </center>
+                        <style>#e{margin-bottom: 10%;}</style>
+                        <div id="e"> </div>
+                    </div>
+                    <div id="procedimiento" class="content-section" style="display:none; ">
+                    <center>
+                    <style>
+                        .p{
+                        text-align: left;}
+                        .l{
+                        text-align: left;}
+                    </style>
+                    <div style="width: 60%;">
+                        <h2>AVISO DE SINIESTROS</h2>
+                        <hr>
+                        <p class="p">En caso de siniestro, los beneficiarios deberán dar aviso a la compañía en un plazo no menor a 30 días<br> calendarios desde el conocimiento del mismo, o del beneficio , o después de dicho plazo, tan pronto como sea<br> posible, siempre y cuando el retraso obedezca a motivos de fuerza mayor.</p>
+                        <br>
+                        <p class="p">Posteriormente deberá de presentar los siguientes documentos:</p>
+                        <br>
+                        <p class="p">Para la cobertura de Muerte Accidental :</p>
+                        <li class="l">Documento de identidad del asegurado fallecido.</li>
+                        <li class="l">Partida o acta de defunción del asegurado.</li>
+                        <li class="l">Certificado médico de defunción del asegurado.</li>
+                        <li class="l">Documento de identidad de los beneficiarios o herederos legales (si fuera el caso).</li>
+                        <li class="l">Declaratoria de herederos legales (si fuera el caso).</li>
+                        <li class="l">Atestado policial completo (solo en caso de muerte accidental).</li>
+                        <li class="l">Protocolo de Necropsia.</li>
+                        <li class="l">Presentar en las oficinas de la compañía toda la documentación (en original o copia legalizada) <br>que sea necesaria para la evaluación del siniestro.</li>
+                        <p class="p">Para la cobertura de Invalidez Total y Permanente por Accidente:</p><br>
+                        <li class="l">Documento de identidad del asegurado.</li>
+                        <li class="l">Certificado del médico que prestó los primeros auxilios al asegurado expresando las causas del accidente<br> y sus consecuencias conocidas o probables.</li>
+                        <li class="l">Certificado médico con diagnóstico, emitido por el Instituto Nacional de Rehabilitación del Ministerio de<br> Salud o entidad legal que la sustituya, en el cual se declare la condición de Incapacidad Total y<br> Permanente.</li>
+                        <li class="l">CHUBB Seguros se reserva el derecho de solicitar cualquier otro antecedente, información y/o documento<br> que estime necesarios para la evaluación del siniestro correspondiente. Esta información podrá ser<br> proporcionada directamente al ajustador, cuando la COMPAÑÍA así se lo indique al ASEGURADO.</li>
+                        <p class="p">Para la cobertura de Reembolso de gastos médicos por Accidente:</p>
+                        <li class="l">Declaración escrita, con fecha y hora del accidente, el lugar y las circunstancias en que este ocurrió.</li>
+                        <li class="l">Certificado del Médico que prestó los primeros auxilios a la víctima, expresando el estado del<br> accidentado, las dolencias o daños identificados y las consecuencias<br> identificados y las consecuencias conocidas o probables.</li>
+                        <li class="l">En el caso de accidentes de tránsito o en los que el asegurado sea el conductor del vehiculó, resultado de<br> Dosaje etílico.</li>
+                        <li class="l">Relación de gastos de curación incurridos por el Asegurado, debidamente fundamentados con los<br> comprobantes de pago respectivos.</li>
+                        <p class="p">En caso el asegurado haya fallecido antes del cobro de la indemnización, se encontrará facultado para realizar<br> el trámite de cobertura el beneficiario (Herederos Legales), quien deberá presentar, adicionalmente:</p>
+                        <li class="l">Acta de sucesión intestada, declaración de Herederos Testamento inscrito (a) en los Registros públicos,<br> que lo designe, según corresponda.</li>
+                        <li class="l">Documentos de identidad del beneficiario (Heredero Legal).</li>
+                        <p class="p">Si tienes alguna consulta o necesitas más información, puedes llamar a CHUBB SEGUROS PERU S.A., al 417-5000,<br> de lunes a viernes, de 9:00 a. m. a 6:00 p. m., o escribir a atención.seguros@chubb.com.</p>
+                        <p class="p">La cobertura del seguro es responsabilidad de Chubb Seguros Perú S.A., empresa distinta a Financiera Qapaq<br> S.A. Ley N° 28587, sus modificatorias y reglamento correspondiente.                </p>
+                    </div>
+                    </center>
+                    <style>#e{margin-bottom: 10%;}</style>
+                        <div id="e">
+                    </div>
+                    </div>
+                    <div id="certificado" class="content-section" style="display:none;">
+                        <center>
+                            <h2>CERTIFICADO</h2>
+                        <hr>
+                            <a href="https://www.qapaq.pe/wp-content/uploads/2023/04/2.-SC-Seg.-Solidario-version-final-abril23.pdf">
+                              <button class="custom-button">Descargue aquí el certificado / Poliza de seguro</button>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+        
+        <div id="footer-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-container').innerHTML = data;
+                    });
+            });
+        </script>
+    
+    <script src="Desgravamen_devolucion_Seguros_Funciones.js"></script>
+
+        <script src="menu.html"></script>
+        <script src="footer.html"></script>
+        <script src="pag_main.js"></script>
+    </body>
+</html>

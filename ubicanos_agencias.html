@@ -6,6 +6,74 @@
     <link rel="stylesheet" href="styles.css">
     <title>-Para tu Negocio</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+     <style>
+
+        .container1 {
+            position: relative;
+            width: 700px;
+            margin: 20px auto;
+        }
+        #map1 {
+            height: 700px;
+            width: 700px;
+        }
+        .search-container {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .search-input1 {
+            width: calc(100% / 3 - 20px);
+            padding: 10px;
+            margin-right: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            position: relative;
+            z-index: 10; /* Ensure inputs are above map */
+        }
+                .search-input2 {
+            width: calc(100% / 3 - 20px);
+            padding: 10px;
+            margin-right: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            position: relative;
+            z-index: 10; /* Ensure inputs are above map */
+        }        .search-input3 {
+            width: calc(100% / 3 - 20px);
+            padding: 10px;
+            margin-right: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            position: relative;
+            z-index: 10; /* Ensure inputs are above map */
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensure menu is above map */
+            max-height: 200px;
+            overflow-y: auto;
+            width: 60%;
+            margin-left: 20%;
+            
+        }
+        .dropdown-menu div {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .dropdown-menu div:hover {
+            background-color: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
     <style>
@@ -13,12 +81,6 @@
         text-align: center;
         align-items: center;
         }
-        #map {
-            width: 55%;
-            height: 580px;
-            box-shadow: 5px 5px 5px #888;
-            position: relative;
-            display: inline-block;        }
     </style>
     <div id="menu-container"></div>
     <script>
@@ -34,7 +96,7 @@
     <section class="banner-body">
     	<div class="banner-bodyl">
             <div class="banner-bdy">        	
-                	<img src="imagenes/banners/agenciasbanner2024-0000.png.png" alt="ima"> 
+                	<img src="imagenes/banners/agenciasbanner2024-0000.jpg" alt="ima"> 
         	</div>
         </div>
     </section>
@@ -55,69 +117,123 @@
                 9:00am a 6:30pm y sábados de 9:00am a 1:00pm.
             </h4>
             <br>
-            <section>
-                <style>
-                    .dropdown {
-                        position: relative;
-                        display: inline-block;
-                    }
-
-                    .dropdown-content {
-                        display: none;
-                        z-index: 1000;
-                        position: absolute;
-                        background-color: #f9f9f9;
-                        min-width: 160px;
-                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                        z-index: 1;
-                    }
-
-                    /* Estilos para los botones */
-                    .dropdown button {
-                        font-size: 16px;
-                        padding: 10px 20px; /* Ajusta el tamaño del botón */
-                    }
-
-                    .dropdown:hover .dropdown-content {
-                        display: block;
-                    }
-                </style>
-                        <div class="dropdown">
-                            <button>Botón 1</button>
-                            <div class="dropdown-content">
-                                <li><a href="#">Opción 1A</a></li>
-                                <li><a href="#">Opción 1A</a></li>
-                                <li><a href="#">Opción 1A</a></li>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button>Botón 1</button>
-                            <div class="dropdown-content">
-                                <a href="#">Opción 1A</a>
-                                <a href="#">Opción 1B</a>
-                                <a href="#">Opción 1C</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button>Botón 1</button>
-                            <div class="dropdown-content">
-                                <a href="#">Opción 1A</a>
-                                <a href="#">Opción 1B</a>
-                                <a href="#">Opción 1C</a>
-                            </div>
-                        </div>
-            </section>
-            <br>
-
-            <div id="map">
-            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-            <script>
-                var map = L.map('map').setView([41.66, -4.72], 15);
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                }).addTo(map);
-            </script>
+           
+            <div class="container1">
+                <div class="search-container">
+                    <input type="text" class="search-input1" id="search1" placeholder="Agencia ">
+                    <input type="text" class="search-input2" id="search2" placeholder="Distrito ">
+                    <input type="text" class="search-input3" id="search3" placeholder="Tipos de producto ">
+                </div>
+                <div id="map1"></div>
             </div>
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script>
+                // Inicializar el mapa
+                const map1 = L.map('map1').setView([-12.045331073366249, -77.03001568242087], 13); // Coordenadas por defecto
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map1);
+            
+            const locations1 = [
+                 { name: 'canto grande', lat: -11.96915708886188, lng: -77.00528902791615 },
+            { name: 'ceres', lat: -11.960657, lng: -77.010453 },
+            { name: 'chiclayo', lat: -11.761229, lng: -77.198411 },
+            { name: 'chincha', lat: -13.418774, lng: -76.133408 },
+            { name: 'comas', lat: -11.966691, lng: -77.039722 },
+            { name: 'el tambo', lat: -12.065317, lng: -75.781721 },
+            { name: 'huacho', lat: -10.238678, lng: -77.996873 },
+            { name: 'huancayo', lat: -12.069583, lng: -75.202546 },
+            { name: 'huaral', lat: -10.212163, lng: -77.852847 },
+            { name: 'ica', lat: -13.710508, lng: -75.159848 },
+            { name: 'imperial', lat: -12.035256, lng: -77.965237 },
+            { name: 'la merced', lat: -12.210810, lng: -74.345896 },
+            { name: 'la molina', lat: -12.087786, lng: -77.053352 },
+            { name: 'los olivos', lat: -11.991620, lng: -77.036932 },
+            { name: 'pangoa', lat: -12.108905, lng: -73.411224 }
+        ];
+            const locations2 = [
+                { name: 'ate', lat: -12.0356, lng: -77.0369 },
+            { name: 'chiclayo', lat: -6.7742, lng: -79.8418 },
+            { name: 'churin', lat: -10.1527, lng: -76.4533 },
+            { name: 'comas', lat: -11.9714, lng: -77.0374 },
+            { name: 'huaral', lat: -10.2121, lng: -77.8534 },
+            { name: 'ica', lat: -13.7105, lng: -75.1598 },
+            { name: 'imperial', lat: -12.0656, lng: -77.9660 },
+            { name: 'la merced', lat: -12.0893, lng: -74.3403 },
+            { name: 'la molina', lat: -12.0878, lng: -77.0533 },
+            { name: 'los olivos', lat: -11.9916, lng: -77.0370 },
+            { name: 'magdalena', lat: -12.0841, lng: -77.0300 },
+            { name: 'mala', lat: -12.1743, lng: -77.7749 },
+            { name: 'miraflores', lat: -12.1214, lng: -77.0290 },
+            { name: 'piura', lat: -5.1945, lng: -80.6328 },
+            { name: 'puente piedra', lat: -11.9900, lng: -77.0780 }
+        
+            ];
+            const locations3 = [
+                { name: 'ahorros', lat: 51.505, lng: -0.09 },
+                { name: 'depositos a plazo fijo', lat: 51.515, lng: -0.1 },
+                { name: 'depocito cts', lat: 51.525, lng: -0.12 },
+                { name: 'efectivo rapido', lat: 51.535, lng: -0.15 },
+                { name: 'garantia con joyas de oro', lat: 51.545, lng: -0.17 },
+                { name: 'GNV', lat: 51.505, lng: -0.09 },
+                { name: 'LD GNV', lat: 51.515, lng: -0.1 },
+                { name: 'magnifiqa', lat: 51.525, lng: -0.12 },
+                { name: 'para tu construccion', lat: 51.535, lng: -0.15 },
+                { name: 'para tu cultivo', lat: 51.545, lng: -0.17 },
+                { name: 'para tu maquinaria', lat: 51.505, lng: -0.09 },
+                { name: 'para tu mercaderia', lat: 51.515, lng: -0.1 },
+                { name: 'soat digital', lat: 51.525, lng: -0.12 }
+            ];
+            
+            function showDropdown(inputId, options) {
+            const input = document.getElementById(inputId);
+            const menu = document.createElement('div');
+            menu.className = 'dropdown-menu';
+            input.parentElement.appendChild(menu);
+
+            document.addEventListener('click', (event) => {
+                if (!menu.contains(event.target) && event.target !== input) {
+                    menu.style.display = 'none';
+                }
+            });
+            
+            function updateMenu() {
+                const filter = input.value.toLowerCase();
+                menu.innerHTML = '';
+
+                const filteredLocations = options.filter(location => location.name.toLowerCase().includes(filter));
+
+                filteredLocations.forEach(location => {
+                    const div = document.createElement('div');
+                    div.textContent = location.name;
+                    div.onclick = () => {
+                        map1.setView([location.lat, location.lng], 13);
+                        input.value = location.name;
+                        menu.style.display = 'none';
+                    };
+                    menu.appendChild(div);
+                });
+                
+                 menu.style.display = filteredLocations.length > 0 ? 'block' : 'none';
+            }
+
+            input.addEventListener('input', updateMenu);
+            input.addEventListener('focus', updateMenu);
+        }
+
+        // Inicializar la funcionalidad de búsqueda
+        document.querySelectorAll('.search-input1').forEach(input => {
+            showDropdown(input.id, locations1);
+        });
+        document.querySelectorAll('.search-input2').forEach(input => {
+            showDropdown(input.id, locations2);
+        });
+        document.querySelectorAll('.search-input3').forEach(input => {
+            showDropdown(input.id, locations3);
+        });
+    </script>
+       
 
             <h4>
                 Recuerda que también puedes pagar tus cuotas a través de nuestros agentes de recaudación (*):

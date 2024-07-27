@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>te Protegemos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ruta_protegida_Seguros_Estilo.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="menu-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('menu.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('menu-container').innerHTML = data;
+                    });
+            });
+        </script>
+
+        <div class="imagenahorro">
+            <img src="Imagenes_Seguros/banner-SEGUROS.jpg" alt="segurs">
+        </div>
+
+        <div>
+            <center>
+            <h2>TE PROTEGEMOS</h2>
+            <hr>
+            <p> 
+                Seguro que protege tus bienes, mercadería, equipos y maquinarias considerados como base para el<br> otorgamiento de los prestamos menores o iguales a S/ 60,000 cuyo valor total y ubicación tienen que ser<br> declarados.
+            </p>
+            <div class="buttons">
+                    
+                <button onclick="changeText('COBERTURA')" style="margin-left: 17%;">Cobertura del <br>
+                SEGURO</button>
+                <button onclick="changeText('REQUISITOS')">Requisitos y <br>
+                CONDICIONES</button>
+                <button onclick="changeText('procedimiento')">Procedimientos en <br>
+                CASO DE SINIESTRO</button>
+                <button onclick="changeText('certificado')">Certificado de <br>
+                POLIZA DE SEGURO</button>
+
+            </div>
+            </center>
+        </div>
+
+        <div id="extraContent">
+            <div class="content-section" id="COBERTURA">
+                <center>
+                    <h3>COBERTURA</h3>
+                    <hr>
+                    <div style="width: 54%; text-align: left;">
+                        <p><b>Los riesgos cubiertos son:</b></p>
+                        <p>Las pérdidas o daños causados por alguna de las siguientes coberturas: Incendio y/o Rayo, Explosión, Terremoto,<br> maremoto, temblor, erupción volcánica, y demás riesgos de la naturaleza,</p>
+                        <p>Huelga, motín, conmoción civil, daño malicioso, vandalismo y terrorismo; en todo lo que no esté excluido.</p>
+                    </div>    
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="REQUISITOS" style="display:none;">
+                <center>
+                    <h3>REQUISITOS Y CONDICIONES</h3>
+                    <hr> 
+                    <div>
+                        <div style="width: 54%; text-align: left; ">
+                            <li>Tener un préstamo vigente con Financiera QAPAQ.</li>
+                            <li>Edad de Ingreso: Personas naturales mayores de 18 años y menores de 70 años 364 días (inclusive) de<br> edad.</li>
+                            <li>Edad de Permanencia: Con un máximo de 75 años 364 días (inclusive) de edad.</li>
+                        </div>
+                        <div style="width: 55%; text-align: left;">
+                            <p><b>Prima Comercial Mensual</b></p>
+                            <p>La prima comercial se calculará multiplicando la Tasa Comercial Mensual + IGV por el monto inicial del crédito<br> por el número de meses del crédito.</p>
+                        </div>
+                        <div style="width: 50%; text-align: left;">
+                            <br>
+                            <li>Para créditos menores o iguales a S/.6,000 la tasa comercial + IGV mensual es de 0.12%.</li>
+                            <li>Para créditos mayores a S/. 6,000 la tasa comercial + IGV mensual es de 0.10%.</li>
+                        </div>
+                        <div style="width: 55%; text-align: left;">
+                            <p><b>Exclusiones</b></p>
+                            <p>Terrenos, embarcaciones, vehículos, dineros en efectivo, explosivos, combustible y derivados del petróleo,<br> Actividades de reciclaje maderero, plástico, entre otros y productos pirotécnicos, guerra civil o internacional<br> declarada o no, insurrección, revolución, robo, etc. Eventos que no representan hechos subitos y/o<br> accidentales.</p><br>
+                            <p><b>Beneficiarios</b></p>
+                            <p>Financiera Qapaq hasta donde sus intereses aparezcan al momento del siniestro y el Asegurado por el saldo que<br> resulte a su favor.</p>
+                        </div>
+                    </div>    
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="procedimiento" style="display:none;">
+                <center>
+                    <h3>AVISO DE SINIESTROS</h3>
+                    <hr> 
+                    <div style="font-size: 15px;">
+                        <div style=" width: 55%; text-align: left;">
+                            <p><b>En caso de siniestro, el Asegurado titular deberá de:</b></p>
+                        </div>
+                        <div style="width: 52%; text-align: left;">
+                            <li>Efectuar la Denuncia Policial ante la comisaria de su jurisdicción en un plazo máximo de veinticuatro (24)<br> horas y solicitar copia certificada de la misma.</li>
+                            <li>Avisar inmediatamente al CONTRATANTE o a la COMPAÑÍA.</li>
+                            <li>Excepto cuando se cuente con autorización escrita de la COMPAÑÍA para hacer algo distinto:</li>
+                            <li>Conservar los bienes dañados en las condiciones en que quedaron al momento de ocurrir el daño; por<br> tanto, no realizar cambios en las artes dañadas.</li>
+                            <li>No remover, ni ordenar o permitir la remoción de los escombros dejados por el Siniestro. No se<br> considerará un incumplimiento de esta carga si el ASEGURADO realiza los cambios o remoción con el<br> objetivo de mitigar los daños cubiertos, o en cumplimiento, sea de órdenes de las autoridades, o de<br> normas específicas e imperativas.</li>
+                            <li>Si la COMPAÑÍA no realiza la inspección dentro de los cinco (5) días útiles siguientes de haber recibido la<br> notificación del Siniestro, el Asegurado queda facultado a iniciar la reparación, pero obligado a conservar<br> las partes dañadas a disposición de la COMPAÑÍA.</li>
+                            <li>Una solicitud de cobertura formal dentro de los treinta (30) días calendarios siguientes a la fecha del<br> Siniestro, o en cualquier otro plazo que la COMPAÑÍA le hubiere concedido por escrito.</li>
+                            <li>Todos los detalles, libros, registros, recibos, notas y asientos contables, contratos, estados financieros,<br> facturas, estadísticas de ventas, compras y producción, copias de facturas, documentos justificativos,<br> actas, copias de documentos, presupuestos, y, en general, cualquier tipo de documento o informe que la<br> COMPAÑÍA le solicite en relación con la solicitud de cobertura.</li>
+                        </div>
+                        <div style="width: 55%; text-align: left;">
+                            <p>Esta información podrá ser proporcionada directamente al ajustador, cuando la COMPAÑÍA así se lo indique al<br> ASEGURADO</p><br>
+                            <p>Si tienes alguna consulta o necesitas más información, puedes llamar a CHUBB SEGUROS PERU S.A., al 417-5000,<br> de lunes a viernes, de 9:00 a. m. a 6:00 p. m., o escribir a atención.seguros@chubb.com.</p><br>
+                            <p>La cobertura del seguro es responsabilidad de Chubb Seguros Perú S.A., empresa distinta a Financiera Qapaq S.A.<br> Ley N° 28587, sus modificatorias y reglamento correspondiente</p>
+                        </div>
+                    </div>    
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="certificado" style="display:none;">
+                <center>
+                    <h3>CERTIFICADO</h3>
+                    <hr>    
+                    <div>
+                        <a href="https://www.qapaq.pe/wp-content/uploads/2021/05/Certificado-Te-protegemos-2021-financiera-y-cliente.pdf">
+                          <button class="custom-button">Descargue aquí el certificado / Poliza de seguro</button>
+                        </a>
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+        </div>
+        
+        <div id="footer-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-container').innerHTML = data;
+                    });
+            });
+        </script>
+    
+    <script src="Desgravamen_devolucion_Seguros_Funciones.js"></script>
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+    <script src="pag_main.js"></script>
+    </body>
+</html>

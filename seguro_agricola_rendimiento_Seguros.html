@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>seguro agricola</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ruta_protegida_Seguros_Estilo.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="menu-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('menu.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('menu-container').innerHTML = data;
+                    });
+            });
+        </script>
+
+        <div class="imagenahorro">
+            <img src="Imagenes_Seguros/banner-SEGUROS.jpg" alt="segurs">
+        </div>
+
+        <div>
+            <center>
+            <h2>SEGURO AGRÍCOLA DE RENDIMIENTO</h2>
+            <hr>
+            <p> 
+                Asegura tu cultivo hasta 10has desde la siembra hasta la cosecha ante un desastre natural.
+            </p>
+            <div class="buttons">
+                    
+                <button onclick="changeText('COBERTURA')" style="margin-left: 17%;">Cobertura del <br>
+                SEGURO</button>
+                <button onclick="changeText('REQUISITOS')">Requisitos y <br>
+                CONDICIONES</button>
+                <button onclick="changeText('procedimiento')">Procedimientos en <br>
+                CASO DE SINIESTRO</button>
+                <button onclick="changeText('certificado')">Documentos <br>
+                DE SU SEGURO</button>
+
+            </div>
+            </center>
+        </div>
+
+        <div id="extraContent">
+            <div class="content-section" id="COBERTURA">
+                <center>
+                    <style>
+                        tr{
+                            width: 100%;
+                            
+                        }
+                        .s{
+                            width: 60%;
+                            border: 1px black solid;
+                            padding: 10px;
+                        }
+                        .g{
+                            width: 24%;
+                            border: 1px black solid;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        .j{
+                            width: 8%;
+                            border: 1px black solid;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        .h{
+                            width: 8%;
+                            border: 1px black solid;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        #s1{
+                            border: none;
+                        }
+                        #g1{
+                            border: none;
+                        }
+                        #j1{
+                            background-color: yellow;
+                        }
+                        h4{
+                            color: red;
+                        }
+                    </style>
+                    <h3>COBERTURA</h3>
+                    <hr>
+                    <div style="width: 55%; text-align: left;">
+                        <p>El Seguro Agrícola de Rendimiento, es un seguro que permite proteger tus cultivos ante la ocurrencia de un<br> riesgo climático de acuerdo con las condiciones de la póliza, el cual puede ser de dos tipos:</p>
+                        <p><h4>– Con cofinanciamiento,</h4> es un seguro subvencionado por el MIDAGRI quien asume el 80% del valor de la prima,<br> y el cliente asume el 20% restante. Revisar los requisitos y condiciones.</p>
+                        <p><h4>– Sin cofinanciamiento</h4>, el cliente asume el 100% de la prima del seguro.</p>
+                        <p>El Seguro Agrícola de Rendimiento es brindado por La Positiva Seguros, empresa distinta a Financiera Qapaq.</p>
+                        <p><b>Los riesgos cubiertos son:</b></p>
+                    </div>
+                    <div style="width: 50%; text-align: left;">
+                        <li>Falta de piso para cosechar</li>
+                        <li>Granizo</li>
+                        <li>Helada</li>
+                        <li>Huaico o deslizamiento de terreno                        </li>
+                        <li>Inundación</li>
+                        <li>Lluvia excesiva o extemporánea                        </li>
+                        <li>Nieve</li>
+                        <li>Sequía</li>
+                        <li>Viento fuerte                        </li>
+                        <li>Incendio</li>
+                        <li>Erupción volcánica                        </li>
+                        <li>Terremoto</li>
+                    </div>    
+                    <div style="width: 55%;  text-align: left;">
+                        <p><b>Suma asegurada:</b></p>
+                        <p>Es el monto del crédito otorgado al agricultor, el cual es la cantidad máxima que La Positiva está obligada a<br> pagar en caso de un siniestro (pérdida).</p>
+                    </div>
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="REQUISITOS" style="display:none;">
+                <center>
+                    <style>
+                        .k{
+                            width: 38%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        .q{
+                            width: 16%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        .l{
+                            width: 9%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        .u{
+                            width: 7%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        #ñ{
+                            background-color: yellow;
+                        }
+                    </style>
+                    <h3>REQUISITOS Y CONDICIONES</h3>
+                    <hr> 
+                    <div>
+                        <div style="width:55%">
+                            <p>El Seguro Agrícola de Rendimiento se encuentra dirigido a todos los agricultores a nivel nacional que califiquen<br> a un Crédito Agrícola en Financiera Qapaq, para solicitarlo deberá realizar lo siguiente:</p>       
+                        </div>
+                        <div style="width: 50%; text-align: left; ">
+                            <li>Brindar información para la emisión de la Solicitud y Condicionado particular del Seguro Agrícola y firmar<br> los documentos.</li>
+                            <li>Aceptación de Pago de la prima al momento del desembolso.</li>
+                        </div>
+                        <div style="width: 55%;">
+                            <p style="text-align: left;">Para acceder al seguro Agrícola de Rendimiento a través del cofinanciamiento, deberá cumplir con la condición<br> de tener un área de cultivo no mayor a diez (10) hectáreas (Ha).</p>
+                            <div style="text-align: left;">
+                            <p><b>Precio del seguro agrícola de rendimiento</b></p>
+                             
+                            <p>Para calcular el precio del seguro se debe multiplicar la tasa comercial + IGV (7.66%) por la Suma Asegurada<br> (monto del crédito). Por ejemplo:</p>
+                            <li>Suma Asegurada (monto del crédito)           :           S/ 4,000</li>
+                            <li>Precio total del seguro                                   :           S/ 4,000 x 7.66% = S/ 306.40 </li>
+                            <p>En el caso de cofinanciamiento, con el resultado obtenido se debe multiplicar por el 20% que<br> será lo que asumirá el cliente. Por ejemplo:</p>
+                            <li>Monto a pagar por el cliente              :           S/ 306.40 x 20% = S/ 61.28 (*)</li>
+                            <li>Beneficio otorgado por el MIDAGRI :           S/ 306.40 x 80% = S/ 245.12</li>
+                            <p>(*) Representa una tasa de 1.532%, se financia en el crédito.</p>
+                            <p><b>Exclusiones</b></p>
+                            <li>Las pérdidas o daños a la calidad comercial del producto agrícola durante su desarrollo o en la etapa de<br> post cosecha.</li>
+                            <li>La baja producción relacionada a procesos naturales de alternancia o vecería.</li>
+                            <li>Las pérdidas de producción originadas por plagas, depredadores y enfermedades al cultivo asegurado.</li>
+                            <p>Para más información y conocer la vigencia de tu seguro, te invitamos a revisar la póliza en:<br><a href= "https://www.lapositiva.com.pe/wps/portal/corporativo/home">www.lapositiva.com.pe.</a></p>
+                            <p><b>Beneficiario Titular</b></p>
+                            <p>Financiera Qapaq de acuerdo a las condiciones indicadas en la póliza de seguros.</p>
+                            </div>
+                            
+                        </div>
+
+                    </div>    
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="procedimiento" style="display:none;">
+                <center>
+                    <h3>AVISO DE SINIESTROS</h3>
+                    <hr> 
+                    <div style="font-size: 15px;">
+                        <div style=" width: 55%; text-align: left;">
+                            <p>En caso de ocurrencia de cualquiera de los eventos climáticos cubiertos, indicados en la póliza de seguros y que<br> causen pérdidas en su cultivo, el cliente deberá  dar aviso del siniestro en un plazo no mayor de 10 días<br> calendario desde que la ocurrencia del evento. En el caso de siniestros causados por sequía o lluvia excesiva, el<br> plazo es de 07 días siguientes a la fecha en que se hagan visibles los daños en el cultivo asegurado.</p>
+                            <p>Para realizar la comunicación del siniestro, el cliente podrá contactarse directamente con la Compañía<br> Aseguradora La Positiva, a través de la línea (01) 211 0211, o acercarse a cualquier agencia de Financiera<br> Qapaq.</p>
+                            <p>La empresa de seguros se comunicará con usted en un plazo de 3 a 4 días calendario para coordinar la visita<br> de inspección a su cultivo de acuerdo al tipo de pérdida.</p>
+                            <p>La cobertura del seguro es responsabilidad de La Positiva Seguros y Reaseguros S.A., empresa distinta a<br> Financiera Qapaq S.A. Ley N° 28587, sus modificatorias y reglamento correspondiente.</p>
+                         
+                        </div>
+                    </div>    
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="certificado" style="display:none;">
+                <center>
+                    <h3>CERTIFICADO</h3>
+                    <hr>    
+                    <div>
+                        <a href="https://www.qapaq.pe/wp-content/uploads/2023/10/CP_AGRICOLA-DE-RENDIMIENTO-10.23.pdf">
+                            <button class="custom-button">Descargue aquí el certificado / Poliza de seguro</button><br><br>
+                        </a><a href="https://www.qapaq.pe/wp-content/uploads/2023/10/SOLICITUD_-AGRICOLA-DE-RENDIMIENTO_28.03.23.pdf">
+                            <button class="custom-button">Descargue aquí la solicitud del seguro</button><br><br>
+                        </a><a href="https://www.qapaq.pe/wp-content/uploads/2023/10/Cuadernillo-Seguro-agricola-de-rendimiento-10.23.pdf">
+                          <button class="custom-button">Descargue aquí las condiciones generales</button>
+                        </a>
+                    </div>
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+        </div>
+        
+        <div id="footer-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-container').innerHTML = data;
+                    });
+            });
+        </script>
+    
+    <script src="Desgravamen_devolucion_Seguros_Funciones.js"></script>
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+    <script src="pag_main.js"></script>
+    </body>
+</html>
