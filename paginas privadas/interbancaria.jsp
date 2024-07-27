@@ -1,8 +1,5 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%> 
-<head>
-    <meta charset="UTF-8">
-    <title>Directas</title>
-    <style>
+
+<style>
         .nameDate{
             display: flex;
             height: 50px;
@@ -84,17 +81,29 @@
         }
 
     </style>
-</head>
 <body>
 <div class="nameDate">
     <div>
-        <h4>KATHERIN MILAGROS ZENAYUCA CORIMANYA</h4>
+        <div><b>
+                <%
+
+                    String nombre = (String) session.getAttribute("primer_nombre");
+                    String nombre2 = (String) session.getAttribute("segundo_nombre");
+                    String apellidoP = (String) session.getAttribute("apellido_paterno");
+                    String apellidoM = (String) session.getAttribute("apellido_materno");
+
+                    if (nombre != null) {
+                        out.println(nombre +" "+ nombre2+" "+ apellidoP +" "+ apellidoM);
+                        //String nombreCompleto = nombre +" "+ nombre2+" "+ apellidoP +" "+ apellidoM;
+                    } else {
+                        String nombreCompleto = "No se ha encontrado el nombre en la sesiÛn.";
+                    }
+                %>
+                </b>
+            </div>
     </div>
-    <div class="access-info">
-        <p id="currentDateTime">
-            viernes, 26 de julio de 2024 | √öltimo Acceso: <span id="lastAccessTime">1:29 p.m.</span> | 
-            <a href="#" class="logout-link">Cerrar Sesi√≥n</a>
-        </p>
+    <div>
+        <p>s&aacute;bado, 26 de julio de 2024 | &Uacute;ltimo Acceso: 25/07/2024 11:29 p.m. | <a href="#">Cerrar Sesi&oacute;n</a></p>
     </div>
 </div>
 <div class="titulo">
@@ -115,12 +124,12 @@
 <hr>
 <div>
     <p>Ingresa los datos para efectuar la transferencia.</p>
-    <p>Recuerda verificar los mismos antes de presionar el bot√≥n "Siguiente".</p>
+    <p>Recuerda verificar los mismos antes de presionar el botÛn "Siguiente".</p>
 </div>
 <h3>Transferencia interbancaria</h3>
 <hr>
 
-<form>
+<form action="form_interbancaria.jsp" method="post">
     <table>
         <tr>
             <td>
@@ -134,14 +143,14 @@
             <td>
                 <label for="cuenta-destino">Cuenta CCI Destino:</label>
                 <input class ="ingreso" type="text" id="cuenta-destino" name="cuenta-destino">
-                <input class ="ingreso" type="text" id="cuenta-destino2" name="cuenta-destino2">
+                <input class ="ingreso" type="text" id="cuenta-destino2" name="cuenta-destino2" value="INTERBANK">
             </td>
         </tr>
         <tr>
             <td>
                 <label for="monto">Monto:</label>
                 <input class ="ingreso" type="number" id="monto" name="monto" min="0" step="0.01">
-                <select class ="ingreso" id="soles" name="soles">
+                <select class ="ingreso" id="soles" name="moneda-select">
                     <option value="Soles">Soles</option>
                 </select>
             </td>
@@ -149,7 +158,7 @@
         <tr>
             <td>
                 <label for="micuenta">Es mi cuenta </label>
-                <input type="checkbox" id="micuenta" name="micuenta">
+                <input type="checkbox" id="micuenta" name="micuenta" value="micuenta">
             </td>
         </tr>
         <tr>
@@ -166,21 +175,9 @@
     </table>
     <br>
     <div class="form-actions">
-                <button type="button" id="btnAgregar">Siguiente</button>
-                <button type="button">Cancelar</button>
-            </div>
+                <button type="submit" id="btnAgregar">Siguiente</button>
+                <button type="button" onclick="loadPage('menupriv.jsp')">Cancelar</button>
+    </div>
 </form>
-<script>
-        document.getElementById('cuenta-propia').addEventListener('change', function() {
-            document.getElementById('cuenta-propia-select').disabled = !this.checked;
-            document.getElementById('cuenta-terceros-input').disabled = this.checked;
-        });
-
-        document.getElementById('cuenta-terceros').addEventListener('change', function() {
-            document.getElementById('cuenta-terceros-input').disabled = !this.checked;
-            document.getElementById('cuenta-propia-select').disabled = this.checked;
-        });
-</script>
 </body>
 
-    
