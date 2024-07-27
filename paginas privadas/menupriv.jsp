@@ -104,10 +104,10 @@
                 <li>CUENTAS</li>
                 <li>Movimientos</li>
                 <li>Movimientos por Fecha</li>
-                <li>Cierre de Cuenta</li>
+                <li onclick="loadPage('cierre_de_cuenta.html')">Cierre de Cuenta</li>
                 <li onclick="loadPage('directa.html')">Transferencias Directas</li>
                 <li onclick="loadPage('interbancaria.jsp')">Transferencias Interbancarias</li>
-                <li>Historicos de Transferencias</li>
+                <li onclick="loadPage('historico_de_transferencias.jsp')">Historicos de Transferencias</li>
                 <li>Compartir cuenta</li>
                 <li>Crear una Cuenta Digital</li>              
                 <li onclick="loadPage('depositos_a_plazo.jsp')">Depositos a plazo</li>
