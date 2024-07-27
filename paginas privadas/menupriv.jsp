@@ -105,7 +105,7 @@
                 <li>Movimientos</li>
                 <li>Movimientos por Fecha</li>
                 <li onclick="loadPage('cierre_de_cuenta.html')">Cierre de Cuenta</li>
-                <li onclick="loadPage('directa.html')">Transferencias Directas</li>
+                <li onclick="loadPage('directa.jsp')">Transferencias Directas</li>
                 <li onclick="loadPage('interbancaria.jsp')">Transferencias Interbancarias</li>
                 <li onclick="loadPage('historico_de_transferencias.jsp')">Historicos de Transferencias</li>
                 <li>Compartir cuenta</li>
