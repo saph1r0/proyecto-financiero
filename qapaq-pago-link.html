@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGO LINK</title>
+    <style>
+        ul{
+            line-height: 30px;
+        } 
+        .centro{
+        align-items: center;
+        padding-left: 150px;
+        }
+  body{
+    background-color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*banner*/
+.banner-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 350px; 
+  }
+  
+  .banner-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .banner-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .banner-prev, .banner-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .banner-prev {
+    
+    width: 30px;
+  height: 30px;
+  border: 0;
+  margin: -20px 0 0;
+  box-shadow: none !important;
+  display: block;
+  background-color: transparent;
+  background-image: url('imagenes/banners/bg_direction_nav.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  }
+  
+  .banner-next {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    margin:0 0 -20px;
+    box-shadow: none !important;
+    display: block;
+    background-color: transparent;
+    background-image: url('imagenes/banners/bg_direction_nav.png');
+    background-repeat: no-repeat;
+    margin-left: 98%;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+  }
+/*feature styles*/
+  .features {
+    display: flex;
+    background-color: #dddbdb;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.card {
+    width: 175px;
+    height: 154.833px;
+    margin: 0 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 175px;
+    height: 154.833px;
+    object-fit: cover;
+    transition: none;
+}
+
+.card:hover img {
+    display: none;
+}
+
+.card:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 160px;
+  background-image: var(--image-hover);
+  background-size: cover;
+  background-position: center;
+}
+/*banner image*/
+.banner-bdy img {
+    width: 100%;
+    height: auto;
+  }
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/*para_tunegocio text container*/
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    .text-container {
+      text-align: center;
+      padding: 20px;
+      font-weight:normal;
+    }
+    .bodytxt {
+      font-family: sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
+    .bodytxt h4{
+      font-weight:normal ;
+      margin-bottom: 20px;
+    }
+    hr {
+      width: 40%;
+      margin: 20px auto;
+      border: 1px solid yellow;
+    }
+    /*hover botones-black-yellows*/
+    /* Estilos para los botones y listas */
+    .botones-black-yellows{
+      border-radius: 0px 10px 10px 10px !important;
+      font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    }
+
+    .buttonblack-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding:20px;
+    }
+    .buttonblack {
+      background-color: rgb(52, 52, 52); 
+      border-radius: 0px 10px 10px 10px !important;
+      font-family: 'Trebuchet MS', Helvetica, sans-serif;
+      color:white;  
+      padding: 8px 38px;
+      border: 1px solid;
+      margin: 10px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 13px;
+      transition: background-color 0.3s; 
+    }
+    .buttonblack:hover {
+      background-color:rgb(215, 59, 85); 
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttonyell {
+      background-color: white; 
+      color: #000000;
+      border-radius: 0px 10px 10px 10px !important;
+      font-family: 'Trebuchet MS', Helvetica, sans-serif;
+      padding: 15px 30px;
+      margin: 10px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 13px;
+      transition: background-color 0.3s;
+    }
+
+    .buttonyell:hover {
+      background-color: #ffff00; 
+    }
+
+    .content-button {
+      display: none; 
+      text-align: center;
+      margin-top: 20px;
+      padding-bottom: 225px;
+    }
+
+    .content-button.active {
+      display: block; 
+      color:black;
+    }
+
+    /*container viñetas*/
+    .container-viñetas{
+      font-family: sans-serif;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container-viñetas ul {
+      list-style-type: disc;
+      padding-left: 37%;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .container-viñetas li{margin-bottom: 10px;}
+    .container-viñetas:hover {
+      color: rgb(215, 59, 85);
+    }
+
+    /*flechas*/
+    .button-flechas{
+      padding-left: 25%;
+      text-align: left;
+      width:54%;
+      
+    }
+    .buttonf{
+      margin-bottom: 30px;
+    }
+    .respuesta{
+      display:none;
+      padding-left: 3%;
+      color:grey;
+      font-size: 15px;
+    }
+    .buttonf input[type="button"] {
+      background-image: url('imagenes/socialmendia/flecha.png'); 
+      background-size: 10px; 
+      width: 10px; 
+      height: 10px; 
+      border: none;
+      cursor: pointer;
+    }
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+    </style>
+</head>
+<body>
+    <div id="menu-container">
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+        </script>
+    </div>
+    	<div>
+            <div class="banner-bdy">        	
+                	<img src="imagenes_servicios/banner-pagolink1-1536x334.png" alt="banner-image"> 
+            </div>
+        </div>
+    <section class="text-container">
+        <div class="bodytxt">
+            <h2>PAGO LINK</h2>
+            <hr>
+                <b>
+                    Hemos puesto a tu disposición el nuevo servicio Pago Link; una plataforma provista por Niubiz (antes<br>
+                    Visanet) que permite generar links para pago de cuotas de tus créditos.
+                </b>               
+                <br>
+        </div>
+    </section>
+    <br>
+    <div class="botones-black-yellows">
+          <div class="button-flechas">
+            <div class="buttonf">
+              <input type="button" id="chkPregunta1" onclick="mostrarRespuesta('respuesta1')" value=" ">
+              <label for="chkPregunta1">¿Cómo funciona el Pago Link?</label>
+              <ul id="respuesta1">
+                <li>Las coordinaciones para el Pago Link son directamente con tu Asesor de Negocios o Personal de Cobranzas.</li>
+                <li>Cargo con tarjeta de débito afiliada a cualquier cuenta que el cliente mantenga en el sistema financiero<br>
+                    (con fondos suficientes para el pago).<br></li>
+                <li>No es necesario acercarse a una Agencia, el trámite se realiza en línea.</li>
+                <li>El pago se procesa y se podrá visualizar en el sistema a las 48 horas de efectuado.</li>
+            </ul>
+
+            </div>
+            <div class="buttonf">
+              <input type="button" id="chkPregunta2" onclick="mostrarRespuesta('respuesta2')" value=" ">
+              <label for="chkPregunta2">¿Cómo acceder?</label>
+              <div id="respuesta2">
+                <ul>
+                    <li>Coordina con tu funcionario de Financiera Qapaq, la generación del Pago Link.</li>
+
+                    <li>Tu funcionario te remitirá previa coordinación, el link de pago a través de: Correo electrónico, Whatsapp<br>
+                        o Redes Sociales. (Según tu elección)<br></li>
+                    <li>Recibes el Pago Link y al ingresar debes completar tus datos personales.</li>
+                </ul>
+                <div class="centro">        	
+                	<img src="imagenes_servicios/pp.png" alt="banner-image"> 
+                </div>  
+                <ul>
+                    <li>En la siguiente pantalla deberás ingresar los datos de tu tarjeta de débito (recuerda que sólo podrás<br>
+                        colocar cuentas que mantengan fondos disponibles para concretar el pago).<br></li>
+                </ul>
+              <div class="centro">        	
+                	<img src="imagenes_servicios/ph.png" alt="banner-image"> 
+              </div>
+              <ul>
+                <li>Efectúas el pago y recibes automáticamente una confirmación y tu constancia.<br></li>
+            </ul>
+              <div style="padding-left:70px;">        	
+                	<img src="imagenes_servicios/oe.png" alt="banner-image"> 
+              </div>
+              <br>
+              <div style="padding-left:100px;">        	
+                	<img src="imagenes_servicios/cp.png" alt="banner-image"> 
+              </div>
+              <br>
+              <ul>
+                <li>Tu pago se reflejará en nuestros sistemas, como máximo 48 horas después de efectuado.<br></li>
+                </ul>
+              </div>
+              <p>
+                  <b style="color:red; padding-left: 100px">¡Listo! Ya puedes pagar desde donde estés las cuotas de tus créditos.<br></b>
+              </p>
+            </div>
+          </div>
+        
+    </div>
+    <div id="footer-container">
+          <script>
+            /* footer */
+                document.addEventListener("DOMContentLoaded", function() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('footer-container').innerHTML = data;
+                        });
+                });
+            </script>
+    </div>
+
+  <script>
+    /* buttonyellows */
+      const buttons = document.querySelectorAll('.buttonyell');
+      const contentButtons = document.querySelectorAll('.content-button');
+      buttons.forEach(button => {
+      button.addEventListener('click', () => {
+      contentButtons.forEach(contentButton => contentButton.classList.remove('active'));
+      const buttonId = button.id;
+      const contentButtonId = `content-btn${buttonId.replace('btn', '')}`;
+      document.getElementById(contentButtonId).classList.add('active');
+          });
+      });
+  </script>
+  <script>
+    /*flechitas checkboxes*/
+    function mostrarRespuesta(idRespuesta) {
+      var respuesta = document.getElementById(idRespuesta);
+      if (respuesta.style.display === "none" || respuesta.style.display === "") {
+        respuesta.style.display = "block";
+      } else {
+        respuesta.style.display = "none";
+      }
+    }
+  </script>
+  <script src="menu.html"></script>
+  <script src="footer.html"></script>
+</body>
+</html>
+

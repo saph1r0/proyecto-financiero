@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSFERENCIAS INTERBANCARIAS</title>
+    <style>
+        a{
+            color: #ed1847;
+            text-decoration: none;
+        }
+        p{
+            line-height: 30px;
+        }
+        ul{
+            line-height: 30px;
+        }
+                
+        body{
+            background-color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*banner*/
+        .banner-carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 350px; 
+        }
+        
+        .banner-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .banner-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .banner-prev, .banner-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        .banner-prev {
+            
+            width: 30px;
+        height: 30px;
+        border: 0;
+        margin: -20px 0 0;
+        box-shadow: none !important;
+        display: block;
+        background-color: transparent;
+        background-image: url('imagenes/banners/bg_direction_nav.png');
+        background-repeat: no-repeat;
+        position: absolute;
+        }
+        
+        .banner-next {
+            width: 30px;
+            height: 30px;
+            border: 0;
+            margin:0 0 -20px;
+            box-shadow: none !important;
+            display: block;
+            background-color: transparent;
+            background-image: url('imagenes/banners/bg_direction_nav.png');
+            background-repeat: no-repeat;
+            margin-left: 98%;
+            top: 50%;
+            z-index: 10;
+            cursor: pointer;
+        }
+        /*feature styles*/
+        .features {
+            display: flex;
+            background-color: #dddbdb;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .card {
+            width: 175px;
+            height: 154.833px;
+            margin: 0 20px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 175px;
+            height: 154.833px;
+            object-fit: cover;
+            transition: none;
+        }
+
+        .card:hover img {
+            display: none;
+        }
+
+        .card:hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 180px;
+        height: 160px;
+        background-image: var(--image-hover);
+        background-size: cover;
+        background-position: center;
+        }
+        /*banner image*/
+        .banner-bdy img {
+            width: 100%;
+            height: auto;
+        }
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+        /*para_tunegocio text container*/
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+            .text-container {
+            text-align: center;
+            padding: 20px;
+            font-weight:normal;
+            }
+            .bodytxt {
+            font-family: sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            }
+            .bodytxt h4{
+            font-weight:normal ;
+            margin-bottom: 20px;
+            }
+            hr {
+            width: 40%;
+            margin: 20px auto;
+            border: 1px solid yellow;
+            }
+            /*hover botones-black-yellows*/
+            /* Estilos para los botones y listas */
+            .botones-black-yellows{
+            border-radius: 0px 10px 10px 10px !important;
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+            }
+
+            .buttonblack-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:20px;
+            }
+            .buttonblack {
+            background-color: rgb(52, 52, 52); 
+            border-radius: 0px 10px 10px 10px !important;
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+            color:white;  
+            padding: 8px 38px;
+            border: 1px solid;
+            margin: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 13px;
+            transition: background-color 0.3s; 
+            }
+            .buttonblack:hover {
+            background-color:rgb(215, 59, 85); 
+            }
+            .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .buttonyell {
+            background-color: white; 
+            color: #000000;
+            border-radius: 0px 10px 10px 10px !important;
+            border-color: #ffff00;
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 13px;
+            transition: background-color 0.3s;
+            }
+            .buttonb {
+            background-color: #282828; 
+            color: #eeeeee;
+            border-radius: 0px 10px 10px 10px !important;
+            border-color: #282828;
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+            padding: 10px 10px;
+            margin: 10px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 13px;
+            transition: background-color 0.3s;
+            }
+            
+            .buttonb:hover {
+            background-color: #ed1847;
+            border-color: #ed1847;
+            }
+
+            .buttonyell:hover {
+            background-color: #ffff00;
+            border-color: #ffff00;
+            }
+
+            .content-button {
+            display: none; 
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 225px;
+            }
+
+            .content-button.active {
+            display: block; 
+            color:black;
+            }
+
+            /*container viñetas*/
+            .container-viñetas{
+            font-family: sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+            }
+            .container-viñetas ul {
+            list-style-type: disc;
+            padding-left: 37%;
+            text-align: left;
+            margin-bottom: 20px;
+            }
+            .container-viñetas li{margin-bottom: 10px;}
+            .container-viñetas:hover {
+            color: rgb(215, 59, 85);
+            }
+
+            /*flechas*/
+            .button-flechas{
+            padding-left: 25%;
+            text-align: left;
+            width:54%;
+            
+            }
+            .buttonf{
+            margin-bottom: 30px;
+            }
+            .respuesta{
+            display:none;
+            padding-left: 3%;
+            color:grey;
+            font-size: 15px;
+            }
+            .buttonf input[type="button"] {
+            background-image: url('imagenes/socialmendia/flecha.png'); 
+            background-size: 10px; 
+            width: 10px; 
+            height: 10px; 
+            border: none;
+            cursor: pointer;
+            }
+        /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+    </style>
+</head>
+<body>
+    <div id="menu-container">
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+        </script>
+    </div>
+    	<div>
+            <div class="banner-bdy">        	
+                	<img src="imagenes_servicios/banner-transferencias-1536x334.png" alt="banner-image"> 
+        	</div>
+        </div>
+    <section class="text-container">
+        <div>
+            <h3>TRANSFERENCIAS INTERBANCARIAS</h3>
+        </div>
+        <hr>
+    </section>
+    <section class="botones-black-yellows">
+        <div class="button-container">
+          <button class="buttonyell" id="btnRequisitos">Características <br> Y REQUISITOS</button>
+          <button class="buttonyell" id="btnDocumentos">Información relevante y <br>PREGUNTAS FRECUENTES</button>
+        </div>
+        <div class="content-button" id="content-btnRequisitos">
+          <div class="bodytxt">
+              <br>
+              <h4><b>BENEFICIOS</b></h4>
+              <hr>
+              <div style="padding-left: 25%; text-align:left">               
+                <ul>
+                    <li>Envía o recibe dinero entre cuentas de distintas entidades financieras a nivel nacional.<br></li>
+                    <li>Efectúa tus transferencias desde nuestros canales digitales (Qapaq por<br>
+                    Internet o App Qapaq Móvil) desde donde estés o en cualquier ventanilla en nuestra <br>red de agencias;rápido y con total seguridad.<br></li>
+                    <li>Bajo costo de transacción.<br></li>
+                    <li>Las transferencias a personas naturales hasta S/ 500 o USD 140 (TIN Especial) no <br>
+                        tienen costo (*).<br></li>
+                    <li>(*)Sólo entre entidades participantes en TIN Especial. Sujeto a cambios.<br></li>
+                </ul>
+              </div>
+              <br>
+              <h4><b>CARACTERISTICAS</b></h4>
+              <hr>
+              <div style="padding-left: 25%; text-align:left">
+                <ul>
+                    <li>Envío y recepción de transferencias por horarios: Las transferencias realizadas<br>
+                    hasta las 13:30 horas se acreditarán en la cuenta de destino el mismo día. Las<br>
+                    realizadas después de las 13:30 horas se acreditarán al siguiente día útil.
+                    </li>
+                    <li>En caso de error de procesamiento la devolución del importe correspondiente<br>
+                    se efectuará en el transcurso de las siguientes 48 horas.</li>
+                    <li>Es responsabilidad del cliente verificar la acreditación de los fondos en caso<br>
+                    de rechazo y devolución.</li>
+                    <li>Servicio disponible desde los canales digitales y ventanillas de la Red de Agencias <br>de Financiera Qapaq.</li>
+                    
+                </ul>
+              </div>
+              <br>
+              <h4><b>REGUISITOS</b></h4>
+              <hr>
+              <div style="padding-left: 25%; text-align:left">
+                <ul>
+                    <li>Envío y recepción de transferencias por horarios: Las transferencias realizadas</li>
+                    <li>Para transferencias por canales digitales estar afiliado a nuestros Canales Digitales <br>
+                    (Banca por Internet o APP Móvil).</li>
+                    <li>Para transferencias desde ventanilla de la Red de Agencias, llenar formato de solicitud <br>
+                    de envío de transferencia interbancaria.</li>
+                    <li>
+                    Código de Cuenta Interbancario (CCI) del beneficiario.</li>
+                    <li>Deberás registrar el nombre completo del beneficiario.</li>
+                    </ul>
+
+              </div> 
+          </div>
+        </div>
+        
+        
+        <div class="content-button" id="content-btnDocumentos">
+           <div>
+           <br>
+          <h4>GUIA PARA EL CLIENTE</h4>
+          <hr>
+          <p>Conoce el tarifario para envío de Transferencias Interbancarias</p>
+            <div class="button-container">
+                <button class="buttonb" id="btnDescarga" onclick="goToLink()">Descargar PDF</button>
+            </div>
+          <br>
+          </div>
+        <div>
+          <h4>PREGUNTAS FRECUENTES</h4>
+          <hr>
+          <div class="button-flechas">
+            <div class="buttonf">
+              <input type="button" id="chkPregunta1" onclick="mostrarRespuesta('respuesta1')" value=" ">
+              <label for="chkPregunta1">¿En qué canales y hasta cuánto puedes enviar?</label>
+              <p id="respuesta1" >
+                Desde Qapaq por Internet o App Qapaq Móvil: ¡Ampliamos el limite diario! Ahora transfiere hasta S/5,000<br>
+                o su equivalente en dólares. Desde Ventanillas de la Red de Agencias: transfiere hasta S/30,000 <br>
+                o su equivalente en dólares al día.<br>
+              </p>
+            </div>
+            </div>
+        </div>
+            <div style="display: block">
+                <h4>MÁS INFORMACIÓN</h4>
+                <hr>
+                <ul style="text-align: start; padding-left: 26%">
+                    <li>Para conocer tu Código de Cuenta Interbancario (CCI) haz <a href="https://alianzas.qapaq.pe/CuentaCCIWeb/Formulario/CuentaFormExt">clic aquí</a>.</li>
+                    <li>Las Transferencias Interbancarias se realizan a través de la Cámara de Compensaciones Electrónica (CCE),<br>
+                        si quieres aprender más de cómo funcionan haz <a href="https://www.transferenciasinterbancarias.pe/">clic aquí</a>.
+                    </li>
+                </ul>
+            
+            </div>
+          </div>
+    </section>
+    <div id="footer-container"></div>
+  <script>
+  /* footer */
+      document.addEventListener("DOMContentLoaded", function() {
+          document.getElementById('content-btnRequisitos').classList.add('active');
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-container').innerHTML = data;
+              });
+      });
+  </script>
+  <script>
+    /* buttonyellows */
+      const buttons = document.querySelectorAll('.buttonyell');
+      const contentButtons = document.querySelectorAll('.content-button');
+      buttons.forEach(button => {
+      button.addEventListener('click', () => {
+      contentButtons.forEach(contentButton => contentButton.classList.remove('active'));
+      const buttonId = button.id;
+      const contentButtonId = `content-btn${buttonId.replace('btn', '')}`;
+      document.getElementById(contentButtonId).classList.add('active');
+          });
+      });
+      
+      function goToLink(){
+          window.location.href = 'https://www.qapaq.pe/wp-content/uploads/2023/11/Tarifario-de-comisiones-transversales-Octubre-2023.pdf';
+      }
+  </script>
+  <script>
+    /*flechitas checkboxes*/
+    function mostrarRespuesta(idRespuesta) {
+      var respuesta = document.getElementById(idRespuesta);
+      if (respuesta.style.display === "none" || respuesta.style.display === "") {
+        respuesta.style.display = "block";
+      } else {
+        respuesta.style.display = "none";
+      }
+    }
+  </script>
+  <script src="menu.html"></script>
+  <script src="footer.html"></script>
+</body>
+</html>
+
