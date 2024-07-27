@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>soat digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="ruta_protegida_Seguros_Estilo.css">
+    </head>
+    <body>
+            <div id="menu-container"></div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    fetch('menu.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('menu-container').innerHTML = data;
+                        });
+                });
+            </script>
+            <div class="imagenahorro">
+                <img src="Imagenes_Seguros/banner-SEGUROS.jpg" alt="segurs">
+            </div>
+
+            <div>
+            <center>
+            <h2>SOAT DIGITAL - LA POSITIVA</h2>
+            <hr>
+            <p> 
+                Adquiere tu SOAT digital en nuestras oficinas autorizadas (*), de manera rápida y segura. Recibirás el <br>
+                comprobante directamente a tu correo electronico.   
+            </p>
+            </center>
+            </div>
+            
+            <div class="buttons">
+            
+                <button onclick="changeText('COBERTURA')" style="margin-left: 29%;">Cobertura del <br>
+                SEGURO</button>
+                <button onclick="changeText('REQUISITOS')">Requisitos y <br>
+                CONDICIONES</button>
+                <button onclick="changeText('Tarifario')">Tarifario <br>
+                GENERAL</button>
+
+            </div>
+            <div id="extraContent">
+                <div id="COBERTURA" class="content-section">
+                    <!-- Boton COBERTURA DEL SEGURO -->
+                    <h3 class="centroh3">COBERTURA</h3>
+                    <hr>
+                    <hr id="cab">
+                    <br>
+                    <style>
+                        #tabl{
+                            width: 60%;
+                            align-items: center;
+                            margin: 0 auto;
+                            text-align: left;
+                            margin-bottom: 10%;
+                        }
+                        th,td{
+                            padding: 1.5%;
+
+                        }
+                        #ce{
+                            background-color: lightgray;
+                            
+                        }
+                        .c1{
+                            width: 5%;
+                            align-items: center;
+                        }
+                        .c2{
+                            width: 37%;
+                        }
+                        .c3{
+                            width: 18%;
+                        }
+                    </style>
+                    <table id="tabl">
+                      <tr>
+                        <th class="c1"> </th>
+                        <th class="c2"><b>Tipo</b></th>
+                        <th class="c3"><b>Cobertura</b></th>
+                      </tr>
+                      <tr>
+                          <td class="c1"><img src="Imagenes_Seguros\tabla_soat_digital\dead-body.png"></td>
+                          <td class="c2">Muerte accidental C/U</td>
+                          <td class="c3">4 UIT = S/ 17,600</td>
+                      </tr>
+                      <tr id="ce">
+                        <td class="c1"><img src="Imagenes_Seguros\tabla_soat_digital\disability-1.png"></td>
+                        <td class="c2">Invalidez Permanente C/U, Hasta</td>
+                        <td class="c3">4 UIT = S/ 17,600</td>
+                    </tr>
+                    <tr>
+                        <td class="c1"><img src="Imagenes_Seguros\tabla_soat_digital\muleta.png"></td>
+                        <td class="c2">Incapacidad Temporal C/U, Hasta	</td>
+                        <td class="c3">1 UIT = S/ 4,400</td>
+                    </tr>
+                    <tr id="ce">
+                        <td class="c1"><img src="Imagenes_Seguros\tabla_soat_digital\medical-team.png"></td>
+                        <td class="c2">Gastos de atención médica, hospitalaria, quirúrgica y farmacéutica C/U, Hasta</td>
+                        <td class="c3">5 UIT = S/ 22,000</td>
+                    </tr>
+                    <tr>
+                        <td class="c1"><img src="Imagenes_Seguros\tabla_soat_digital\funeral.png"></td>
+                        <td class="c2">Gastos de sepelio C/U, Hasta</td>
+                        <td class="c3">1 UIT = S/ 4,400</td>
+                    </tr>
+                    </table>
+            </div>
+            <div id="REQUISITOS" class="content-section" style="display:none;">
+                <!-- Boton COBERTURA DEL SEGURO -->
+                <h3 class="centroh3">REQUISITOS Y CONDICIONES</h3>
+                <hr>
+                <hr id="cab">
+                <br>
+                <style>
+                    #tabl{
+                        width: 60%;
+                        align-items: center;
+                        margin: 0 auto;
+                        text-align: left;
+                        margin-bottom: 10%;
+                    }
+                    th,td{
+                        padding: 1.5%;
+
+                    }
+                    #ce{
+                        background-color: lightgray;
+                        
+                    }
+                    .c1{
+                        width: 5%;
+                        align-items: center;
+                    }
+                    .c2{
+                        width: 37%;
+                    }
+                    .c3{
+                        width: 18%;
+                    }
+                </style>
+                <table id="tabl">
+                  <tr>
+                    <th class="c1"><b>¿QUE ES EL SOAT?</b> </th>
+                  </tr>
+                  <tr>
+                    <td class="c1">Es el seguro que cubre las lesiones corporales y muerte que tú, tus acompañantes y los peatones puedan sufrir a <br>
+                        consecuencia de un accidente de tránsito. La Ley N° 27181 vigente desde julio de 2002 señala que todo <br>
+                        vehículo automotor debe contar con un SOAT, así no tenga placa de rodaje e independientemente de tener <br>
+                        contratado cualquier otro tipo de seguro. </td>
+                  </tr>
+                  <tr>
+                    <th class="c1">REQUISITOS </th>
+                  </tr>
+                  <tr>
+                    <td class="c1">Solo debe presentar al momento de la venta:<br>
+                        <br>
+                        <li>DNI del comprador</li>
+                        <li>Tarjeta de propiedad del vehículo.</li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="c1">BENEFICIOS </th>
+                  </tr>
+                  <tr>
+                    <td class="c1"> 
+                        <li>Lo puedes visualizar desde tu celular, no necesitas imprimirlo.</li>
+                        <li>Facilita la revisión del SOAT en una intervención policial.</li>
+                        <li>Tu SOAT digital tiene la misma cobertura que un certificado físico.</li>
+                        <li>Puedes verificar que tu SOAT se encuentra activo en: <a href="https://www.apeseg.org.pe/consultas-soat/">https://www.apeseg.org.pe/consultas-soat/</a></li>                        
+                    </td>
+                  </tr>
+                </table>
+        </div>
+        <div id="Tarifario" class="content-section" style="display:none;">
+            <!-- Boton COBERTURA DEL SEGURO -->
+            <h3 class="centroh3">Tarifas SOAT electrónico a nivel nacional.</h3>
+            <hr>
+            <center><p>Expresado en nuevos soles (S/) Incluye derecho de emisión e IGV.</p></center>
+            <br>
+            <center>
+                <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.qapaq.pe%2Fwp-content%2Fuploads%2F2022%2F03%2FTarifario-SOAT-2022.xlsx&wdOrigin=BROWSELINK">
+                  <button class="custom-button">Descargue aquí el Tarifario</button>
+                </a>
+              </center>
+            <br>
+            <center><p>Lista de agencias autorizadas para la venta del SOAT Digital</p></center>
+            <br>
+            <center><p>Comas, Los Olivos, Pro, Puente Piedra, Canto Grande, Mariscal Cáceres, Zárate, Ceres, Ventanilla, Villa El Salvador, San Juan de Miraflores, Chorrillos,<br>
+                Pershing, San Miguel, Satipo, Pangoa, Pichanaki, La Merced y Villa Rica.
+            </p></center>
+            <br>
+            <style>#e{margin-bottom: 10%;}</style>
+            <div id="e"></div>
+
+
+    </div>
+        </div>
+
+
+
+        <div id="footer-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-container').innerHTML = data;
+                    });
+            });
+        </script>
+    
+        <script src="ruta_protegida_Seguros_Funciones.js"></script>
+        <script src="menu.html"></script>
+        <script src="footer.html"></script>
+        <script src="pag_main.js"></script>
+    </body>
+</html>

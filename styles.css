@@ -131,6 +131,11 @@
     border: 1px solid yellow;
   
   }
+  #cab{
+    width: 60%;
+    margin: 20px auto;
+    border: 5px solid yellow;
+  }
 
   
   /*hover botones-black-yellows*/

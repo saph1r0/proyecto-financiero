@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilos_seguros_principal.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>-Inicio-Qapaq</title>
+</head>
+<body>
+  <div id="menu-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menu-container').innerHTML = data;
+                });
+        });
+    </script>
+    
+  <section class="banner-body">
+      <div class="banner-bodyl">
+          <div class="banner-bdy">        	
+                  <img src="Imagenes_Seguros\banner-SEGUROS.jpg" alt="ima"> 
+          </div>
+      </div>
+  </section>
+   
+    <h3 class="centroh3">¿QUÉ SEGURO NECESITAS?</h3>
+    <hr>
+
+    <section class="features">
+        <div class="card" data-image="Imagenes_Seguros/Botones/seguros_condicionados.png" data-image-hover="Imagenes_Seguros/Botones/seguros_condicionados.png" data-href="" style="--image-hover: url(Imagenes_Seguros/Botones/seguros_condicionados.png);">
+            <img src="" alt="Imagen 1">
+            <a href="#" class="enlace"></a>    </div>
+        <div class="card" data-image="Imagenes_Seguros/Botones/seguro_desgravamen_blanco.png" data-image-hover="Imagenes_Seguros/Botones/seguro_desgravamen.png" data-href="" style="--image-hover: url(Imagenes_Seguros/Botones/seguro_desgravamen.png);">
+            <img src="" alt="Imagen 1">
+            <a href="#" class="enlace"></a>    
+          </div>
+          <div class="card" data-image="Imagenes_Seguros/Botones/desgravamen_devolucion_blanco.png" data-image-hover="Imagenes_Seguros/Botones/desgravamen_devolucion.png" data-href=""style="--image-hover: url(Imagenes_Seguros/Botones/desgravamen_devolucion.png);">
+            <img src="" alt="Imagen 2">
+            <a href="#" class="enlace"></a>
+          </div>
+    </section>
+
+     <section class="features2">
+      <div class="card" data-image="Imagenes_Seguros/Botones/seguros_para_mas.png" data-image-hover="Imagenes_Seguros/Botones/seguros_para_mas.png" data-href="" style="--image-hover: url(Imagenes_Seguros/Botones/seguros_para_mas.png);">
+        <img src="Imagenes_Ahorro/Botones/apertura_digital.png" alt="Imagen 1">
+        <a href="#" class="enlace"></a>
+      </div>
+      <div class="card" data-image="Imagenes_Seguros/Botones/vida_integral_blanco.png" data-image-hover="Imagenes_Seguros/Botones/vida_integral.png" data-href="" style="--image-hover: url(Imagenes_Seguros/Botones/vida_integral.png);">
+        <img src="Imagenes_Seguros/Botones/vida_integral_blanco.png" alt="Imagen 1">
+        <a href="#" class="enlace"></a>    
+      </div>
+      <div class="card" data-image="Imagenes_Seguros/Botones/la_positiva_blanco.png" data-image-hover="Imagenes_Seguros/Botones/la_positiva.png" data-href="" style="--image-hover: url(Imagenes_Seguros/Botones/la_positiva.png);">
+        <img src="Imagenes_Seguros/Botones/la_positiva.png" alt="Imagen 5">
+        <a href="#" class="enlace"></a>
+      </div>
+      <div class="card" data-image="Imagenes_Seguros/Botones/seguro_solidario_blanco.png" data-image-hover="Imagenes_Seguros/Botones/seguro_solidario.png" data-href="" style="--image-hover: url(Imagenes_Seguros/Botones/seguro_solidario.png);" >
+        <img src="Imagenes_Seguros/Botones/seguro_solidario.png" alt="Imagen 6">
+        <a href="#" class="enlace"></a>
+      </div>
+      <div class="card" data-image="Imagenes_Seguros/Botones/te_protegemos_blanco.png" data-image-hover="Imagenes_Seguros/Botones/te_protegemos" data-href="" style="--image-hover: url(Imagenes_Seguros/Botones/te_protegemos.png);" >
+        <img src="Imagenes_Seguros/Botones/te_protegemos.png" alt="Imagen 6">
+        <a href="#" class="enlace"></a>
+      </div>
+    </section>
+    <section class="features2">
+      <div class="card" data-image="Imagenes_Seguros/Botones/proteccion_familiar_blanco.png" data-image-hover="Imagenes_Seguros/Botones/proteccion_familiar.png" data-href="" style="--image-hover: url(Imagenes_Seguros/Botones/proteccion_familiar.png);">
+        <img src="Imagenes_Seguros/Botones/proteccion_familiar.png" alt="Imagen 2">
+        <a href="#" class="enlace"></a>
+      </div>
+      <div class="card" data-image="Imagenes_Seguros/Botones/ruta_protegida_blanco.png" data-image-hover="Imagenes_Seguros/Botones/ruta_protegida.png" data-href="" style="--image-hover: url(Imagenes_Seguros/Botones/ruta_protegida.png);">
+        <img src="Imagenes_Seguros/Botones/ruta_protegida.png" alt="Imagen 3">
+        <a href="#" class="enlace"></a>
+      </div>
+      <div class="card" data-image="Imagenes_Seguros/Botones/multiayuda_blanco.png" data-image-hover="Imagenes_Seguros/Botones/multiayuda.png" data-href="" style="--image-hover: url(Imagenes_Seguros/Botones/multiayuda.png);">
+        <img src="Imagenes_Seguros/Botones/multiayuda.png" alt="Imagen 4">
+        <a href="#" class="enlace"></a>
+      </div>
+    </section>
+   
+        <script>
+          const cards = document.querySelectorAll('.card');
+          cards.forEach(card => {
+            const image = card.querySelector('img');
+            const imageData = card.getAttribute('data-image');
+            image.src = imageData;
+          });
+        
+        </script>
+    <section class="subpagina1">
+      <p>
+        <br>
+        En QAPAQ tenemos Seguros que protegen tu crédito, tu negocio, a tu familia y a ti. Evalúa con nosotros el Seguro que más te conviene ¡y solicítalo ya!.
+      </p>
+    </section>
+    <div id="footer-container"></div>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-container').innerHTML = data;
+              });
+      });
+  </script>
+    
+    <script src="footer.html"></script>
+    <script src="pag_main.js"></script>
+    <script src="funciones_seguros_principal.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>proteccion  familiar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ruta_protegida_Seguros_Estilo.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="menu-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('menu.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('menu-container').innerHTML = data;
+                    });
+            });
+        </script>
+
+        <div class="imagenahorro">
+            <img src="Imagenes_Seguros/banner-SEGUROS.jpg" alt="segurs">
+        </div>
+
+        <div>
+            <center>
+            <h2>SEGURO PROTECCIÓN FAMILIAR</h2>
+            <hr>
+            <p> 
+                Seguro de asistencia salud para nuestro cliente y un familiar adicional (cónyuge, hijos mayores de 18 años,<br> padres) residan en el territorio nacional.
+            </p>
+            <div class="buttons">
+                    
+                <button onclick="changeText('COBERTURA')" style="margin-left: 17%;">Cobertura del <br>
+                SEGURO</button>
+                <button onclick="changeText('REQUISITOS')">Requisitos y <br>
+                CONDICIONES</button>
+                <button onclick="changeText('procedimiento')">Procedimientos en <br>
+                CASO DE SINIESTRO</button>
+                <button onclick="changeText('certificado')">Certificado de <br>
+                POLIZA DE SEGURO</button>
+
+            </div>
+            </center>
+        </div>
+
+        <div id="extraContent">
+            <div class="content-section" id="COBERTURA">
+                <center>
+                    <style>
+                        tr{
+                            width: 100%;
+                            
+                        }
+                        .s{
+                            width: 60%;
+                            border: 1px black solid;
+                            padding: 10px;
+                        }
+                        .g{
+                            width: 24%;
+                            border: 1px black solid;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        .j{
+                            width: 8%;
+                            border: 1px black solid;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        .h{
+                            width: 8%;
+                            border: 1px black solid;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        #s1{
+                            border: none;
+                        }
+                        #g1{
+                            border: none;
+                        }
+                        #j1{
+                            background-color: yellow;
+                        }
+                    </style>
+                    <h3>COBERTURA</h3>
+                    <hr>
+                    <div style="width: 55%; text-align: left;">
+                        <p><b>Los riesgos cubiertos son:</b></p>
+                        <table style="border-collapse: collapse;">
+                            <tr>
+                                <td class="s" id="s1"></td>
+                                <td class="g" id="g1"></td>
+                                <td class="j" id="j1">Plan<br> Titular</td>
+                                <td class="h" id="j1">Plan<br> Titular<br> + 1</td>
+                            </tr>
+                            <tr>
+                                <td class="s"><b>Coberturas Asistencia</b>	</td>
+                                <td class="g"><b>Monto Máximo Soles</b>	</td>
+                                <td class="j"><b>Máximo<br>de<br>Eventos<br> al año</b></td>
+                                <td class="h"><b>Máximo<br>de<br>Eventos<br> al año</b></td>
+                            </tr>
+                            <tr>
+                                <td class="s"><p>Atención médica ambulatoria a cuadro cerrado por Medicina General</p>	</td>
+                                <td class="g"><p>100% servicio	</p></td>
+                                <td class="j"><p>6 eventos</p></td>
+                                <td class="h"><p>7 eventos</p></td>
+                            </tr>
+                            <tr>
+                                <td class="s"><p>Medicamentos genéricos derivados de la consulta médica ambulatoria</p>	</td>
+                                <td class="g"><p>100% servicio</p>	</td>
+                                <td class="j"><p>6 eventos</p></td>
+                                <td class="h"><p>7 eventos</p></td>
+                            </tr>
+                            <tr>
+                                <td class="s"><p>Servicio de envío de Médico a domicilio – Medicina General</p>	</td>
+                                <td class="g"><p>Copago S/ 30.00</p></td>
+                                <td class="j"><p>6 eventos</p></td>
+                                <td class="h"><p>7 eventos</p></td>
+                            </tr>
+                            <tr>
+                                <td class="s"><p>Enfermera a Domicilio (Servicio por procedimiento)</p>	</td>
+                                <td class="g"><p>Copago S/ 25.00</p></td>
+                                <td class="j"><p>6 eventos</p></td>
+                                <td class="h"><p>7 eventos</p></td>
+                            </tr>
+                            <tr>
+                                <td class="s"><p>Orientación médica telefónica las 24h, los 365 días del año</p></td>
+                                <td class="g"><p>100% servicio</p></td>
+                                <td class="j"><p>Ilimitado</p></td>
+                                <td class="h"><p>Ilimitado</p></td>
+                            </tr>
+                            <tr>
+                                <td class="s">
+                                    <p>TELESALUD</p><br>
+                                    <p>- Servicio de TeleSalud brindado por Medico General, servicios:<br>
+                                    - Triaje Médico <br>
+                                    - Diagnóstico médico de enfermedades de bajo complejidad<br>
+                                    - Prescripción de medicamentos derivados del diagnóstico<br>
+                                    - Lectura de exámenes de laboratorio</p><br>
+                                    <p>Consejos para la buena salud y prevención de enfermedades.</p>
+                                </td>
+                                <td class="g"><p>100% servicio</p></td>
+                                <td class="j"><p>3 eventos</p></td>
+                                <td class="h"><p>3 eventos</p></td>
+                            </tr>
+                            <tr>
+                                <td class="s">
+                                    <p>Descuentos en nuestra red de<br>
+                                    Prestadores de Salud en consultas por<br>
+                                    Especialidad, exámenes de laboratorio y<br>
+                                    exámenes de imágenes (Rayos X y<br>
+                                    Ecografías)</p>
+                                </td>
+                                <td class="g"><p>Hasta 30% Dscto</p>	</td>
+                                <td class="j"><p>Ilimitado</p></td>
+                                <td class="h"><p>Ilimitado</p></td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table style="border-collapse: collapse;">
+                            <tr>
+                                <td class="s" id="s1"></td>
+                                <td class="g" id="g1"></td>
+                                <td class="j" id="j1">Plan<br> Titular</td>
+                                <td class="h" id="">Plan<br> Titular<br> + 1</td>
+                            </tr>
+                            <tr>
+                                <td class="s"><p><b>Coberturas Seguro	</b></p></td>
+                                <td class="g"><p><b>Plazo</b></p></td>
+                                <td class="j"><p><b>Suma Asegurada</b></p></td>
+                                <td class="h"><p><b>Suma Asegurada</b></p></td>
+                            </tr>
+                            <tr>
+                                <td class="s"><p>Muerte Accidental	</p></td>
+                                <td class="g"><p>12 meses	</p></td>
+                                <td class="j"><p>S/1,000.00	</p></td>
+                                <td class="h"><p>S/1,000.00	</p></td>
+                            </tr>
+                            <tr>
+                                <td class="s"><p>Renta para el Hogar por muerte accidental	</p></td>
+                                <td class="g"><p>12 meses	</p></td>
+                                <td class="j"><p>S/200.00 hasta por 2 meses</p></td>
+                                <td class="h"><p>S/200.00 hasta por 2 meses</p></td>
+                            </tr>
+                            <tr>
+                                <td class="s"><p>Muerte Accidental	</p></td>
+                                <td class="g"><p>24 meses	</p></td>
+                                <td class="j"><p>S/1,500.00	</p></td>
+                                <td class="h"><p>S/1,500.00	</p></td>
+                            </tr>
+                            <tr>
+                                <td class="s"><p>Renta para el Hogar por muerte accidental	</p></td>
+                                <td class="g"><p>24 meses	</p></td>
+                                <td class="j"><p>S/250.00 hasta por 2 meses</p></td>
+                                <td class="h"><p>S/250.00 hasta por 2 meses</p></td>
+                            </tr>
+                        </table>
+                    </div>    
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="REQUISITOS" style="display:none;">
+                <center>
+                    <style>
+                        .k{
+                            width: 38%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        .q{
+                            width: 16%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        .l{
+                            width: 9%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        .u{
+                            width: 7%;
+                            border: 1px black solid;
+                            padding: 5px;
+                        }
+                        #ñ{
+                            background-color: yellow;
+                        }
+                    </style>
+                    <h3>REQUISITOS Y CONDICIONES</h3>
+                    <hr> 
+                    <div>
+                        <div style="width: 50%; text-align: left; ">
+                            <li>Titular asegurado y adicional deberá tener edad mínima de ingreso 18 años hasta 65 años y 345 días.</li>
+                            <li>Edad máxima de permanencia: 69 años con 364 días.</li>
+                            <li>Para los planes Titular + 1 solo podrá asegurar al cónyuge, hijos mayores de 18 años o padres.</li>
+                        </div>
+                        <div style="width: 55%;">
+                            <p style="text-align: left;">Prima Comercial</p>
+                            <div style="float: left;">
+                                <table style="margin-left: 0%; border-collapse: collapse; ">
+                                    <tr>
+                                        <td class="k" id="ñ"><p>Planes</p></td>
+                                        <td class="q" id="ñ"><p>Asegurado</p></td>
+                                        <td class="l" id="ñ"><p>Prima Comercial Total + IGV</p></td>
+                                        <td class="u" id="ñ"><p>Plazo</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="k" id="ñ"><p>Plan 1</p></td>
+                                        <td class="q"><p>Titular</p></td>
+                                        <td class="l"><p>S/ 108.00</p></td>
+                                        <td class="u"><p>12 meses</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="k" id="ñ"><p>Plan 2</p></td>
+                                        <td class="q"><p>Titular + 1</p></td>
+                                        <td class="l"><p>S/ 108.00</p></td>
+                                        <td class="u"><p>12 meses</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="k" id="ñ"><p>Plan 3</p></td>
+                                        <td class="q"><p>Titular</p></td>
+                                        <td class="l"><p>S/ 192.00</p></td>
+                                        <td class="u"><p>24 meses</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="k" id="ñ"><p>Plan 4</p></td>
+                                        <td class="q"><p>Titular + 1	</p></td>
+                                        <td class="l"><p>S/ 324.00</p></td>
+                                        <td class="u"><p>24 meses</p></td>
+                                    </tr>
+                                </table>
+                            </div><br>
+                            <div style="text-align: left;">
+                            <p><b>Exclusiones</b></p>
+                            <p>Las exclusiones se encuentran detalladas en la Póliza de Seguro.</p>
+                            <p>Si tienes alguna consulta o necesitas más información, puedes llamar a CHUBB SEGUROS PERU S.A. al 417-5000,<br> de lunes a viernes de 9:00 a. m. a 6:00 p. m. o escribir a atencion.seguros@chubb.com.</p>
+                            <p>La cobertura del seguro es responsabilidad de Chubb Seguros Perú S.A., empresa distinta a Financiera Qapaq<br> S.A. Ley N° 28587, sus modificatorias y reglamento correspondiente.</p>
+                            </div>
+                        </div>
+
+                    </div>    
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="procedimiento" style="display:none;">
+                <center>
+                    <h3>AVISO DE SINIESTROS</h3>
+                    <hr> 
+                    <div style="font-size: 15px;">
+                        <div style=" width: 55%; text-align: left;">
+                            <p>1. El ASEGURADO se comunicará a la central de operaciones de VDR Asistencias (476-1610), para solicitar<br> cualquiera de los ítems de la asistencia.</p>
+                            <p>2. Toma de información y solicitud de servicios por parte de un agente de la central de operaciones.</p>
+                            <p>3. VDR realiza una evaluación básica para determinar la asistencia necesaria para el AFILIADO.</p>
+                            <p>4. Asignación del centro de salud apto para la asistencia requerida, en caso de ser determinado.</p>
+                            <p>5. Comunicación con el ASEGURADO para indicar el procedimiento de entrega de medicamentos en<br> Inkafarma y/o Mifarma.</p>
+                            <p>6. Seguimiento y monitoreo de la atención y evolución del ASEGURADO. Control de calidad.</p>
+                        </div>
+                    </div>    
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+            <div class="content-section" id="certificado" style="display:none;">
+                <center>
+                    <h3>CERTIFICADO</h3>
+                    <hr>    
+                    <div>
+                        <a href="https://www.qapaq.pe/wp-content/uploads/2023/04/Solicitud-Certificado-Protecc.-Fam.-Aumento-de-Asistencias-version-final-al-22.02.23.pdf">
+                          <button class="custom-button">Descargue aquí el certificado / Poliza de seguro</button>
+                        </a>
+                </center>
+                <style>#e{margin-bottom: 10%;}</style>
+                <div id="e"> </div>
+            </div>
+        </div>
+        
+        <div id="footer-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-container').innerHTML = data;
+                    });
+            });
+        </script>
+    
+    <script src="Desgravamen_devolucion_Seguros_Funciones.js"></script>
+    <script src="menu.html"></script>
+    <script src="footer.html"></script>
+    <script src="pag_main.js"></script>
+    </body>
+</html>
